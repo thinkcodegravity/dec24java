@@ -1,1 +1,42 @@
 computer basics
+
+1/0
+text - human readable
+	ascii code
+binary - machine readable
+images
+	RGB code
+video = motion picture
+	FPS
+
+
+32315678
+decimal = 0-9
+
+B23123
+hex code= 0-9 , A-F
+
+
+src - source code
+bin - binary code
+
+
+
+BankAccount =
+	money , accountnumber, name, address, deposit , withdraw, accountType,
+		atmPin, userid , password, checkBalance, openAccount, closeAccount
+	Variable
+	HAS-A : money, accountnumber,name, address, type, pin ,userid, password
+	Method
+	DOES-A : deposit, withdraw , checkBalance, openAccount, closeAccount
+	
+	
+java program
+	variable
+	methods
+
+
+
+
+
+

@@ -1,4 +1,3 @@
-package jtrainingdec;
 
 public class Welcome {
 
