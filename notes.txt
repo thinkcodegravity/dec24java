@@ -37,6 +37,173 @@ java program
 
 
 
+Object oriented programming : modular approach
+Procedure oriented programming : task oriented, machine level programming
+
+
+Rocket :
+	cockpit -
+		oxygen supply
+		waterNutrients
+		controls
+	fuelchamber -
+		fuels
+	combustionChamber
+		burnfuel
+		exhaust
+
+	takeOffInSpace
+
+
+Fan :
+	Has-A : Blades, motor, switch, speed
+	Does-A : turnOn,TurnOff,increaseSpeed,decreaseSpeed
+
+
+Class BankAccount 
+	has-a : name, accountNumber, balance,ssn
+	
+	
+	REUSABILITY
+Iphone
+	call
+	text
+Iphone2 inherit Iphone
+	camera
+Iphone3 inherit Iphone2
+	gpsMap
+IphoneX
+	applyPay
+	facialRecog
+	
+
+Login
+	facialRecog
+	userid and password
+	emailid and passsword
+	phone and password
+	secretPin
+	fingerScan
+	
+	
+	
+	
+********************** variables **************************
+Programs
+	has-a : attributes
+	does-a : activity
+Programs
+	information
+	process Information - instruction on how to process information
+Machines/devices
+	memory
+	cpu - process instruction
+	
+
+Bank
+	has-A = Balance=100
+	
+	does-A = 
+		withdraw(50)
+			Balance = 100 - 50;
+
+		deposit(20)
+			Balance = 100 + 20;
+	
+
+public class BankAccount 
+{
+	int Balance=100;
+	public void withdraw(int withdrawAmount) {
+		Balance = Balance - withdrawAmount;
+	}
+
+	public void deposit(int depositAmount){
+		Balance = Balance + depositAmount;
+	}
+}	
+	
+Program = SYNTAX
+	Variable = balance = 100
+	Method
+		withdraw(input)
+			logic / algorithm
+		
+		deposit(input)
+			logic / algorithm
+	
 
 
 
+Programs
+	has-a : attributes
+	does-a : activity
+
+
+
+
+Bank
+	has-A = balance, name, accountNumber,isActive,address
+	*********** 
+	What is the data-type of value you would store
+		number	= byte, short, int, long
+		fraction number = float, double
+		1 character = char
+		group of characters = String
+		Yes/no answer = boolean
+		complex = create another program <anotherprogram> (has-a exercise)
+			anotherprogram attribute_name=new anotherprogram();
+	*********** 
+	balance = fraction number
+	name = group of characters
+	accountNumber = number
+	isActive = Yes/No
+	address = complex
+		has -a : unit , streetNumber, city,state,zip, country
+		create a new program
+		
+	data-type     name-attribute;
+	float    balance; // 6 precision accuracy
+	String   name;
+	int    accountNumber;
+	boolean    isActive;
+	anotherprogram attribute_name=new anotherprogram();
+	
+	byte = 1 byte in memory	-128 to 127
+	short = 2 bytes 			-32768 to 32767
+	int = 4 bytes			-2billion to 2 billion
+	long = 8 bytes			millions of trilliions
+	
+	int    accountNumber;
+	byte    birthDate;
+	byte  birthMonth;
+	short  birthYear;
+	int    zipCode; 
+	long     phoneNumber;  
+	
+	
+	
+	equal sign = 
+	asdadasd=asdasdasd
+	LHS = RHS
+	
+	int a=12;
+	
+	
+	
+	
+	*********** attribute names rules **************
+	
+	1) alphabets or numbers or $ _
+	2) first character should always be alphabets or $ or _
+	
+	
+	
+	
+	int 1sadasdad234$_;
+	
+	
+	telecom
+		has-a : phone_number
+	
+	
