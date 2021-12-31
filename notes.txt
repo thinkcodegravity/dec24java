@@ -207,3 +207,105 @@ Bank
 		has-a : phone_number
 	
 	
+	
+ *********** Declaration rules ***********
+	Declration line includes.... Data type followed by variable name
+	variable cannot be assigned with a value before declaration a data type
+	variable names : same program and same block
+		u cannot have 2 similar variable names
+		can contain alphabets, numbers, $, _
+		start with alphabet or $ or _ 
+		coding practice
+			naming convention - camelCase
+			choose a relevant meaningful names
+	
+	
+******** initialization rules ****
+	Value assigned to a variable for the FIRST time.
+	values should match the data type on LHS
+	RHS can be literal value or variable of same type
+
+
+Methods :
+	********* Method Declaration	*********
+		how to recognize methods : Does-A exercise
+		how to code methods :
+			What to name this activity ??? <<NAME>>
+			how many inputs are required ??? what are the data type of each inputs ???
+			how many outputs are required ??? what is the data type of each output ???
+		
+		PUBLIC 	OUTPUT 	NAME	(INPUT)
+	
+	
+		NAME : similar rules as variables
+			Follow camelCase format in method names
+			Alphabets , numbers, $, _ allowed in method names
+	
+		OUTPUT : CAN ALWAYS BE 0 or 1 
+			0 = void  ... 
+				public  void hello(String message)
+			1 = appropriate data type, int/boolean... 
+				public int add(int a, int b)
+			more than 1 = complex or multiple infor to return, create a class that contains all the output data
+				public Profile display(String userid)
+				
+		INPUT : CAN ALWAYS BE 0 or MORE 
+			0 = if no input require, leave it empty
+				public int bye(  )
+			1 = write the data type followed by variable name
+				public void welcome(String greeting)
+			More = if more than 1 input , separated by comma. data type followed by the name 
+				public int add(int number1, int number2)
+
+	
+how to code methods :
+	What to name this activity ??? addition
+	how many inputs are required ??? what are the data type of each inputs ???
+		2 inputs... int and int
+	how many outputs are required ??? what is the data type of each output ???
+		1 output.... int
+ 
+PUBLIC 	OUTPUT 	NAME	(INPUT)
+public	float		simpleInterest(int principal, float rateOfInterest, int term)
+
+Write a software/method for area of rectangle 
+public	float		areaOfRectange (float length,float width)
+
+Calculate area of circle
+public 	float		areaOfCircle(float radius)
+	
+Calculate shopping cart value
+public 	float		shoppingCart(float price,byte quantity)
+
+calculate area of square
+public	float		areaOfSquare(float side)
+	
+design a software for login page
+public	boolean	login(String userid, String password)
+	
+design google address search method
+public 	Address	searchRestarAddress	(String restaurantName)	
+public class Address{
+	String street;
+	String city;
+	String state;
+	int zip;
+	
+}
+	********* Scope of Data ********* 
+		Data that is part of you or defines you - global
+		Data that is provided to you by other - parameter
+		Data that u hold on temprory basis - local
+		
+		
+	********* Accessing Data ********* 
+		same program : direct access 
+		outside program : accessed with reference to the program using dot operator
+
+
+
+
+	
+	
+	
+	
