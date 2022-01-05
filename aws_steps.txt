@@ -1,0 +1,123 @@
+for spring starter project json error
+https://stackoverflow.com/questions/47390485/cant-create-a-spring-starter-project-in-spring-tool-suite/47430169
+
+*****************************
+
+https://aws.amazon.com/
+click create aws account on top left corner
+Sign for aws account
+	enter userid,password,account name
+	continue step1 of 5
+Contact information
+	How do you plan to use AWS? Personal
+	enter all other contact info
+	continue step2 of 5
+enter creditcard info
+	continue step3 of 5
+confirm identity enter phone
+	continue step4 of 5
+confirm identity enter message
+	continue step5 of 5
+select support plan
+	basic
+	click complete signup
+log into email account
+	open "Welcome to Amazon Web Services" email
+	click on "Getting started Resources"
+click sign in to console
+	enter email id and password
+click launch a virtual machine with ec2
+	Amazon Linux 2 AMI (HVM), SSD Volume Type -
+	next configure instance details
+	next add storage
+	add tags
+	next configure security group
+		for ssh entry in source select "my ip"
+		click add rule - in type select "http" and in source select "anywhere"
+		click add rule - in type select "https" and in source select "anywhere"
+		click add rule - in type select "mysql/aurora" and in source select "my ip"
+		click add rule - in type select "custom tcp port" and port as "8080" in source select "anywhere"
+click review and launch
+click launch
+click "create new key pair" in drop down menu
+	enter key pair name as - java
+	click "download key-pair" ( REMEMBER WHERE java.pem IS DOWNLOADED)
+	click launch instances.
+	
+Your instances are now launching
+The following instance launches have been initiated: i-......
+click on blue hyper link of	 i-......
+click on i-..... hyperlink 
+COPY AND REMEMBER PUBLIC IPV4 DNS
+ecx-x-x-x-x.us-xxxx-2.compute.amazonaws.com
+
+***********************puttygen install***********
+https://www.puttygen.com/download-putty
+search puttygen.exe on page
+click on puttygen.exe bit 64
+open puttygen.exe
+click load > beside File name > select drop down menu "All Files"
+then browse to where java.pem is downloaded
+and click open
+click ok on popup
+enter keyphrase - java
+entery confirm keyphrase - java
+click save private key
+enter filename as java
+this will save a file called "java.ppk" (REMEMBER WHERE THIS FILE IS DOWNLOADED)
+***********************putty setup***************
+https://www.puttygen.com/download-putty
+search "putty.exe" on webpage
+click on 64 bit putty.exe
+open putty.exe
+	in host name enter aws public ipv4 dns
+	left side click connection>ssh>auth>browse
+	select "java.ppk" file (whereever u generated in puttygen step)
+	left slide scroll up and click on session
+	in saved session enter "aws"
+	click save
+	click open
+	click yes
+	enter login id as ec2-user
+	enter passphrase as java and then hit enter( it will not show , when ur typing)
+	
+	*******install java******
+	upon login in putty window black screen enter below command
+	
+	sudo amazon-linux-extras install java-openjdk11
+		when asked enter "y"
+	java -version
+	
+	*******install mysql******
+	sudo wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+	sudo yum localinstall mysql57-community-release-el7-11.noarch.rpm 
+	sudo yum install mysql-community-server
+	
+
+******************** install winscp ******
+open https://winscp.net/eng/download.php
+	click on download green button "Download WINSCP 5.17.10"
+	open downloaded winscp.exe file
+	complete installation
+	click tool > import sites > import from putty >  click aws and ok
+	
+******************** upload website code ******
+Spring tool suite editor
+	right click on pom.xml > run as > maven install
+	after console prints "build success" u can proceed with below steps
+open wincp
+	double click on aws
+	enter userid ec2-user , enter password as java
+	left side navigate to target folder of your project ( right click on projct > properties > resources > find location of your project)
+	drag and drop .war file to right side window
+
+open putty
+	click aws > click load > click open
+	enter userid ec2-user, enter password java
+	enter command (whatever your war file name is) - stop command followed by start command
+		sudo kill $(ps aux | grep 'java' | awk '{print $2}')
+		sudo nohup java -jar xxxx.war &
+		
+open browser
+	type url
+	ecx-x-x-x-x.us-xxxx-2.compute.amazonaws.com
