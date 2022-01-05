@@ -292,18 +292,121 @@ public class Address{
 	int zip;
 	
 }
-	********* Scope of Data ********* 
-		Data that is part of you or defines you - global
-		Data that is provided to you by other - parameter
-		Data that u hold on temprory basis - local
+
+********* Accessing Data and methods ********* 
+	Methods job is to process data.. it could read or change information (global variable)
+	Methods communicate with each other to accomplish task. such as 
+		Car
+			startcar() // has to communicate (method call) with startEngine()
+			pumpFuel()
+			startEngine() // has to communicate (method call) to pumpFuel(), then motors will call rotateWheel()
+			rotateWheel()
+		
+	same program : direct access 
+	outside program : accessed with reference to the program using dot operator
+
+
+
+	***************** Method call Important ******************
+	
+	method call : programs communicate with each other through method calls.
+		parameters receive values from the callee program (Pass by value)							
+			callee				caller		
+			int a	will be 10			passed x whose value was 10		
+			int b	will be 20			passed y whose value was 20		
+			String c	will be john			passed p whose value was john		
+		If callee need primitive output							
+			 you can rerurn a  variable (sum) of same type or literal value						
+		If callee need complex/Object output							
+			 you can pass variable of same type
+
+	1) Pass input that match data type				x , y, p are int, int ,String as needed by callee program					
+		If callee need primitive input - you can pass variable of same type or literal value								
+		If callee need complex/Object input - you can pass variable of same type								
+	2) Pass input in the same order				pass same order int,int,String as needed by calling program					
+	3) pass equal amount of input				3 inputs are needed by add, caller program passes 3					
+	4) handle return type/output from caller program in same type									
+		add method returns "int"… Callee program stores output in "int" variable result								
+										
+	***************** Method call Important ******************
+	
+
+********* Scope of Data ********* 
+	Data that is part of you or defines you - global
+	Data that is provided to you by other - parameter
+	Data that u hold on temprory basis - local
+	
+		
+	
+***************** operators ************
+	
+		= assignment operator
+		LHS RHS same data type
+		LHS ..... should always be variable
+		RHS .... literal value, new, variable, method call , expression
+		RHS if u have variable.... VALUE of RHS variable is assigned / overwritten on LHS variable
+		
+		arithemtic operators = numberd data type.. int long float etc
+		equality operator = ANY data type
+		
+		is 10 equal to 20 = NO
+		is 4.4 equal to 4.4 = YES
+		is 30 not equal to 40 = YES
+		is 30 not equal to 30 = NO
 		
 		
-	********* Accessing Data ********* 
-		same program : direct access 
-		outside program : accessed with reference to the program using dot operator
-
-
-
+		AND =	&&	
+		OR = 	||
+		
+		true AND true = true 
+		true AND false = false
+		false AND true = false
+		false AND false = false
+		
+		
+		true OR true = true 
+		true OR false = true
+		false OR true = true
+		false OR false = false
+		
+		LHS and RHS should be boolean
+		LHS and RHS can have = boolean literal value, boolean variable, 
+			expression that gives boolean output (relational and eqaulity operator)
+	
+	
+	multiple operators on same line
+	
+	
+	
+	1) brackets
+	2) * / %
+	3) + -
+	4) relational
+	5) equality
+	6) logical and or
+	multiple operator at same level ... left to right
+	
+	10 * 5 + ( 7 -1 * 4 ) - ( 3*2 + ( 4 + 5) ) > 12 && 15 > 1
+	10 * 5 + ( 7 - 4 ) - ( 3*2 + ( 4 + 5) ) > 12 && 15 > 1
+	10 * 5 + 3  - ( 3*2 + ( 4 + 5) ) > 12 && 15 > 1
+	10 * 5 + 3  - ( 3*2 + 9 ) > 12 && 15 > 1
+	10 * 5 + 3  - ( 6 + 9 ) > 12 && 15 > 1
+	10 * 5 + 3  - 15 > 12 && 15 > 1
+	50 + 3  - 15 > 12 && 15 > 1
+	53  - 15 > 12 && 15 > 1
+	38 > 12 && 15 > 1
+	true 	&& 15 > 1
+	true 	&& true
+	true
+	
+	if(userid == "john" && password == "john1!" && userid != "hacker" )
+	
+	
+	
+	
+		
+		
+	***************** operators ************
 
 	
 	
