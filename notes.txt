@@ -401,8 +401,80 @@ public class Address{
 		
 		
 	***************** operators ************
+	
+	for(Initialization ;  Condition Check ; Modification){
+		For block Execution
+	}
 
 	
+	for loop : Fixed = booking fixed number of seats in flight, movie, auditorium
+	while loop : 0 to more loops = shopping cart
+	do-while loop : 1 or more loops = atm software
 	
 	
+	for(int i=0;i<3; i++)
+	{
+		sysout("hi");
+		if(i==1){
+			break;
+		}
+		sysout("bye");
+	}
 	
+
+	adasdasdasas
+	
+	ICE	: i=0,	true,	print hi	print bye
+	MCE	: i=1,	true,  print hi
+	MCE	: 
+	MCE 	: 
+	
+	
+	continue : exit current loop... 
+		all remaining lines in the current block is skipped
+		continue with modification step
+	break : will exit entire loop.... go out of loop
+	
+	
+	while(condition_check){
+	
+	}
+	
+	do{
+	
+	
+	}while(condition_check);
+	
+	
+	MULTIPLE choice control flows
+	Switch case : if only comparing single values for primitive data type or string
+	if-else if : if condition check involves multiple or complex checks
+
+
+		if(userid=="john" && pwd=="jee")
+			sysout("login valid");
+		else if(email=="john@g.com" && pwd=="jee")
+			sysout("login valid");
+		else if(phone=="123123" && pwd=="jee")
+			sysout("login valid");
+		else
+			sysout("failed");
+
+		int choice=3;
+		switch(choice){
+			case 1:
+				System.out.println("withdraw");
+				break;
+			case 2:
+				System.out.println("deposit");
+				break;
+			case 3:
+				System.out.println("exit");
+				break;
+			default:
+				System.out.println("unknown ");
+				break;
+			
+		}
+			
+			
