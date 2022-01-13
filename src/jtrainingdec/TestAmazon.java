@@ -8,7 +8,7 @@ public class TestAmazon {
 		int p=12;
 		System.out.println(c.customerName);
 		System.out.println(p);
-		a.method1(p,c);
+		c=a.method1(p,c);
 		System.out.println(c.customerName);
 		System.out.println(p);
 	}
