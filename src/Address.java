@@ -7,7 +7,9 @@ public class Address {
 	String state="ad123";
 	int zip =213213;
 	String country="sdad";
-	
+	public Address(int z) {
+		zip=z;
+	}
 	/*
 	 What is the data-type of value you would store
 		number	= byte, short, int, long
