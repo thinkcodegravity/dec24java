@@ -476,5 +476,485 @@ public class Address{
 				break;
 			
 		}
+		
+		
+********** inheritnace **********
+
+sub class = child program
+super class = parent program
+
+extends key word for inheriting other programs
+
+Multiple inheritnace not allowed 
+Multi-level inheritance is allowed
+
+Child constructor cannot execute before parent consturctor
+	super() is added by compliler 
+	super() should be the first line in all sub/child class constructor
+	Parent program without default constructor requires child/sub class to
+	add super constructor call with matching input.
+
+Inheritance constructors
+	All child class constructors first line will contain super();
+		if not mentioned... compiler will add this as the first line in child class constructor
+		
+		
+	
+NEW RULE FOR ASSIGNNMENT OPERATOR
+
+LHS = RHS
+int a=20;
+String b="john";
+int c=a;
+
+RHS can be CONCRETE child of LHS
+Parent p=new Child();
+
+Method call..
+	If a method requires input as X.... in method call u can pass any variable of
+	type X...... OR any variable that is child of X
+
+
+Runtime Polymorphism = OVERRIDING
+	Actual output/method call is resolved in runtime 
+	(it is based on actual object "new" in runtime)
+	ONLY happens between parent/super and child/sub class
+		Access_privilege	Return_type	Method_name(input)
+		1) Access privilege - same or more broader access than parent		
+			private < default < protected < public
+			parent = default ..... Child = default/protected/public
+		2) Return type=
+			same a parent or child data type
+			public Iphone test() // parent
+			public Iphone12 test() // child
+		3) Name of the method SHOULD be SAME 
+		4) Input SHOULD be SAME
+		
+CompileTime Polymorphism = OVERLOADING
+	Can resolve method call during compile time.
+	It can happen in same class or in parent/child class
+		1) Name of the method SHOULD be SAME
+		2) Input SHOULD be DIFFERNT
+	
+	
+	
+Testing git uploads and downloads
+
+testing
+
+
+
+IIphone = 2006
+	call();
+	text();
+	browseInternet();
+	
+abstract IIphoneSample implements IIphone
+	call()
+		asdasdas
+	
+Iphone3 extends IIphoneSample
+	text()
+		fdsfdsf
+
+Iphone4 extends Iphone3
+	camera()
+		asdasd
+		
+Iphone6 extends Iphone4
+	fingerprintScan()
+		adssd
+
+IphoneX extends Iphone6
+	facialrecog()
+		asdadasd
+		
+FORWARD LOOKING changes
+Backward compatibility
+
+
+
+
+NON-ABSTRACT -
+
+TeslaS
+	gaming
+		qweqweqweqwe
+	build body
+		asdasdasd
+	digitalscreen
+		qqqqqqqqqqq
+	driving
+		dsfsdfdsfdsf
+	electricEngine
+		100 miles range
+Tesla3
+	gaming
+		qweqweqweqwe
+	build body
+		asdasdasd
+	digitalscreen
+		qqqqqqqqqqq
+	driving
+		dsfsdfdsfdsf
+	electricEngine
+		200 miles range
+TeslaX
+	gaming
+		qweqweqweqwe
+	build body
+		asdasdasd
+	digitalscreen
+		qqqqqqqqqqq
+	driving
+		dsfsdfdsfdsf
+	electricEngine
+		400 miles range
+TeslaY
+	gaming
+		qweqweqweqwe
+	build body
+		asdasdasd
+	digitalscreen
+		qqqqqqqqqqq
+	driving
+		dsfsdfdsfdsf
+	electricEngine
+		500 miles range
+		
+ABSTRACT IMPLEMENTAION		
+		
+AbstractTesla
+	build body
+		asdasdasd
+	digitalscreen
+		qqqqqqqqqqq
+	driving
+		dsfsdfdsfdsf
+	gaming
+		qweqweqweqwe
+	
+
+TeslaS extends AbstractTesla
+	electricEngine
+		100 miles range
+	
+Tesla3 extends AbstractTesla
+	electricEngine
+		200 miles range
+TeslaX extends AbstractTesla
+	electricEngine
+		400 miles range
+TeslaY extends AbstractTesla
+	electricEngine
+		500 miles range
+		
+		
+		
+		Abstract class = Generalization rule
+
+IPayment
+	collectCustomerName
+	collectShippingAddress
+	collectPayment
+
+AbstractPayment implement IPayment
+	collectCustomerName
+	collectShippingAddress
+
+PayPal extends AbstractPayment
+	collectPayment
+CreditCard extends AbstractPayment
+	collectPayment
+DebitCard extends AbstractPayment
+	collectPayment
+Bitcoin extends AbstractPayment
+	collectPayment
+
+
+*********************** Access Privilege
+
+	Package A = Parent, ChildA, OtherA
+	Package B = ChildB, OtherB
+
+
+com.amazon.login
+	register.java
+	changePassword.java
+	abc.java
+com.amazon.shopping
+	browse.java
+	add2Cart.java
+
+
+
+public (EVERYONE)
+protected (same package + related other package)
+default/package (same package)
+private (NO OUTSIDERS)
+
+
+***************** static ************
+
+declare variable as static if an information(global variable) has the same value across all
+	references
+delcare method a static if it does not refer instance variable in the program
+	(static methods are served as Utility in an application)
+
+Bank
+	balance
+	
+	withdraw(){
+		Utility.sub(balance, withdrawAmount);
+	}
+	deposit()
+	chckBalance()
+	
+Accountant
+	taxes
+	
+	fileTaxes()
+	caluclateIncome(){
+		Utility.mul(salary , 12);
+	}
+	
+Utility
+	static add()
+	static sub()
+	static mul()
+	
+	
+*************** final **************
+
+final variable = cannot Change value
+final method = cannot Override (Polymorphism)
+final class = cannot inherit (Inheritance)
+
+public final class Calculator{
+	public  int add(int a,int b){
+		int sum=a+b;
+		return sum;
+	}
+	public  int sub(int a,int b){
+		int sum=a-b;
+		return sum;
+	}
+	public  int mul(int a,int b){
+		int sum=a*b;
+		return sum;
+	}
+	public  int div(int a,int b){
+		int sum=a/b;
+		return sum;
+	}
+}
+
+********************* exception handling *****************
+
+1) customer : 
+	Upon program failure/crash, rather than tech error message provide easy to understand 
+	error message to customers
+	diffferent error message for each failures
+		ATM
+			card in corrupted/damaged
+			card is expired
+			wrong atm pin
+			insufficient fund in account
+			
+		Sorry for the inconvinience
+			
+2) developer :
+	you can pin point exact program name, method name, line number
+	also reason for failure
+
+
+
+try
+	Programming line that we suspect might fail
+
+catch
+	actions to be taken in the event of failure
+
+finally
+	guaranteed execution block
+	
+	
+try-catch
+try-catch-catch
+try-catch-finally
+try-finally
+
+
+method stack
+stack trace
+	divide by zero
+	test5 : 26
+	test4 : 22
+	test3 : 17
+	test2 : 13
+	test : 8
+	main : 16
+STACK TRACE
+java.lang.ArithmeticException: / by zero ********WHAT IS THE PROBLEM********
+	at Method3.test5(Method3.java:26) ********WHERE IS THE PROBLEM********
+	at Method3.test4(Method3.java:22)
+	at Method3.test3(Method3.java:17)
+	at Method3.test2(Method3.java:13)
+	at Method3.test(Method3.java:8)
+	at ExceptionTest.main(ExceptionTest.java:16) ********WHERE IT BEGAN********
+
+
+
+multiple catch blocks ORDER
+
+	child
+	parent
+	grand parent
+	Great great grand parent Throwable
+
+
+Throws : compile time exception should be handled in code before run/execution of program
+	the method can choose to handle by try/catch or "throws" to let caller handle that.
+	
+	
+User-Defined Exception
+
+BankingChecking
+	int balance=100;// negative 2 billion
+	
+	public void withdraw(int amount){
+		balance=balance-amount; // -50
+		// NO technical limitation on negativee numbers in int data type
+		// business limitation
+	}
+	
+telecom
+	public void makePhoneCall(long phoneNumber)
+	
+makePhoneCall(12);	 // NO technical limitation to store 12 in long ddata type
+				// business limitation
+withdraw(150);
+
+	
+WHY
+HOW
+customer and deveopers
+try
+catch
+finally
+mutliple catches
+throws
+throw
+User defined exception
+
+
+*********************** String ****************
+
+String s1="iphone";
+String s2="iphone";
+String s3="samsung";
+String s4=new String("iphone");
+String s5="iphone";
+String s6=new String("iphone");
+
+
+in pool = iphone samsung
+outside pool = iphone iphone
+
+
+String phone="(123)-12-12345";
+String phone="1231212345";
+String phone="123-12-12345";
+String phone="123 12 12345";
+
+phone.replaceAll("(" ,"").replaceAll(")","").replaceAll(" ",""),replaceAll("-","");
+1231212345
+phone.substring( 0,4);
+
+
+
+customer name = john doe
+
+String userid=" john";
+String userid="john ";
+userid=userid.trim();
+
+
+xvcb
+
+
+
+**************** collection *****************
+
+Arraylist : 
+	dynamic size
+	indexed
+	faster for reading
+		
+Vector :
+	dynamic size
+	indexed
+	synchronized / thread safe.
+	
+Linked List :
+	dynamic size
+	indexed
+	fastest for editing
+		
+HashSet
+	Unique
+	Unordered
+	
+LinkedHashSet
+	Unique
+	Ordered
+	
+TreeSet
+	Unique
+	Sorted
+	
+LinkedList<String> al=new LinkedList<String>();
+ArrayList<String> al=new ArrayList<String>();
+Vector<String> al=new Vector<String>();
+	
+HashSet<String> s1=new HashSet<String>();
+LinkedHashSet<String> s2=new LinkedHashSet<String>();
+TreeSet<String> s3=new TreeSet<String>();
+	
+	
+	al.add("john");
+	s1.remove("john");
+	
+	
+List > ArrayList, LinkedList,Vector
+
+Set > HashSet,TreeSet
+	       > LinkedHashSet
+	       
+	       
+*********** important ***********	       
+If a set or map is being used for user-defined data type , the user defined program should override
+equals and hashcode method.
+
+If a user-defined data type is stored in treeSet or key section of treemap
+user defined program needs to implement comparable interface
+
+
+*********** important ***********	       
+in-built programs	- String, System,
+user-defined programs - programmer created classes
+
+
+MAPS
+	hashmap = unordered, fastest
+	linkedhashmap = ordered
+	treemap = sorted
+	hashtable = synchronized, thread safe
+	
+	
+	
+	
+	
+	
 			
 			
