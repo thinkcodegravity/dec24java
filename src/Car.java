@@ -1,35 +1,16 @@
 
 public class Car {
-	
-  //public OUTPUT methodname(Input) 
-	public int sub(int a, int b) {
-		int sub=a-b;
-		return sub;
+	// compiletime polymorphism
+	public void drive() {
+		System.out.println("driving basic");
 	}
-	public int add(int a, int b) {
-		int sum=a+b;
-		return sum;
-	}
-	
-	
-	
-	String status="idle";
-	public void startCar() {
-		startEngine("run"); // method call
-	}
-	public void pumpfuel() {
-		System.out.println("inject fuel to engine");
-	}
-	public int startEngine(String s) {
-		System.out.println("starting car now");
-		pumpfuel();// method call
-		System.out.println("motors running");
-		rotateWheel( 10 );// method call
-		return 1;
-	}
-	
-	public void rotateWheel(int i) {
-		System.out.println("Wheels rotation, car is moving");
-		status="moving";
+	// same name, different input
+	public void drive(String s) {
+		System.out.println("driving fast");
 	}
 }
+/*
+ 	development
+ 	compile = text program into binary program
+ 	run = machines execute/run your binary program
+ */

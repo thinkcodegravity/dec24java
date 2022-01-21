@@ -517,6 +517,15 @@ Method call..
 	type X...... OR any variable that is child of X
 
 
+compiletime polymorphism = Overloaded methods
+	method name should be same
+	input should be different
+	can happen in same program OR in child and parent program
+runtime polymorphism = Overridden methods
+	method name should be same
+	input should be same
+	can ONLY happen between child and parent program
+	
 Runtime Polymorphism = OVERRIDING
 	Actual output/method call is resolved in runtime 
 	(it is based on actual object "new" in runtime)
@@ -540,6 +549,33 @@ CompileTime Polymorphism = OVERLOADING
 	
 	
 	
+LHS=RHS  >>> RHS data type should be same as LHS data type
+int a=20;
+int b=30;
+a=b;
+
+
+LHS=RHS  >>> RHS data type can ALSO be child of LHS data type
+Iphone a=new Iphone;
+IphoneX b=new IphoneX();
+a=b; // RESTRICT / BLOCK ACCESS TO CHILD METHODS
+
+method( input )  >> input passed data type should be same as method declaration data type
+int p=30;
+met(p)
+public void met(int x)
+	
+
+method( input )  >> input passed data type should be same as method declaration data type
+IphoneX ix=new IphoneX();
+met(ix)
+public void met(Iphone i)
+	// RUNTIME POLYMORPHISM... METHOD FROM ACTUAL VARIABLE PASSED
+	// IS CALLED
+	
+
+
+
 Testing git uploads and downloads
 
 testing
