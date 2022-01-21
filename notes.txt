@@ -498,7 +498,9 @@ Inheritance constructors
 	All child class constructors first line will contain super();
 		if not mentioned... compiler will add this as the first line in child class constructor
 		
-		
+super(); // call to super/parent class constructor
+super.method(); // call to super/parent class methods
+super.variable // call to super/parent class global variables
 	
 NEW RULE FOR ASSIGNNMENT OPERATOR
 
