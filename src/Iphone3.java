@@ -1,5 +1,5 @@
 
-public class Iphone3 extends Iphone{
+public class Iphone3 extends IphoneNextGen{
 	int a=40;
 	public Iphone3() {
 		System.out.println("parent : iphone3");

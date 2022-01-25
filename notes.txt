@@ -580,135 +580,118 @@ Testing git uploads and downloads
 
 testing
 
+Interface - BACKWARD compaitibiilty was major problem
+	Solved - default method
+	created another problem - conflict between 2 parents default methods
+		override both parent solution and provide new solution
 
+IIphone
+	call
+	text
+	default internetBrowsing 
+		code
+Iphone
+	call
+		code
+	text
+		code
+Iphone3 extends Iphone
+	camera
+		code
+Iphone5 extends Iphone3
+	facialrecog
+		code
+IphoneX extends Iphone5
+	applePay
+		code
+I
+Machines/device
+	memory = store data
+	cpu = process data
 
-IIphone = 2006
-	call();
-	text();
-	browseInternet();
+Program
+	variable = store data
+	method = process data
+
+Bank
+	balance=100
+	deposit{
+		increase your balance
+	}
+	withdraw
+		decrease your balance
+		
+Abstract class = Generalization/reusaibility/commanility
+
+Hyndai owner
+	Hyndai Santa FE 
+	Hyndai Santa SE
+	Hyndai Santa Limited
 	
-abstract IIphoneSample implements IIphone
-	call()
-		asdasdas
+1 big factory = 90% part  Hyndai Santa
+3 tiny factories = 10% customization in FE,SE,Limited
+
+interface IPayment
+	takeCustomerShippingAddress
+	takeCustomerEmail
+	takePhone
+	processPayment
+CreditCard implements IPayment
+	takeCustomerShippingAddress
+		code
+	takeCustomerEmail
+		code... only accept gmail
+	processPayment
+		code
+	takePhone
+		code
+Bitcoin implements IPayment
+	takeCustomerShippingAddress
+		code
+	takeCustomerEmail
+		code... only accept gmail
+	processPayment
+		code
 	
-Iphone3 extends IIphoneSample
-	text()
-		fdsfdsf
+	takePhone
+		code	
+Paypal implements IPayment
+	takeCustomerShippingAddress
+		code
+	takeCustomerEmail
+		code... only accept gmail
+	processPayment
+		code
 
-Iphone4 extends Iphone3
-	camera()
-		asdasd
-		
-Iphone6 extends Iphone4
-	fingerprintScan()
-		adssd
-
-IphoneX extends Iphone6
-	facialrecog()
-		asdadasd
-		
-FORWARD LOOKING changes
-Backward compatibility
+	takePhone
+		code
 
 
 
 
-NON-ABSTRACT -
+CUSTOMERS will interact with interface
 
-TeslaS
-	gaming
-		qweqweqweqwe
-	build body
-		asdasdasd
-	digitalscreen
-		qqqqqqqqqqq
-	driving
-		dsfsdfdsfdsf
-	electricEngine
-		100 miles range
-Tesla3
-	gaming
-		qweqweqweqwe
-	build body
-		asdasdasd
-	digitalscreen
-		qqqqqqqqqqq
-	driving
-		dsfsdfdsfdsf
-	electricEngine
-		200 miles range
-TeslaX
-	gaming
-		qweqweqweqwe
-	build body
-		asdasdasd
-	digitalscreen
-		qqqqqqqqqqq
-	driving
-		dsfsdfdsfdsf
-	electricEngine
-		400 miles range
-TeslaY
-	gaming
-		qweqweqweqwe
-	build body
-		asdasdasd
-	digitalscreen
-		qqqqqqqqqqq
-	driving
-		dsfsdfdsfdsf
-	electricEngine
-		500 miles range
-		
-ABSTRACT IMPLEMENTAION		
-		
-AbstractTesla
-	build body
-		asdasdasd
-	digitalscreen
-		qqqqqqqqqqq
-	driving
-		dsfsdfdsfdsf
-	gaming
-		qweqweqweqwe
-	
-
-TeslaS extends AbstractTesla
-	electricEngine
-		100 miles range
-	
-Tesla3 extends AbstractTesla
-	electricEngine
-		200 miles range
-TeslaX extends AbstractTesla
-	electricEngine
-		400 miles range
-TeslaY extends AbstractTesla
-	electricEngine
-		500 miles range
-		
-		
-		
-		Abstract class = Generalization rule
-
-IPayment
-	collectCustomerName
-	collectShippingAddress
-	collectPayment
-
-AbstractPayment implement IPayment
-	collectCustomerName
-	collectShippingAddress
-
-PayPal extends AbstractPayment
-	collectPayment
-CreditCard extends AbstractPayment
-	collectPayment
-DebitCard extends AbstractPayment
-	collectPayment
-Bitcoin extends AbstractPayment
-	collectPayment
-
+interface IPayment
+	takeCustomerShippingAddress
+	takeCustomerEmail
+	processPayment
+	takephone
+abstract APayment (Common features)
+	takeCustomerShippingAddress
+		code
+	takeCustomerEmail
+		code... accept only gmail
+	takePhone
+		code
+CreditCard extends APayment
+	processPayment
+		code
+Bitcoin extends APayment
+	processPayment
+		code
+Paypal extends APayment
+	processPayment
+		code
 
 *********************** Access Privilege
 
