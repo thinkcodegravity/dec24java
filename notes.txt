@@ -713,6 +713,112 @@ public (EVERYONE)
 protected (same package + related other package)
 default/package (same package)
 private (NO OUTSIDERS)
+packages : group together related programs in 1 folder
+com.amazon.www.login
+	Login.java
+	ForgtPassword.java
+	Register.java
+com.amazon.www.shopping	
+	Shopping.java
+	Add2Cart.java
+	Payment.java
+com.amazon.www.manageOrder	
+	CancelOrder.java
+	EditOrder.java
+	
+
+com.tutorial.group1
+	Main.java
+	Child1.java
+	UnRelated1.java
+com.tutorial.group2
+	Child2.java
+	UnRelated2.java
+
+
+
+How does programs access variable and method 
+	IS-A = inheritance - inherit variable and method from other program
+	HAS-A = create reference of the other program and using dot operator
+			we can access variable and method
+
+
+public class Main{
+	int a=10;
+}
+public class Child extends Main{
+	// inherited a variable from Main prgram
+}
+public class Other {
+	public void method(){
+		Main main=new Main();
+		main.a;
+	}
+}
+
+
+
+public class USCitizens{
+	
+	public String name;
+	protected String address;
+	private int ssn;
+	
+}
+
+Final = 
+
+Variables = hold information. it can CHANGE
+	final = unchangeable
+	long term permanant unchangeable info
+	
+Methods = polymorphism overriding
+	final = cannot override
+	Perfect method implemented, that will never require any changes in future
+	
+Class = inheritance.. reusability
+	final = cannot inherit
+	if every method in program is perfect...
+		
+public class Company{
+	final String name="Amazon";
+	public void method(){
+		name="idiot company";
+	}
+}
+
+
+public class Car1850{
+	public void drive(){
+		sysout(" basic driving");
+	}
+}
+public class Ferrari extends Car1850{
+	public void drive(){ // polymorphism by overriding
+		sysout(" better driving");
+	}	
+}
+
+
+public final class Calculator{
+	public  int add(int a, int b){
+		int sum= a + b;
+		return sum;
+	}
+	public  int sub(int a, int b){
+		int sub= a - b;
+		return sub;
+	}
+	public  int mul(int a, int b){
+		int mul= a * b;
+		return mul;
+	}
+	public  int div(int a, int b){
+		int div= a / b;
+		return div;
+	}
+}
+
 
 
 ***************** static ************
