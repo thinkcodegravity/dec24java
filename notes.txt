@@ -1,3 +1,25 @@
+EXPLAIN BELOW LINE IS AS MANY WAYS AS YOU CAN
+Person p=new Person();
+
+p variable is declared
+p is initialized
+Person is data type
+Person is a complex or object data type
+p is reference variable of type Person
+p is object of person
+Person() is a constructor
+Person program has a construction with no input/parameter
+new creates new object of person in memory
+new Person() RHS is called person initialization
+; is a statement.... initialization and delcaration are statements
+	and they have to end with semi colon
+= is assigment operator
+= value or event of RHS is given to LHS variable
+RHS event is object creation in memory in an ADDRESS
+so address of RHS object in memory is given to LHS variable
+
+
+
 computer basics
 
 1/0
