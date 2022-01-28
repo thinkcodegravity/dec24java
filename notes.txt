@@ -795,9 +795,9 @@ public final class Calculator{
 ********************* exception handling *****************
 
 1) customer : 
-	Upon program failure/crash, rather than tech error message provide easy to understand 
+	a)Upon program failure/crash, rather than tech error message provide easy to understand 
 	error message to customers
-	diffferent error message for each failures
+	b)diffferent error message for each failures
 		ATM
 			card in corrupted/damaged
 			card is expired
@@ -810,22 +810,6 @@ public final class Calculator{
 	you can pin point exact program name, method name, line number
 	also reason for failure
 
-
-
-try
-	Programming line that we suspect might fail
-
-catch
-	actions to be taken in the event of failure
-
-finally
-	guaranteed execution block
-	
-	
-try-catch
-try-catch-catch
-try-catch-finally
-try-finally
 
 
 method stack
@@ -845,6 +829,24 @@ java.lang.ArithmeticException: / by zero ********WHAT IS THE PROBLEM********
 	at Method3.test2(Method3.java:13)
 	at Method3.test(Method3.java:8)
 	at ExceptionTest.main(ExceptionTest.java:16) ********WHERE IT BEGAN********
+
+
+
+try
+	Programming line that we suspect might fail
+
+catch
+	actions to be taken in the event of failure
+
+finally
+	guaranteed execution block
+	
+	
+try-catch
+try-catch-catch
+try-catch-finally
+try-catch-catch-finally
+try-finally
 
 
 
