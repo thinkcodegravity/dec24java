@@ -996,10 +996,84 @@ MAPS
 	treemap = sorted
 	hashtable = synchronized, thread safe
 	
+UNIQUENESS - supporting code	
+IF user-defined program (programmer written such as Student/Product class etc)
+is being stored in Set or Key section of a map
+	write code for hashCode and equals method (unique or no duplicates)
+	
+SORTING (Tree) - supporting code
+IF user-defined program (programmer written such as Student/Product class etc)
+is being stored in TreeSet or Key section of a TreeMap
+	implements Comparable interface
+	and write code in compareTo method
+	
+************************
+
+File operations
+	Create folder
+	Create file
+	read file
+	write file
+	delete folder
+	delete file
 	
 	
 	
 	
 	
-			
-			
+
+
+
+Character stream... reading and writing text data
+	Reader
+	Writer
+		FileWriter : allows to write text content in a file
+		BufferedWriter: allows to write text content in a file (better with performance)
+		
+		File f=new File("d:/Tutorial/writing.txt");
+		FileWriter fw= new FileWriter(f)  ; 
+		BufferedWriter bw=new BufferedWriter(fw);
+		bw.write("hello how are you");			
+		bw.close();
+
+
+Binary stream.... reading and writing binary data
+	InputStream
+	OutputStream
+	
+	
+	
+	String = group of characters/text
+Writing Text file = String can be used to store text data
+	File f=new File("d:/Tutorial/writing.txt");
+	FileWriter fw= new FileWriter(f)  ; 
+	BufferedWriter bw=new BufferedWriter(fw);
+	bw.write("hello how are you");			
+	bw.close();
+
+	byte array = group of binary 1/0
+Writing binary file = byte array can be used to store binary data
+	File f=new File("d:/Tutorial/writing.txt");
+	FileOutputStream fw= new FileOutputStream(f)  ; 
+	BufferedOutputStream bw=new BufferedOutputStream(fw);
+	byte[] binary data=adssadadasdasd;
+	bw.write( byteArr );			
+	bw.close();
+	
+
+Reading Text file
+	File f1=new File("d:/Tutorial/writing.txt");
+	FileReader fr= new FileReader(f1);  
+	BufferedReader readFile = new BufferedReader(fr); 
+	String line = readFile.readLine();		
+	while (line  != null) {
+	    
+	
+Reading binary file
+	File f1=new File("d:/Tutorial/writing.txt");
+	FileInputStream fr= new FileInputStream(f1);  
+	BufferedInputStream readFile = new BufferedInputStream(fr); 
+	byte[] binaryData= readFile.read();		
+	while (line  != null) {
+		
+	

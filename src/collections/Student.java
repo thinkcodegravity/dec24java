@@ -16,6 +16,11 @@ public class Student implements Comparable<Student> {
 		return this.grade;
 	}
 	
+	@Override
+	public String toString() {
+		return "Student [grade=" + grade + ", name=" + name + "]";
+	}
+
 	// find duplicates 
 	// is this object similar to another object
 	public boolean equals(Object obj)
@@ -31,26 +36,12 @@ public class Student implements Comparable<Student> {
 			
 	
 	}
-	/*
-	
-	
-	*/
-	
-	
 	
 public int compareTo(Student anotherObject)
 {
-	
-	// this method has to return int value, which treeset uses to sort in ascending order.
-	// if difference is higher, this student record moves to the bottom of treeset
-	
-	int difference= this.grade - anotherObject.grade;
-	return difference;
-	
-	// String class already has it own way of comparing string values.
-	// to compare by string value (this.name)
-	// return this.name.compareTo(anotherObject.name);
-	 
+	return this.name.compareTo(anotherObject.name);
+	//int difference= this.grade - anotherObject.grade;
+	//return difference; 
 }
 
 }
