@@ -1,1079 +1,264 @@
-EXPLAIN BELOW LINE IS AS MANY WAYS AS YOU CAN
-Person p=new Person();
-
-p variable is declared
-p is initialized
-Person is data type
-Person is a complex or object data type
-p is reference variable of type Person
-p is object of person
-Person() is a constructor
-Person program has a construction with no input/parameter
-new creates new object of person in memory
-new Person() RHS is called person initialization
-; is a statement.... initialization and delcaration are statements
-	and they have to end with semi colon
-= is assigment operator
-= value or event of RHS is given to LHS variable
-RHS event is object creation in memory in an ADDRESS
-so address of RHS object in memory is given to LHS variable
+Hardware 
+	Memory :   Binary language ( 1 , 0 )
+Software 
+	programs : take binary data from memory and provides Visual aspect
 
 
 
-computer basics
+27 = 101010101
 
-1/0
-text - human readable
-	ascii code
-binary - machine readable
-images
-	RGB code
-video = motion picture
-	FPS
+hi how are you = 1 0 10 10
+
+picture
 
 
-32315678
-decimal = 0-9
-
-B23123
-hex code= 0-9 , A-F
+video
 
 
-src - source code
-bin - binary code
+audio
 
 
-
-BankAccount =
-	money , accountnumber, name, address, deposit , withdraw, accountType,
-		atmPin, userid , password, checkBalance, openAccount, closeAccount
-	Variable
-	HAS-A : money, accountnumber,name, address, type, pin ,userid, password
-	Method
-	DOES-A : deposit, withdraw , checkBalance, openAccount, closeAccount
+Digital data/information
+	Numbers = 1010
+	Text= ascii code 61  
+	images = 
+	video
+	audio
+	
+Store information ????
+	Memory : how does the above information get stored here .... 1010101
 	
 	
-java program
-	variable
-	methods
-
-
-
-Object oriented programming : modular approach
-Procedure oriented programming : task oriented, machine level programming
+	
+ascii characters
+A - code/number
+B - 
 
 
-Rocket :
-	cockpit -
-		oxygen supply
-		waterNutrients
-		controls
-	fuelchamber -
-		fuels
-	combustionChamber
-		burnfuel
-		exhaust
+Program : 
+	Data
+	processing of data
 
-	takeOffInSpace
+Concepts of prgramming style
 
+	Procedure Oriented Programming : focus on task ( Machine level programming )
+	C language
+		takeOff/Fly : 
 
-Fan :
-	Has-A : Blades, motor, switch, speed
-	Does-A : turnOn,TurnOff,increaseSpeed,decreaseSpeed
-
-
-Class BankAccount 
-	has-a : name, accountNumber, balance,ssn
-	
-	
-	REUSABILITY
-Iphone
-	call
-	text
-Iphone2 inherit Iphone
-	camera
-Iphone3 inherit Iphone2
-	gpsMap
-IphoneX
-	applyPay
-	facialRecog
-	
-
-Login
-	facialRecog
-	userid and password
-	emailid and passsword
-	phone and password
-	secretPin
-	fingerScan
-	
-	
-	
-	
-********************** variables **************************
-Programs
-	has-a : attributes
-	does-a : activity
-Programs
-	information
-	process Information - instruction on how to process information
-Machines/devices
-	memory
-	cpu - process instruction
-	
-
-Bank
-	has-A = Balance=100
-	
-	does-A = 
-		withdraw(50)
-			Balance = 100 - 50;
-
-		deposit(20)
-			Balance = 100 + 20;
-	
-
-public class BankAccount 
-{
-	int Balance=100;
-	public void withdraw(int withdrawAmount) {
-		Balance = Balance - withdrawAmount;
-	}
-
-	public void deposit(int depositAmount){
-		Balance = Balance + depositAmount;
-	}
-}	
-	
-Program = SYNTAX
-	Variable = balance = 100
-	Method
-		withdraw(input)
-			logic / algorithm
-		
-		deposit(input)
-			logic / algorithm
-	
-
-
-
-Programs
-	has-a : attributes
-	does-a : activity
-
-
-
-
-Bank
-	has-A = balance, name, accountNumber,isActive,address
-	*********** 
-	What is the data-type of value you would store
-		number	= byte, short, int, long
-		fraction number = float, double
-		1 character = char
-		group of characters = String
-		Yes/no answer = boolean
-		complex = create another program <anotherprogram> (has-a exercise)
-			anotherprogram attribute_name=new anotherprogram();
-	*********** 
-	balance = fraction number
-	name = group of characters
-	accountNumber = number
-	isActive = Yes/No
-	address = complex
-		has -a : unit , streetNumber, city,state,zip, country
-		create a new program
-		
-	data-type     name-attribute;
-	float    balance; // 6 precision accuracy
-	String   name;
-	int    accountNumber;
-	boolean    isActive;
-	anotherprogram attribute_name=new anotherprogram();
-	
-	byte = 1 byte in memory	-128 to 127
-	short = 2 bytes 			-32768 to 32767
-	int = 4 bytes			-2billion to 2 billion
-	long = 8 bytes			millions of trilliions
-	
-	int    accountNumber;
-	byte    birthDate;
-	byte  birthMonth;
-	short  birthYear;
-	int    zipCode; 
-	long     phoneNumber;  
-	
-	
-	
-	equal sign = 
-	asdadasd=asdasdasd
-	LHS = RHS
-	
-	int a=12;
-	
-	
-	
-	
-	*********** attribute names rules **************
-	
-	1) alphabets or numbers or $ _
-	2) first character should always be alphabets or $ or _
-	
-	
-	
-	
-	int 1sadasdad234$_;
-	
-	
-	telecom
-		has-a : phone_number
-	
-	
-	
- *********** Declaration rules ***********
-	Declration line includes.... Data type followed by variable name
-	variable cannot be assigned with a value before declaration a data type
-	variable names : same program and same block
-		u cannot have 2 similar variable names
-		can contain alphabets, numbers, $, _
-		start with alphabet or $ or _ 
-		coding practice
-			naming convention - camelCase
-			choose a relevant meaningful names
-	
-	
-******** initialization rules ****
-	Value assigned to a variable for the FIRST time.
-	values should match the data type on LHS
-	RHS can be literal value or variable of same type
-
-
-Methods :
-	********* Method Declaration	*********
-		how to recognize methods : Does-A exercise
-		how to code methods :
-			What to name this activity ??? <<NAME>>
-			how many inputs are required ??? what are the data type of each inputs ???
-			how many outputs are required ??? what is the data type of each output ???
-		
-		PUBLIC 	OUTPUT 	NAME	(INPUT)
-	
-	
-		NAME : similar rules as variables
-			Follow camelCase format in method names
-			Alphabets , numbers, $, _ allowed in method names
-	
-		OUTPUT : CAN ALWAYS BE 0 or 1 
-			0 = void  ... 
-				public  void hello(String message)
-			1 = appropriate data type, int/boolean... 
-				public int add(int a, int b)
-			more than 1 = complex or multiple infor to return, create a class that contains all the output data
-				public Profile display(String userid)
-				
-		INPUT : CAN ALWAYS BE 0 or MORE 
-			0 = if no input require, leave it empty
-				public int bye(  )
-			1 = write the data type followed by variable name
-				public void welcome(String greeting)
-			More = if more than 1 input , separated by comma. data type followed by the name 
-				public int add(int number1, int number2)
-
-	
-how to code methods :
-	What to name this activity ??? addition
-	how many inputs are required ??? what are the data type of each inputs ???
-		2 inputs... int and int
-	how many outputs are required ??? what is the data type of each output ???
-		1 output.... int
- 
-PUBLIC 	OUTPUT 	NAME	(INPUT)
-public	float		simpleInterest(int principal, float rateOfInterest, int term)
-
-Write a software/method for area of rectangle 
-public	float		areaOfRectange (float length,float width)
-
-Calculate area of circle
-public 	float		areaOfCircle(float radius)
-	
-Calculate shopping cart value
-public 	float		shoppingCart(float price,byte quantity)
-
-calculate area of square
-public	float		areaOfSquare(float side)
-	
-design a software for login page
-public	boolean	login(String userid, String password)
-	
-design google address search method
-public 	Address	searchRestarAddress	(String restaurantName)	
-public class Address{
-	String street;
-	String city;
-	String state;
-	int zip;
-	
-}
-
-********* Accessing Data and methods ********* 
-	Methods job is to process data.. it could read or change information (global variable)
-	Methods communicate with each other to accomplish task. such as 
-		Car
-			startcar() // has to communicate (method call) with startEngine()
-			pumpFuel()
-			startEngine() // has to communicate (method call) to pumpFuel(), then motors will call rotateWheel()
-			rotateWheel()
-		
-	same program : direct access 
-	outside program : accessed with reference to the program using dot operator
-
-
-
-	***************** Method call Important ******************
-	
-	method call : programs communicate with each other through method calls.
-		parameters receive values from the callee program (Pass by value)							
-			callee				caller		
-			int a	will be 10			passed x whose value was 10		
-			int b	will be 20			passed y whose value was 20		
-			String c	will be john			passed p whose value was john		
-		If callee need primitive output							
-			 you can rerurn a  variable (sum) of same type or literal value						
-		If callee need complex/Object output							
-			 you can pass variable of same type
-
-	1) Pass input that match data type				x , y, p are int, int ,String as needed by callee program					
-		If callee need primitive input - you can pass variable of same type or literal value								
-		If callee need complex/Object input - you can pass variable of same type								
-	2) Pass input in the same order				pass same order int,int,String as needed by calling program					
-	3) pass equal amount of input				3 inputs are needed by add, caller program passes 3					
-	4) handle return type/output from caller program in same type									
-		add method returns "int"… Callee program stores output in "int" variable result								
-										
-	***************** Method call Important ******************
-	
-
-********* Scope of Data ********* 
-	Data that is part of you or defines you - global
-	Data that is provided to you by other - parameter
-	Data that u hold on temprory basis - local
-	
-		
-	
-***************** operators ************
-	
-		= assignment operator
-		LHS RHS same data type
-		LHS ..... should always be variable
-		RHS .... literal value, new, variable, method call , expression
-		RHS if u have variable.... VALUE of RHS variable is assigned / overwritten on LHS variable
-		
-		arithemtic operators = numberd data type.. int long float etc
-		equality operator = ANY data type
-		
-		is 10 equal to 20 = NO
-		is 4.4 equal to 4.4 = YES
-		is 30 not equal to 40 = YES
-		is 30 not equal to 30 = NO
-		
-		
-		AND =	&&	
-		OR = 	||
-		
-		true AND true = true 
-		true AND false = false
-		false AND true = false
-		false AND false = false
-		
-		
-		true OR true = true 
-		true OR false = true
-		false OR true = true
-		false OR false = false
-		
-		LHS and RHS should be boolean
-		LHS and RHS can have = boolean literal value, boolean variable, 
-			expression that gives boolean output (relational and eqaulity operator)
-	
-	
-	multiple operators on same line
-	
-	
-	
-	1) brackets (  )
-	2) * / %
-	3) + -
-	4) relational
-	5) equality
-	6) logical and or
-	multiple operator at same level ... left to right
-	
-	
-	( 2 * 3 + 4) + ( 3 - 1 + 2 / 2) - ( (3+4) * 10)
-	( 6 + 4) + ( 3 - 1 + 2 / 2) - ( (3+4) * 10)
-	10  + ( 3 - 1 + 2 / 2) - ( (3+4) * 10)
-	10  + ( 3 - 1 + 1 ) - ( (3+4) * 10)
-	10  + ( 2 + 1 ) - ( (3+4) * 10)
-	10  + 3  - ( (3+4) * 10)
-	10  + 3  - ( 7  * 10)
-	10  + 3  - 70
-	13 - 70
-	-57
-	
-		
-		
-	***************** operators ************
-	
-	for(Initialization ;  Condition Check ; Modification){
-		For block Execution
-	}
-
-	
-	for loop : Fixed = booking fixed number of seats in flight, movie, auditorium
-	while loop : 0 to more loops = shopping cart
-	do-while loop : 1 or more loops = atm software
-	
-	
-	for(int i=0;i<3; i++)
-	{
-		sysout("hi");
-		if(i==1){
-			break;
-		}
-		sysout("bye");
-	}
-	
-
-	adasdasdasas
-	
-	ICE	: i=0,	true,	print hi	print bye
-	MCE	: i=1,	true,  print hi
-	MCE	: 
-	MCE 	: 
-	
-	
-	continue : exit current loop... 
-		all remaining lines in the current block is skipped
-		continue with modification step
-	break : will exit entire loop.... go out of loop
-	
-	
-	while(condition_check){
-	
-	}
-	
-	do{
-	
-	
-	}while(condition_check);
-	
-	
-	MULTIPLE choice control flows
-	Switch case : if only comparing single values for primitive data type or string
-	if-else if : if condition check involves multiple or complex checks
-
-
-		if(userid=="john" && pwd=="jee")
-			sysout("login valid");
-		else if(email=="john@g.com" && pwd=="jee")
-			sysout("login valid");
-		else if(phone=="123123" && pwd=="jee")
-			sysout("login valid");
-		else
-			sysout("failed");
-
-		int choice=3;
-		switch(choice){
-			case 1:
-				System.out.println("withdraw");
-				break;
-			case 2:
-				System.out.println("deposit");
-				break;
-			case 3:
-				System.out.println("exit");
-				break;
-			default:
-				System.out.println("unknown ");
-				break;
+	Object Oriented Programming : focus on system ( User/ customer focused s/w)
+	Java , Dotnet , Ruby , C++
+		Rocket 
+			has 
+				cockpit : life support system
+					has 
+						ventilaton :
+						air supply :
+						water system :
+						
+				fuel chamber : ignite the fuel
+				exhaustion chamber : exhaute the gas/energy from buring fuel in downward
+					direction
 			
-		}
+			does
+
+fan , tv, remote, cell, laptop, amazon, facebook, person , manager, cashier,
+restaurant
+
+BankAccount
+accountNumber, withdraw, pin , deposit, transfer, customer name, money, login
+
+	// DATA or INFORMATION
+	has - a ( BankAccount is MADE-OF or COMPOSED of below attributes)
+		accountNumber=0000, pin=1234, customername=john,balance=100
+	
+	// PROCESS INFORMATION or DATA
+	does -a ( BankAccount DOES following activity or PROVIDES following features)
+		withdraw ( Logic) 
+			25$.... is this customer balance greater than withdraw request
+			if yes, then new balance=75...
+			else insufficient fund error
 		
-		
-********** inheritnace **********
-
-sub class = child program
-super class = parent program
-
-extends key word for inheriting other programs
-
-Multiple inheritnace not allowed 
-Multi-level inheritance is allowed
-
-Child constructor cannot execute before parent consturctor
-	super() is added by compliler 
-	super() should be the first line in all sub/child class constructor
-	Parent program without default constructor requires child/sub class to
-	add super constructor call with matching input.
-
-Inheritance constructors
-	All child class constructors first line will contain super();
-		if not mentioned... compiler will add this as the first line in child class constructor
-		
-super(); // call to super/parent class constructor
-super.method(); // call to super/parent class methods
-super.variable // call to super/parent class global variables
-	
-NEW RULE FOR ASSIGNNMENT OPERATOR
-
-LHS = RHS
-int a=20;
-String b="john";
-int c=a;
-
-RHS can be CONCRETE child of LHS
-Parent p=new Child();
-
-Method call..
-	If a method requires input as X.... in method call u can pass any variable of
-	type X...... OR any variable that is child of X
-
-
-compiletime polymorphism = Overloaded methods
-	method name should be same
-	input should be different
-	can happen in same program OR in child and parent program
-runtime polymorphism = Overridden methods
-	method name should be same
-	input should be same
-	can ONLY happen between child and parent program
-	
-Runtime Polymorphism = OVERRIDING
-	Actual output/method call is resolved in runtime 
-	(it is based on actual object "new" in runtime)
-	ONLY happens between parent/super and child/sub class
-		Access_privilege	Return_type	Method_name(input)
-		1) Access privilege - same or more broader access than parent		
-			private < default < protected < public
-			parent = default ..... Child = default/protected/public
-		2) Return type=
-			same a parent or child data type
-			public Iphone test() // parent
-			public Iphone12 test() // child
-		3) Name of the method SHOULD be SAME 
-		4) Input SHOULD be SAME
-		
-CompileTime Polymorphism = OVERLOADING
-	Can resolve method call during compile time.
-	It can happen in same class or in parent/child class
-		1) Name of the method SHOULD be SAME
-		2) Input SHOULD be DIFFERNT
-	
-	
-	
-LHS=RHS  >>> RHS data type should be same as LHS data type
-int a=20;
-int b=30;
-a=b;
-
-
-LHS=RHS  >>> RHS data type can ALSO be child of LHS data type
-Iphone a=new Iphone;
-IphoneX b=new IphoneX();
-a=b; // RESTRICT / BLOCK ACCESS TO CHILD METHODS
-
-method( input )  >> input passed data type should be same as method declaration data type
-int p=30;
-met(p)
-public void met(int x)
-	
-
-method( input )  >> input passed data type should be same as method declaration data type
-IphoneX ix=new IphoneX();
-met(ix)
-public void met(Iphone i)
-	// RUNTIME POLYMORPHISM... METHOD FROM ACTUAL VARIABLE PASSED
-	// IS CALLED
-	
-
-
-
-Testing git uploads and downloads
-
-testing
-
-Interface - BACKWARD compaitibiilty was major problem
-	Solved - default method
-	created another problem - conflict between 2 parents default methods
-		override both parent solution and provide new solution
-
-IIphone
-	call
-	text
-	default internetBrowsing 
-		code
-Iphone
-	call
-		code
-	text
-		code
-Iphone3 extends Iphone
-	camera
-		code
-Iphone5 extends Iphone3
-	facialrecog
-		code
-IphoneX extends Iphone5
-	applePay
-		code
-I
-Machines/device
-	memory = store data
-	cpu = process data
-
-Program
-	variable = store data
-	method = process data
-
-Bank
-	balance=100
-	deposit{
-		increase your balance
-	}
-	withdraw
-		decrease your balance
-		
-Abstract class = Generalization/reusaibility/commanility
-
-Hyndai owner
-	Hyndai Santa FE 
-	Hyndai Santa SE
-	Hyndai Santa Limited
-	
-1 big factory = 90% part  Hyndai Santa
-3 tiny factories = 10% customization in FE,SE,Limited
-
-interface IPayment
-	takeCustomerShippingAddress
-	takeCustomerEmail
-	takePhone
-	processPayment
-CreditCard implements IPayment
-	takeCustomerShippingAddress
-		code
-	takeCustomerEmail
-		code... only accept gmail
-	processPayment
-		code
-	takePhone
-		code
-Bitcoin implements IPayment
-	takeCustomerShippingAddress
-		code
-	takeCustomerEmail
-		code... only accept gmail
-	processPayment
-		code
-	
-	takePhone
-		code	
-Paypal implements IPayment
-	takeCustomerShippingAddress
-		code
-	takeCustomerEmail
-		code... only accept gmail
-	processPayment
-		code
-
-	takePhone
-		code
-
-
-
-
-CUSTOMERS will interact with interface
-
-interface IPayment
-	takeCustomerShippingAddress
-	takeCustomerEmail
-	processPayment
-	takephone
-abstract APayment (Common features)
-	takeCustomerShippingAddress
-		code
-	takeCustomerEmail
-		code... accept only gmail
-	takePhone
-		code
-CreditCard extends APayment
-	processPayment
-		code
-Bitcoin extends APayment
-	processPayment
-		code
-Paypal extends APayment
-	processPayment
-		code
-
-*********************** Access Privilege
-
-	Package A = Parent, ChildA, OtherA
-	Package B = ChildB, OtherB
-
-
-com.amazon.login
-	register.java
-	changePassword.java
-	abc.java
-com.amazon.shopping
-	browse.java
-	add2Cart.java
-
-
-
-public (EVERYONE)
-protected (same package + related other package)
-default/package (same package)
-private (NO OUTSIDERS)
-
-
-***************** static ************
-
-declare variable as static if an information(global variable) has the same value across all
-	references
-delcare method a static if it does not refer instance variable in the program
-	(static methods are served as Utility in an application)
-
-Bank
-	balance
-	
-	withdraw(){
-		Utility.sub(balance, withdrawAmount);
-	}
-	deposit()
-	chckBalance()
-	
-Accountant
-	taxes
-	
-	fileTaxes()
-	caluclateIncome(){
-		Utility.mul(salary , 12);
-	}
-	
-Utility
-	static add()
-	static sub()
-	static mul()
-	
-	
-*************** final **************
-
-final variable = cannot Change value
-final method = cannot Override (Polymorphism)
-final class = cannot inherit (Inheritance)
-
-public final class Calculator{
-	public  int add(int a,int b){
-		int sum=a+b;
-		return sum;
-	}
-	public  int sub(int a,int b){
-		int sum=a-b;
-		return sum;
-	}
-	public  int mul(int a,int b){
-		int sum=a*b;
-		return sum;
-	}
-	public  int div(int a,int b){
-		int sum=a/b;
-		return sum;
-	}
-}
-
-********************* exception handling *****************
-
-1) customer : 
-	a)Upon program failure/crash, rather than tech error message provide easy to understand 
-	error message to customers
-	b)diffferent error message for each failures
-		ATM
-			card in corrupted/damaged
-			card is expired
-			wrong atm pin
-			insufficient fund in account
-			
-		Sorry for the inconvinience
-			
-2) developer :
-	you can pin point exact program name, method name, line number
-	also reason for failure
-
-
-
-method stack
-stack trace
-	divide by zero
-	test5 : 26
-	test4 : 22
-	test3 : 17
-	test2 : 13
-	test : 8
-	main : 16
-STACK TRACE
-java.lang.ArithmeticException: / by zero ********WHAT IS THE PROBLEM********
-	at Method3.test5(Method3.java:26) ********WHERE IS THE PROBLEM********
-	at Method3.test4(Method3.java:22)
-	at Method3.test3(Method3.java:17)
-	at Method3.test2(Method3.java:13)
-	at Method3.test(Method3.java:8)
-	at ExceptionTest.main(ExceptionTest.java:16) ********WHERE IT BEGAN********
-
-
-
-try
-	Programming line that we suspect might fail
-
-catch
-	actions to be taken in the event of failure
-
-finally
-	guaranteed execution block
-	
-	
-try-catch
-try-catch-catch
-try-catch-finally
-try-catch-catch-finally
-try-finally
-
-
-
-multiple catch blocks ORDER
-
-	child
-	parent
-	grand parent
-	Great great grand parent Throwable
-
-
-Throws : compile time exception should be handled in code before run/execution of program
-	the method can choose to handle by try/catch or "throws" to let caller handle that.
-	
-	
-User-Defined Exception
-
-BankingChecking
-	int balance=100;// negative 2 billion
-	
+public class BankAccount{
+	int balance=100;
+	String customerName="john";
+	int pin=1234;
 	public void withdraw(int amount){
-		balance=balance-amount; // -50
-		// NO technical limitation on negativee numbers in int data type
-		// business limitation
+		if(amount < balance)
+			sysout("insufficient fund");
+		else
+			balance=balance-amount;
 	}
-	
-telecom
-	public void makePhoneCall(long phoneNumber)
-	
-makePhoneCall(12);	 // NO technical limitation to store 12 in long ddata type
-				// business limitation
-withdraw(150);
 
-	
-WHY
-HOW
-customer and deveopers
-try
-catch
-finally
-mutliple catches
-throws
-throw
-User defined exception
+}
 
 
-*********************** String ****************
-
-String s1="iphone";
-String s2="iphone";
-String s3="samsung";
-String s4=new String("iphone");
-String s5="iphone";
-String s6=new String("iphone");
+Person has legs - YES
+Person does walk - YES
 
 
-in pool = iphone samsung
-outside pool = iphone iphone
+has : part-of, attribute-of
+does : 
 
-
-String phone="(123)-12-12345";
-String phone="1231212345";
-String phone="123-12-12345";
-String phone="123 12 12345";
-
-phone.replaceAll("(" ,"").replaceAll(")","").replaceAll(" ",""),replaceAll("-","");
-1231212345
-phone.substring( 0,4);
-
-
-
-customer name = john doe
-
-String userid=" john";
-String userid="john ";
-userid=userid.trim();
-
-
-xvcb
-
-
-
-**************** collection *****************
-
-Arraylist : 
-	dynamic size
-	indexed
-	faster for reading
+10 years - 
+	iphone2
+		call
+		text
+1 year		
+	iphone3
+		call
+		text
+		browsing
+1 year		
+	iphone4
+		call
+		text
+		browsing
+		map
+1 year		
+	iphone5
+		call
+		text
+		browsing
+		map
+		camera
+				
 		
-Vector :
-	dynamic size
-	indexed
-	synchronized / thread safe.
-	
-Linked List :
-	dynamic size
-	indexed
-	fastest for editing
+
+
+sticky - closely tied up to underlying device/product/platform
+
+
+Oracle
+	java download
+		JDK - Java Development Kit
+		JRE - Java Runtime Environment
 		
-HashSet
-	Unique
-	Unordered
-	
-LinkedHashSet
-	Unique
-	Ordered
-	
-TreeSet
-	Unique
-	Sorted
-	
-LinkedList<String> al=new LinkedList<String>();
-ArrayList<String> al=new ArrayList<String>();
-Vector<String> al=new Vector<String>();
-	
-HashSet<String> s1=new HashSet<String>();
-LinkedHashSet<String> s2=new LinkedHashSet<String>();
-TreeSet<String> s3=new TreeSet<String>();
-	
-	
-	al.add("john");
-	s1.remove("john");
-	
-	
-List > ArrayList, LinkedList,Vector
-
-Set > HashSet,TreeSet
-	       > LinkedHashSet
-	       
-	       
-*********** important ***********	       
-If a set or map is being used for user-defined data type , the user defined program should override
-equals and hashcode method.
-
-If a user-defined data type is stored in treeSet or key section of treemap
-user defined program needs to implement comparable interface
-
-
-*********** important ***********	       
-in-built programs	- String, System,
-user-defined programs - programmer created classes
-
-
-MAPS
-	hashmap = unordered, fastest
-	linkedhashmap = ordered
-	treemap = sorted
-	hashtable = synchronized, thread safe
-	
-UNIQUENESS - supporting code	
-IF user-defined program (programmer written such as Student/Product class etc)
-is being stored in Set or Key section of a map
-	write code for hashCode and equals method (unique or no duplicates)
-	
-SORTING (Tree) - supporting code
-IF user-defined program (programmer written such as Student/Product class etc)
-is being stored in TreeSet or Key section of a TreeMap
-	implements Comparable interface
-	and write code in compareTo method
-	
-************************
-
-File operations
-	Create folder
-	Create file
-	read file
-	write file
-	delete folder
-	delete file
-	
-	
-	
-	
-	
-
-
-
-Character stream... reading and writing text data
-	Reader
-	Writer
-		FileWriter : allows to write text content in a file
-		BufferedWriter: allows to write text content in a file (better with performance)
 		
-		File f=new File("d:/Tutorial/writing.txt");
-		FileWriter fw= new FileWriter(f)  ; 
-		BufferedWriter bw=new BufferedWriter(fw);
-		bw.write("hello how are you");			
-		bw.close();
 
 
-Binary stream.... reading and writing binary data
-	InputStream
-	OutputStream
-	
-	
-	
-	String = group of characters/text
-Writing Text file = String can be used to store text data
-	File f=new File("d:/Tutorial/writing.txt");
-	FileWriter fw= new FileWriter(f)  ; 
-	BufferedWriter bw=new BufferedWriter(fw);
-	bw.write("hello how are you");			
-	bw.close();
-
-	byte array = group of binary 1/0
-Writing binary file = byte array can be used to store binary data
-	File f=new File("d:/Tutorial/writing.txt");
-	FileOutputStream fw= new FileOutputStream(f)  ; 
-	BufferedOutputStream bw=new BufferedOutputStream(fw);
-	byte[] binary data=adssadadasdasd;
-	bw.write( byteArr );			
-	bw.close();
-	
-
-Reading Text file
-	File f1=new File("d:/Tutorial/writing.txt");
-	FileReader fr= new FileReader(f1);  
-	BufferedReader readFile = new BufferedReader(fr); 
-	String line = readFile.readLine();		
-	while (line  != null) {
-	    
-	
-Reading binary file
-	File f1=new File("d:/Tutorial/writing.txt");
-	FileInputStream fr= new FileInputStream(f1);  
-	BufferedInputStream readFile = new BufferedInputStream(fr); 
-	byte[] binaryData= readFile.read();		
-	while (line  != null) {
+Car 
+	has
+		wheels, engine, steering
 		
+	does
+		left-turn
+			Logic..... Use Steering .. turn it left... stering is connected to wheel
+			
+			
+Person
+	has
+		hand, leg, mouth, nose
+		
+	does
+		breath - use nose
+		eat - use hand and mouth
+		walk - use legs
+
+Amazon - E-commerce
+
+Paypal - Financial transactions 
+
+1) amazon does not need to know complexity involved in financia tranaction
+2) Paypal financial trans alogirthm copyright, private, confidential financial algorithm
+
+******************* Variables ******************
+Class members : components that make up your program
+
+Requirement analysis 
+BankAccount
+	has-a : STORE information ( Variables )
+		acctNumber=123  phone=123213 email=j@g.com lastname=asdsad firstname=ewewqeqwe
 	
+	does-a : MANIPULATE information (Methods)
+		withdraw - 20
+			money decrease
+		deposit -40
+			money increases
+		update profile
+			phone/email/name gets changes
+		
+		
+Varies/Vary : changes
+money ???? Variable name ( identifier-meta data ) info about info
+120 ??? value (information)
+
+variable name rules  : violation will cause errors
+	should be unique in a program
+	no spaces
+	special characters = $ _ 
+	character and numbers 
+	should begin with alphabets or special character (not with number)
+	Key words cannot be used
+Code guidelines
+	variable name should be appropriately named to its purpose
+	if 2 worded varialbe name use camelcase
+		upper case... lower case... camelcase
+
+PERSONAGE
+personage
+personAge
+
+
+
+buyproduct
+
+amazon
+	add2Cart=yes
+	
+	
+	
+	123123123
+
+program with Variable
+1) List the has-a 
+2) find the category of each variable
+3) pick appropriate java data type
+
+
+
+******* requirement analysis *********
+BankAccount
+	has-a : STORE information ( Variables )
+		acctNumber, phone , email ,lastname , firstname , address, balance, accountActive, 
+		loggedIn
+	does-a : MANIPULATE information (Methods)
+		withdraw - 20
+			money decrease
+		deposit -40
+			money increases
+
+*********** design **********		
+acctNumber = variable name (identifier)
+123  	= value (information)
+int = data type
+
+
+	Simple information / primitive Data type
+		numbered data = byte, short, int, long
+			acctNumber, phone
+		fraction data = float, double
+			balance
+		single character data - char
+			loggedIn
+		yes/no data - boolean
+			accountActive
+	
+	Complex information / object Data type
+		group of character data = String
+			email,lastname=doe,firstname=john
+		contain sub-information data = another program
+			address = 
+				street num, build num, city, state, zip, country
+				
+				
+************ program ********
+
+
+product 
+	has
+		name, description, ratings, price, quantity
+		
+String name="iphone";
+float ratings = 4.4;
+float price=99.99;
+int quantity=10;
