@@ -262,3 +262,13 @@ String name="iphone";
 float ratings = 4.4;
 float price=99.99;
 int quantity=10;
+
+
+Numbered java data type
+	byte
+	short
+	int
+	long
+
+
+
