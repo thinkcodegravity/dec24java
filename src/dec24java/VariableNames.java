@@ -15,7 +15,7 @@ public class VariableNames {
 	int personHeight=160;
 	int asdasd=40;
 	int personweight=50;
-
+	aman=20;
 /*
 	 
 variable name rules  : violation will cause errors

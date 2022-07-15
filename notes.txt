@@ -265,10 +265,208 @@ int quantity=10;
 
 
 Numbered java data type
-	byte
+what range value it can store ?  how much memory will be consumed ?
+	byte	
 	short
 	int
 	long
 
 
 
+1) LHS should always be a variable
+2) RHS can be a literal value 
+or another variable of same type
+// replace all RHS variable with its latest value
+3) RHS can be method call
+4) RHS can also be an expression/operator
+
+int a=10;
+boolean b=true;
+String c="john";
+float d=10.1f;
+
+int e="20";
+boolean f=false;
+String g="jane";
+float h=20.1f;
+
+a=e;
+sysout( e ) 
+b=g;
+30.0=h;
+b="false"; // LHS is boolean variable and RHS String value
+
+
+
+int a="10"; // int a=10;
+String b='john'; // String b="john";
+boolean c=true; // Correct
+int 1x=20; // int x1=20; 
+boolean abc1=false; // Correct
+String xyz#1="jane"; // String xyz$1="jane";
+20=int a; // int a=20;
+int x; // declaration
+int d=20;
+float ab_cd=12.2f; // Correct
+double as_qw=12.3; // fraction value are double by default
+String e="12"; // Correct
+int f=e; // incorrect RHS e (String) = LHS f(int)
+int g=d; // correct RHS d(int) = LHS g(int)
+h=30; //incorrect .... h has to be declared
+boolean d=c; // cannot redeclare a already declared variable
+boolean de=c; // COrrect LHS de(boolean)= RHS c(boolean)
+d=e; // incorrect lhs d(int)= RHS e (Stirng)
+d=35;
+
+variable name
+data type
+value
+declaration
+initizlition
+reassignment
+
+
+variable = containers
+values = content in the container
+
+data type = value
+	refridgerator = cold contents
+	glass = liquid contents
+	paper bag = solid contents
+	
+*************** methods ****************
+
+Bank
+	has-a (variables)
+		(primitive  datatype)simple data, (Object datatype)complex data
+
+	does-a(methods)
+		withdraw
+	
+	
+Guidelines how to create a method
+	what do i call this activity ? withdraw
+	how many and what data type of inputs and what do u call this input?
+		1 input  (int amount )
+	how many and what data type of output ?
+		1 ouput ( String / int )
+		
+access_privilege output_data_type activity_name ( input)
+public String  withdraw(int amount){
+	// algorithm, logic
+}
+
+METHOD DECLARATION
+public output_data_type activity_name ( input){
+METHOD BODY/LOGIC/ALGORITHM
+}
+******RULES for method declaration******
+	access_privilege : optional
+	output_data_type : has to be just 1
+		0 output = void 
+		1 output = write data type
+		more than 1 output= another program that can hold multiple output info
+	activity_name : same rules as the variable names
+	input : optional... can be 0 or more
+		0 input = leave the brackets blank (  )
+		1 input = mention the data type and input name ( String name)
+		more than 1 input = 
+			separated by comma ( int number1  ,  int number2, String name, int a, int b, float x, String city, )
+			another program that can hold multiple input info
+				loanApplication (CustomerDetails info)
+				public class CustomerDetails{
+					String name;
+					String lastName;
+					int creditScore;
+					String city;
+					String state;
+					.......
+				}
+******** guideline for methods *********
+	what do i call this activity ? payment
+	how many and what data type of inputs and what do u call this input?
+		2 input
+		long creditCardNumber, String expDate, short secCode, Address addres, String acctHolderName
+	how many and what data type of output ?
+		1 ouput
+		boolean
+		
+	customer : loggedIn/Loggedout..
+	status : active/inactive
+	login page : success/failure
+	paymentProcess : success/failed
+	
+create a method for addition 	
+	what do i call this activity ? 
+	how many and what data type of inputs and what do u call this input?
+	how many and what data type of output ?
+		
+access_privilege output_data_type activity_name ( input)
+1) addition requirement
+	public	int 	add( int number1 , int number2  )
+2) calculate area of square and circle
+	public 	AreaOutput  	measureArea(float radius ,	int side)
+3) design login feature	
+	public 	boolean		facebookLogin(String userName	,	String password)
+	
+	
+	
+	public	int 	add( int number1 , int number2  ){
+	
+	
+	}
+	
+	public 	boolean		facebookLogin(String userName	,	String password){
+	
+	
+	}
+	public 	AreaOutput  	measureArea(float radius ,	int side){
+	
+	}
+	
+	
+	bank
+	withdraw {
+		enter withdraw amount
+		check balance
+		deduct withdra amount from outstanding balance
+	}
+	deposit{
+		enter deposit amount
+		add deposit amount to outstanding balance
+	}
+	balanceinquiry{
+		display outstandingbalance
+	}
+	
+	
+walmart
+		public grocery Shopping(Cash money)
+			
+		
+AppleStore
+		public iphone Buy(Cash money)
+	
+	
+class ECommerce
+
+Caller:	checkout{
+		CALLING : transfer control to enterPaymentDetails
+		order placed.... order cannot be placed..
+	}
+Callee:	enterPaymentDetails{
+		payment processing
+		transfer control to transferMoney
+	}
+	transferMoney{
+		paymnt proessed
+		transfer control to shipping start
+	}
+	shippingStart{
+		
+	}
+	
+	output : 
+		how do i return back to caller
+		what do i return back to caller
+		when do i return back to caller
