@@ -470,3 +470,14 @@ Callee:	enterPaymentDetails{
 		how do i return back to caller
 		what do i return back to caller
 		when do i return back to caller
+		
+		
+Modular programming
+Modules : small manageable program
+
+Nissan and Car
+Dog and Milo
+
+Class and Data type
+Class is program through which u define data 
+
