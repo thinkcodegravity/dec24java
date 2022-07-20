@@ -482,8 +482,10 @@ Class and Data type
 Class is program through which u define data 
 
 
-************** REFERENCES ************
+************** Variable scope ************
 
+long term info/memory 
+short term info/memory
 
 
 

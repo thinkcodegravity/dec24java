@@ -1,7 +1,7 @@
 package references;
 
 public class Person {
-	int age;// default value 0
+	int age=20;// default value 0
 	String name="john";
 	float weight=100.25f;
 }
