@@ -1,5 +1,6 @@
 package methodCall;
 
-public class Person {
-
-}
+	public class Person {
+		String name="john";
+		int age=20;
+	}

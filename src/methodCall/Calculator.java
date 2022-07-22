@@ -6,6 +6,8 @@ import jominos.AddressDetails;
 public class Calculator {
 	// Pre-defined/ inbuilt data type
 	public int add(int a, int b) {
+		
+		
 		return a+b;
 	}
 	// Pre-defined/ inbuilt data type

@@ -361,6 +361,8 @@ public output_data_type activity_name ( input){
 METHOD BODY/LOGIC/ALGORITHM
 }
 ******RULES for method declaration******
+access_privilege output_data_type activity_name ( input)
+public		int				add(int a,int b)
 	access_privilege : optional
 	output_data_type : has to be just 1
 		0 output = void 
@@ -489,3 +491,20 @@ short term info/memory
 
 
 
+int b=20;
+int c=30;
+int d=b; // int d=20; replace variable on RHS with its value
+p2.name=p22.name;	
+
+
+RHS processed first... VALUE is generated out of the processing RHS
+
+int a=10+5; // int a=15;
+int a=b+c; // int a=20+30; int a=50;
+Person p=new Person(); // Person p= #abc ;   #abc: address where person was created in memory
+int sum=add(1,2); // int sum=3;
+
+public int add(int a, int b){ // 1 get transferreed to a, 2 value to b
+	int s=a+b; // int s=1+2; int s=3;
+	return s; // return 3;
+}
