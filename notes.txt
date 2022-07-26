@@ -508,3 +508,208 @@ public int add(int a, int b){ // 1 get transferreed to a, 2 value to b
 	int s=a+b; // int s=1+2; int s=3;
 	return s; // return 3;
 }
+
+
+
+*************** operators **************
+
+statements : ";"   programming code  that ends with semicolon 
+	variable declaration - 
+		int a;
+	variable assigment - 
+		a=20;
+	method call/invocation - 
+		add(10,20);
+
+blocks : "{}" blocks are used to mark the boundary in a program
+	where does the class begin and where it ends
+	where does the method begin and where it ends
+	where does the algorithm begin and where it ends
+	
+assignment : "="
+	LHS = RHS
+	1) LHS and RHS should be same data type
+	int a=10; int b=a; int c=10+25;
+	2) LHS is always a variable
+	3) RHS can be 
+		value : int a=10;
+		similar variable : int a=b;
+		operator/expression : int c=10+20;
+		method call : int sum=add(10,25);
+
+
+Arithmetic operators : primarily is used on numeric data types
+	true * false = ???
+	10 + 20 = 30
+	20 - 5 = 15
+	20 * 5 = 100
+	20 / 5 = 4
+	22 % 5 = 2 remainder(modulous)
+	
+	Input is numeric data type
+	Output is numeric data type
+
+Equality operator : ==
+	is 10 equal to 5 = NO false
+	is 3 equal to 3 = YES true 
+	is 4 not equal to 5 = YES true
+
+	Input can be anything (recommend use it on primitive data type only)
+	Output is boolean
+
+
+Relational operator : < > 
+	less than .... greater than
+	"john" is less than "jane"
+	"jane "is greater than "john"
+
+	10 is greater than 5 = true
+	7 is less than 10 = true
+	6 is greater than 9 = false
+	
+	
+	Input : numeric data type
+	Ouput : boolean 
+	
+Unary operator : used on numeric data type
+	output is numeric
+ 	
+	+ = turn signs of numeric value to positive
+	- = turn signs of numeric value to negative
+	
+	-(- 5 ) = +5
+	-(+ ( - 5) = +5
+	-   - = +
+	-  + = -
+	+ -  = -
+	+  + = +
+	
+	++ = increment operator 
+		increases a numeric value by 1
+	-- = decremenet operator
+		decrease a numeric value by 1
+	
+	int h=10;
+	h++; // h =11
+	h++; // h = 12
+	h--;// h= 11
+	h--;// h=10
+	h--;// h=9
+	sysout(h);
+	
+	post-increment : after the current line incre/decre
+	pre-increment : before the current line incre/ decre
+	
+	int i=10;
+	sysout( i ) ; // prints 10
+	// i = 9
+	sysout( --i ); // prints 9
+	sysout( i--) ; // prints 9
+	// i = 8
+	// i = 7
+	sysout( --i ); // prints 7
+	
+	
+	int j=10;
+	sysout( j ); // print 10
+	// j=11
+	sysout( ++j ); // print 11
+	// j=12
+	sysout( ++j ); // print 12
+	sysout( j++ ); // print 12
+	// j =13
+	
+	
+	iphone 1000$ 2 quantity  = 2000
+	samsung 800$ 1 quantity = 800
+	moto 500$ 4 quantity = 2000
+	
+	4800
+	
+	
+Conditional operators : AND / OR
+
+and = &&
+or = ||
+
+Login webpage : login userid = reg userid AND login pass = reg pass
+	true and true = true
+	true and false = false
+	false and true  = false
+	false and false = false
+	
+int a=10;
+int b=30;
+
+a==b &&  a<b	
+false && true
+false
+
+
+Login by face recognition or fingerprint scan	
+	true or true =  true 
+	true or false =  true
+	false or true  =  true
+	false or false =  false
+
+	
+int a=10;
+int b=30;
+boolean c=true;
+a==b ||  a<b	
+false || true
+true
+
+
+	input is boolean : 
+		boolean value 
+		boolean variable 
+		boolean output operator
+	output is boolean
+
+true || a>b
+boolean value OR   boolean output operator
+a<b || c
+boolean output operator OR boolean variable
+
+
+
+operator precedence
+
+1) () []
+2) * / %
+3) + - 
+4) > <
+5) && 
+6) ||
+7) if you have 2 operators at same level then proceed Left to right
+
+
+( 10+ 5 ) < 5*2 || (20 +4) + 4 * 3 < 21  
+15 < 5*2 || (20 +4) + 4 * 3 < 21  
+15 < 5*2 || 24 + 4 * 3 < 21  
+15 < 10 || 24 + 4 * 3 < 21  
+15 < 10 || 24 + 12 < 21  
+15 < 10 || 36 < 21  
+15 < 10 || 36 < 21  
+false || 36 < 21  
+false || false
+false
+
+
+
+
+
+
+
+( 10+2 ) > 5 && (20 -4) + 4 * 3 > 21
+12 > 5 && (20 -4) + 4 * 3 > 21
+12 > 5 && 16 + 4 * 3 > 21
+12 > 5 && 16 + 12 > 21
+12 > 5 && 28 > 21
+true && 28 > 21
+true && true
+true
+
+
+
