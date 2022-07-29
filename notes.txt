@@ -713,3 +713,30 @@ true
 
 
 
+****************** control flow ************
+boolean a=true;
+int b=20;
+int c=30;
+
+if( false ){
+
+
+}
+
+condition = 
+	boolean variable
+	expression or operator that provide boolean output
+	boolean value
+
+
+== : boolean
+&& : boolean
+> : boolean
+
+
++ : int
+- : int
+++ : int
+/ : int
+
+
