@@ -740,3 +740,202 @@ condition =
 / : int
 
 
+Loop - 
+	Shopping - 0 or X loop (WHILE)
+	pizza topping - Fixed loop (FOR)
+	Atm - 1 or X loop (DO-WHILE)
+	
+for( Initialization, Condition , Modification){ // for block
+
+	Execute repetetive code here
+
+}
+for(int i=1; i <= 3 ; i++ ){
+	sysout("hi");
+}
+I C E	= 	i-1,	true,	Print hi
+M C E = 	i-2,	true,	Print hi
+M C E = 	i-3,	true,	Print hi
+M C E = 	i-4,	false
+M C E
+M C E
+
+
+for(int i=1; i > 3 ; i++ ){
+	sysout("hi");
+}
+I C E	= 	i-1, false
+M C E = 	
+M C E = 	
+
+for(int i=2; i <= 10 ; i=i+2 ){
+	System.out.println( i );
+}
+I C E	= 	i-2, true,	print 2
+M C E = 	i-4, true,	print 4
+M C E = 	i-6, true,	print 6
+M C E = 	
+M C E = 	
+M C E = 	
+
+i=i+2
+i=4+2
+
+
+
+continue : MOVE ON TO NEXT LOOP
+	skip all remaining line in current loop
+break  : EXIT LOOP
+
+for(int i=1; i <= 3 ; i++ ){
+	System.out.println( "hi");
+	if(i==2)
+		continue;
+	System.out.println( "bye");
+}
+I C E	= 	i-1,	true,	print hi	print bye
+M C E = 	i-2,	true,	print hi	
+M C E = 	i-3,   true,	print hi	print bye
+M C E = 	i-4,	false
+
+
+for(int i=1; i <= 3 ; i++ ){
+	System.out.println( "hi");
+	if(i==2)
+		break;
+	System.out.println( "bye");
+}
+
+asdadasd
+
+I C E	= 	i-1,	true,	print hi	print bye
+M C E = 	i-2,	true,	print hi
+M C E = 	
+M C E = 	
+
+When/why/how to use continue
+
+for(int i=1;i < 100; i ++){
+	browse
+	customer chose product in shopping cart
+	if(i > 1)
+		continue;
+	ask customer to enter phone
+	ask customer to enter email
+}
+
+I C E	= 	i=1	true, browse, add item, ask phone , ask email
+M C E = 	i=2 	true, browse, add item
+M C E = 	i=3, 	true, browse, add item
+M C E = 	i=4, 	true, browse, add item
+
+
+
+While( condition ){
+	// Execute repetetive code here
+}
+
+C E
+C E
+C E
+
+INFINITE LOOP
+int i=1;
+while(i < 3) {
+	if(i==2)
+		continue;
+	sysout("hi");
+	i++;
+}
+i=1
+C E = 	i-1, true,	print hi , i-2
+C E = 	      	
+C E = 	
+
+while and do while to end
+	incremenet should be inside the loop
+	Never have continue before the incremeent
+
+
+
+while - 0 or more loops
+do-while - 1 or more loops
+
+int i=5;
+while(i < 3) {
+	print hi
+}
+
+int i=5;
+do{
+	print hi
+}while(i < 3) ;
+
+
+int i=500;
+
+if(i==1 || i>3 || i<4)
+	sysout("its 1");
+else if(i==2)
+	sysout("its 2");
+else if(i==3)
+	sysout("its 3");
+else if(i==4)
+	sysout("its 4");
+...
+else if(i==499)
+	sysout("its 499");
+else if(i==500)
+	sysout("its 500");
+
+else
+	sysout("unknown");
+
+
+Switch case :
+	use when dealing with primitive data type values
+		or string values
+
+if-else if :
+	when dealing with multiple conditions or complex comparison
+
+
+email and password
+userrid and password
+phone and password
+phone secret code
+
+if(email==regemail && pwd=regPwd)
+
+else if(userod==regUid&& pwd=regPwd)
+
+else if(phone==regPhone && pwd=regPwd)
+
+
+
+ATM
+	press choice 1 for withdraw
+	press choice 2 for deposit
+	press choice 3 for balance inquiry
+
+	int choice=???
+	
+	switch(choice){
+		case 1:
+				print enter amount to withdraw
+		case 2:
+				print enter amount to deposit
+		case 3:
+				print your balance is 100$
+		
+	}
+	
+	
+
+
+if - single comparison
+if else if - multiple choice (complex comparison/condition check)
+for - fixed loop
+while - 0 or more loop
+do-while - 1 or more loop
+switch case - multiple choice (simple/primitve value comparisson)
