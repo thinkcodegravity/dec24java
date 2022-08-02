@@ -939,3 +939,177 @@ for - fixed loop
 while - 0 or more loop
 do-while - 1 or more loop
 switch case - multiple choice (simple/primitve value comparisson)
+
+
+Development/programming
+Save program - compiler will convert your text into binary file
+
+post binary file is created
+
+Run the program
+
+
+Compiler error - error in editor
+Runtime error - error in console
+
+Reusability
+class Iphone{
+	call
+	text
+}
+class Iphone5 extends Iphone{
+	camera
+	appleMap
+}
+class IphoneX extends Iphone5{
+	fingerprintscan
+}
+class Iphone12 extends Iphone5{
+	facialrecog
+}
+class Iphone14{
+	foldableScreen
+}
+
+
+
+super = keyword to refer parent program
+
+
+super();  reference to parent constructor
+super.x  reference to parent variable x
+super.test(); reference to parent method test
+
+
+this and super = non-static
+
+
+Interface = allows to implement oop fundamental "Abstraction"
+
+
+bank
+	// has-a ... data section.. variable stores data
+	balance=100; 
+	
+	// does-a ... activity / data modification section.... method manipulate data
+	withdraw(){
+		balance = balance - withAmount
+	}
+	
+	
+	deposit(){
+	
+	}
+
+
+2 programs in java connected by below relationship
+HAS-A
+IS-A
+
+
+HAS-A = referencce / pointer to other program
+IS-A = inheritance connection to other program (extends, implements)
+
+
+Car, Engine, Wheel, Nissan, Steering, Pizza
+
+
+Car has-a Engine
+Car has-a wheel
+Car has-a Steering
+
+Nissan is-a Car
+
+Pizza
+
+
+public class Car{
+	Engine en=new Engine();
+	Wheel w=new Wheel();
+	Steering s=new Steering();
+}
+
+public class Nissan extends Car{
+
+
+}
+
+
+
+Payment, gmail login, fingerprintscan, facialrecog, paypal, creditcard, exp code,login,
+shopping, add2cart, checkout
+
+gmail login is-a login
+fingerprintscan is-a login
+facialRecog is-a login
+
+
+public class login{
+
+}
+public class fingerprintscan extends login{
+
+}
+public class facialrecog extends login{
+
+}
+public class gmaillogin extends login{
+
+}
+
+
+
+paypal is-a payment
+creditcard is-a payment
+creditcard has-a expcode
+
+public class payment{
+}
+public class paypal extends payment{
+
+}
+public class creditcard extends payment{
+	int expcode=123;
+}
+
+IFood ic=new IFood()// cannot digitally create something that is incomplete
+IFood if=new Nissan();// Nissan does not have the code for IFood
+IFood if=new Pizza();// OKK
+
+
+ICar ic=new ICar()// cannot digitally create something that is incomplete
+ICar ic=new Pizza();// Pizza does not have the code for ICar
+ICar ic=new Nissan();// OKK
+
+
+
+
+
+interface IIphone -2005
+	call();
+	text();
+	
+	default browseInternet(){
+		
+	}
+	
+class Iphone3 implements IIphone - 2006  
+	call(){
+	}
+	text(){
+	}
+	
+class Iphone5 extends Iphone3 - 2010 
+	camera(){
+	}
+	map(){
+	}
+
+class IphoneX extends Iphone5 - 2018  
+	applePay(){
+	}
+	faciallrecog(){
+	}	
+	
+Backward compatibility
+	java 1.8 = default methods
