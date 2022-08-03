@@ -6,11 +6,10 @@ public interface ICar {
 	int x=20; // store info
 	
 	public abstract void drive();
-	
 	public void takeTurn();
-	
-	public default void reverese() {
-		System.out.println("taking reverese");
+	public void on();
+	public default void off() {
+		System.out.println("turning off car");
 	}
 	
 }

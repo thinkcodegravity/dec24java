@@ -1090,7 +1090,7 @@ interface IIphone -2005
 	text();
 	
 	default browseInternet(){
-		
+	
 	}
 	
 class Iphone3 implements IIphone - 2006  
@@ -1113,3 +1113,160 @@ class IphoneX extends Iphone5 - 2018
 	
 Backward compatibility
 	java 1.8 = default methods
+	
+	
+	
+interface = 100% abstract incomplete
+
+abstract class = partially complete program (  incomplete method and complete methods)
+
+class = 100% concrete complete
+
+
+
+
+
+Abstract = Generalization - common be
+
+ITesla
+	drive();
+	mileage();
+	digitalScreen();
+	
+Telsa3 implements ITesla
+
+TelsaS implements ITesla
+
+TelsaX implements ITesla
+
+TelsaY implements ITesla
+
+
+Nissan Altima SE - 20 k
+	Basic package
+Nissan Altima LE - 22 k
+	leather seats
+Nissan Altima Limited edition - 25 k
+	praking assis
+	rearview camera
+	
+90% of car component car
+10% of car varies
+
+Nissan Altima SE Giant manufacturing unit - 1 billion $
+Nissan Altima LE Giant manufacturing unit - 1 billion $
+Nissan Altima Limited Edition Giant manufacturing unit - 1 billion $
+
+Nissan Altima Giant manufacturing unit - 1 billion $
+	90% of car component assembly
+
+Nissan Altima LE small manufacturing unit - 10 million $
+	10% of car compoent
+
+Nissan Altima SE small manufacturing unit - 10 million $
+	10% of car compoent
+
+Nissan Altima Limtied Edition small manufacturing unit - 10 million $
+	10% of car compoent
+
+
+Iphone14
+	699 - 64 GB memory
+	799 - 128 GB memory
+	899 -  256 GB memory
+
+AbstractIphone14 (abstract = incomplete)
+IIphone = 3 incomplete features/methods
+	call
+	text
+	storage
+AbstractIPhone implements IIphone
+	call{
+	}
+	text{
+	}
+Iphone699 extends AbstractIphone
+	storage{
+		64 gb memory
+	}
+Iphone799 extends AbstractIphone
+	storage{
+		128 gb memory
+	}
+Iphone899 extends AbstractIphone
+	storage{
+		256 gb memory
+	}	
+	
+	
+	
+	
+	remove duplicates, code flexible, enhancement
+
+Ipaymnt
+	collectShippingAddress();
+	collectEmail();
+	pyament();
+	
+Creditcard implement IPayment
+	collectShippingAddress(){
+		accept street city state ZIP details
+	}
+	collectEmil(){
+		get email id
+	}
+	pyament(){
+		credt card proces
+	}
+	
+Paypal implement IPayment
+	collectShippingAddress(){
+		accept street city state ZIP details
+	}
+	collectEmil(){
+		get email id
+	}
+	pyament(){
+		paypal account login
+	}
+	
+crypto implement IPayment
+	collectShippingAddress(){
+		accept street city state ZIP details
+	}
+	collectEmil(){
+		get email id
+	}
+	pyament(){
+		crypto wallet proces
+	}
+
+remove duplicates, code flexible, enhancement
+
+Ipaymnt
+	collectShippingAddress();
+	pyament();
+	collectEmail();
+	
+AbstractPayment implement IPayment
+	collectShippingAddress(){
+		accept street city state ZIP details
+	}
+	collectEmail(){
+		collect email from customer
+	}
+	
+Creditcard extends AbstractPayment
+	pyament(){
+		credt card proces
+	}
+	
+Paypal extends AbstractPayment
+	pyament(){
+		paypal account login
+	}
+	
+crypto extends AbstractPayment
+	pyament(){
+		crypto wallet proces
+	}
