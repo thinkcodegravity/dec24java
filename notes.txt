@@ -1270,3 +1270,26 @@ crypto extends AbstractPayment
 	pyament(){
 		crypto wallet proces
 	}
+	
+	
+	********* polymorphism ************
+	payment(long creditNum, String expDate)
+	payment(String userid, String password)
+	payment(String cryptoWalletId)
+	
+	Compile-time poly = OVERLOADING
+		method name remain same
+		input/parameter are different
+	Run-time poly = OVERRIDING
+		happens between parent and child class
+		method signature has to match exactly
+			methodname, input, output
+		accessprivilege can be much broader than the parent
+
+	
+	
+	
+	
+	
+	
+	
