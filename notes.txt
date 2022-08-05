@@ -1271,7 +1271,29 @@ crypto extends AbstractPayment
 		crypto wallet proces
 	}
 	
+Assignment rule
+	int a=10;
+	Student s=new Student();
+	NEW RULE
+		Car c=new Nissan();
+		RHS can be Child(grand child..) of LHS variable
+		
+method call rule
+	Person > Employee > Cashier
+	int x=10;
+	Person p=new Person();
+	Employee e=new Employee();
+	Cashier c=new Cashier();
+	test(p);
+	test(e); // NEW RULE... you can pass any child(grandchild) to method
+			input
+	test(c);
 	
+	public void test(Person x){
+	}
+
+
+
 	********* polymorphism ************
 	payment(long creditNum, String expDate)
 	payment(String userid, String password)
@@ -1287,9 +1309,160 @@ crypto extends AbstractPayment
 		accessprivilege can be much broader than the parent
 
 	
+**************** Access Privilege *************
+www.amazon.com
+package com.amazon.www.account
+	Login.java
+	Register.java
+	ChangePassword.java
+package com.amazon.www.browsing
+	Shopping.java
+	Add2Cart.java
+	Order.java
+	Cancelorder.java
+package com.amazon.www.checkOut
+	Payment.java
+	CreditCard.java
+		
+		
+2 Program are connected with below relationship
+
+	IS-A = Inheritance - extends,implementss
+	HAS-A = Composition - by creating Reference
+
+Car Nissan Engine Pizza Tomato PepporoniPizza Employee Chef
+
+Car HAS-A Engine
+Pizza HAS-A Tomato
+PerppPizza IS-A Pizza
+Chef IS-A Employee
+
+
+Nissan IS-A Car
+	public class Car{
+		int door=4;
+		public void drive(){ }
+	}
+	public class Nissan extends Car{
+		public void test(){
+			sysout(door); // able to access bcos Nissan inherited everything that Car has
+			drive();
+		}
+	}
+
+Pizza HAS-A Tomato
+	public class Tomato{
+		String color="red";
+		public void cook(){}
+	}
+	public class Pizza{
+		public void test(){
+			Tomato t=new Tomato();
+			sysout(   t.color ); // access using the connection/pointer/refe variable t.
+			t.cook();
+		}
+	}
+
+
+Pack1 = 
+	Main 
+		public int a;
+		protected int b;
+		int c;
+		private int d;
+	ChildA - IS-A Main ( belongs to the same group as targetted Main program)
+	OtherA - HAS-A main
+	
+Pack2 =
+	ChildB - IS-A Main ( belongs to the different group as targetted Main program)
+	OtherB - HAS-A main
+	
+	
+	
+
+
+Inheritance
+	extends, implements
+
+Encapsulation - internal view of system ( Automobile Engineer looks at Car) 
+	Access privilege
+
+Abstraction : external view of system ( Driver looks at Car )
+	interface , Abstract classes
+
+Polymorphism
+	Overloading, Overriding
+
+
+public class Car{
+	Car HAS-A 
+		private Engine eng;
+		Wheel w;
+		public GearBox gb;
+		public Steering s;
+
+	Car Does
+		public void drive(){
+		
+		}
+		private void combustion(){
+		
+		}
+
+}
+
+
+************ Final **************
+variable = something the varies/changes
+
+final int a=10; 	// CANNOT CHANGE ITS VALUE	
+
+public final int add(int a, int b) // CANNOT OVERRIDE (Polymorphism)
+
+public final class Calculator{ // CANNOT INHERIT (Inheritance)
+
+
+}
+
+
+
+public class ECommerce{
+
+	public final String companyName="Amazon";
+
+}
+
+
+
+primitive data type : int, byte, boolean etc
+
+Object data type
+	In-built/library - final
+		System
+		String
+	User-defined
+		programmer writes code
 	
 	
 	
 	
 	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
