@@ -1,5 +1,7 @@
 package access.pck1;
 public class ChildA extends Main{
+	String a="john";
+	
 	public ChildA() {
 		super();
 	}

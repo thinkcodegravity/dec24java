@@ -1445,24 +1445,67 @@ Object data type
 	
 	
 	
+Person
+
+	String DNA; // non-static.... instance
+	String name // non-static
+	int age // non-static
+	int weight // non-static
+	static String speicies="human" // shared
+	int height // non static
+	static String planet="earth" // shared
+	
+Person p1=new Person();
+Person p2=new Person();
+Person p3=new Person();
+Person p4=new Person();
 	
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	***************** Array ***************
+	
+	// variable declared 
+	FBCustomer cus1;//default null
+	cus1=new FBCustomer ();
+	
+	FBCustomer cus2;
+		FBCustomer cus3;
+		FBCustomer cus4;
+		FBCustomer cus5;
+		FBCustomer cus6;
+		FBCustomer cus7;
+		FBCustomer cus8;
+		FBCustomer cus9;
+	
+	FBCustomer[] group=new  FBCustomer[5];
+	group[0]=new FBCustomer ();
+	
+	group[1]
+	group[2]
+	
+	
+	
+	
+	int[] scores=new int[5];
+	String[] names=new String[5];
+	
+	String = immutable
+	
+	String d="john"; // inside pool #aaa
+	d="jane";		// inside pool #bbb
+	
+	String e=new String("john");// outside pool #xxx
+	e="andy";		// inside pool #ccc
+	e=new String("mike"); // outside pool
+	
+	
+	123 456 7890
+	123-456-7890
+	(123)456-7890
+	1234567890
+	
+	
+	String name="john doe ny";
+	String[] namearr=name.split(" ");
+		// namearr= john, doe, ny
+	namearr[1] // doe
+	
