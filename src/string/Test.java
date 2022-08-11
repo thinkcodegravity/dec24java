@@ -34,6 +34,18 @@ public class Test {
 		String q="John";
 		if(p.equalsIgnoreCase(q))
 			System.out.println("p and q are same");
+		
+		
+		String h="john doe";
+		h=h.replaceAll("o", "a");// string immmutable
+		//h=jahn dae
+		System.out.println(  h  );
+		h=h.toUpperCase();
+		System.out.println(  h  );
+		
+		
+		
+		
 	}
 
 }

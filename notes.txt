@@ -1501,11 +1501,105 @@ Person p4=new Person();
 	123 456 7890
 	123-456-7890
 	(123)456-7890
-	1234567890
+	name="1234567890";
+	name.substring(0,3); // 123
 	
 	
 	String name="john doe ny";
 	String[] namearr=name.split(" ");
 		// namearr= john, doe, ny
 	namearr[1] // doe
+
+
+
+*****************exceptions************
+
+Intro : 
+	Customers :
+		1. Avoid technical error message and provide easy to understand messages
+		2. different custom error message for each failure , that customer can use to resolve the issue
+			ATM software
+				card damaged
+				card expired
+				atm wrong pin
+				insufficient fund
+				
+			sorry for the inconvinience, please try again later			
+	Developers :
+		1. Exception stack trace
+		Exception in thread "main" java.lang.ArithmeticException: / by zero (WHAT IS THE PROBLEM)
+			at exceptions.MethodCall4.test3(MethodCall4.java:14) (WHERE IS THE PROBLEM)
+			at exceptions.MethodCall4.test2(MethodCall4.java:11)
+			at exceptions.MethodCall4.test(MethodCall4.java:8)
+			at exceptions.MethodCall4.exc(MethodCall4.java:5)
+			at exceptions.ExceptionTest.main(Login.java:7) ( WHERE IT ALL BEGAN)
+			
+		Exception in thread "main" java.lang.ArithmeticException: / by zero (WHAT IS THE PROBLEM)
+				at exceptions.MethodCall4.test3(MethodCall4.java:14) (WHERE IS THE PROBLEM)
+				at exceptions.MethodCall4.test2(MethodCall4.java:11)
+				at exceptions.MethodCall4.test(MethodCall4.java:8)
+				at exceptions.MethodCall4.exc(MethodCall4.java:5)
+				at exceptions.ExceptionTest.main(Payment.java:7) ( WHERE IT ALL BEGAN)
+			
+		Exception in thread "main" java.lang.ArithmeticException: / by zero (WHAT IS THE PROBLEM)
+				at exceptions.MethodCall4.test3(MethodCall4.java:14) (WHERE IS THE PROBLEM)
+				at exceptions.MethodCall4.test2(MethodCall4.java:11)
+				at exceptions.MethodCall4.test(MethodCall4.java:8)
+				at exceptions.MethodCall4.exc(MethodCall4.java:5)
+				at exceptions.ExceptionTest.main(Shopping.java:7) ( WHERE IT ALL BEGAN)
+		
+
+NullPointerException : when we apply dot operator on a null valued variable
+
+exceptions type : 
+	throwable : parent of all exception/failure
+		exception : failure due to technical/programming mistakes				
+			checked : has to be handled while programming
+			runtime: not enforced/required to handle
+		errors : more sever failures, that might require hardware upgrade.
+
+Exception handling in program
+try/catch/finally
+		try{
+			ALL CODE THAT WE SUSPECT MIGHT FAIL
+			// NOT ALL LINES GUARANTEED
+		}
+		// NOT GUARANTEED
+		catch(Exception e){
+			CODE NEEDED IN THE EVENT OF FAILURE
+		}// GUARANTEED
+		finally{
+		
+		}
+
+	try - catch
+	try - finally
+	try - catch finally
+	try - catch catch catch
+	try - catch catch catch finally
 	
+	
+
+multiple catches :
+	used for specific custom message for different failures
+	catch should be written in the order of their inheritance... child > parent > grand parent
+throws
+	alternative to try-catch
+	this keyword allows the caller of your method to do the exception handling
+	
+programmer-defined exception
+	bank
+		int balance=100; // -2 billion to 2 billion
+		
+		withdraw(1000000)
+		{
+			balance= 100 - 1000000; // NO TECHNICAL LIMITATION
+								// BUSINESS LIMITATION
+		}
+
+	Telecom
+		phone( long number)
+		
+	phone(12);	
+
+

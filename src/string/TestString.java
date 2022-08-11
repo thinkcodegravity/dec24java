@@ -35,15 +35,15 @@ public class TestString {
 		// if split by space
 		System.out.println(name.split(" "));
 		// return substring starting at position provided in input
-		System.out.println(name.substring(5));
+		System.out.println(name.substring(5));// john doe = doe
 		// return substring between starting and ending position provided in inputs
-		System.out.println(name.substring(3, 6));
+		System.out.println(name.substring(3, 6));// john doe = n d 
 		// convert all characters in the string to lower case
-		System.out.println(name.toLowerCase());
+		System.out.println(name.toLowerCase()); // JOHndoe=johndoe
 		// convert all characters in the string to upper case
-		System.out.println(name.toUpperCase());
+		System.out.println(name.toUpperCase());// JOHndoe=JOHNDOE
 		// remove the white space and next line characters from the string in the begining and end of the string
-		System.out.println(name.trim());					
+		System.out.println(name.trim());	// "  john doe  " = "john doe"				
 
 	}
 
