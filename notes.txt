@@ -1520,9 +1520,12 @@ Intro :
 		2. different custom error message for each failure , that customer can use to resolve the issue
 			ATM software
 				card damaged
+					please dial 1800, requet for new card
 				card expired
 				atm wrong pin
+					please check and enter correct
 				insufficient fund
+					please enter amount lower than your balance
 				
 			sorry for the inconvinience, please try again later			
 	Developers :
@@ -1587,19 +1590,39 @@ throws
 	alternative to try-catch
 	this keyword allows the caller of your method to do the exception handling
 	
-programmer-defined exception
+user/programmer-defined exception
 	bank
-		int balance=100; // -2 billion to 2 billion
+		int balance=100;  // -2 billion to 2 billion
 		
 		withdraw(1000000)
 		{
-			balance= 100 - 1000000; // NO TECHNICAL LIMITATION
-								// BUSINESS LIMITATION
+			balance= 100 - 1000000; // -999900
+			// no techical limitation to store -999k in int variable
+			// banking business limitation.. that prohibits withdrawing more than balance
 		}
 
 	Telecom
-		phone( long number)
+		phoneCall( long number)
 		
-	phone(12);	
-
-
+	phone(12);// NO technical limitation... to have 12 as numeric value
+			// telecom business limitation... number should atleast be 10 digit long
+			
+			
+			
+			
+	int warehouseInventory=5;
+	
+	int order=7;
+	
+	
+	warehouseInventory=warehouseInventory-order;
+					// 5 - 7 = -2
+	
+	
+	try/catch - HANDLE problem yourself... lets u prepare for program failure
+	throws -  force caller to HANDLE this problem... alternative of try / catch, if a program fails
+	throw - CAUSING the problem
+	
+	
+	
+	
