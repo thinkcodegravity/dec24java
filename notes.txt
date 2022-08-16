@@ -1625,4 +1625,11 @@ user/programmer-defined exception
 	
 	
 	
-	
+successful termination
+	all code in run method is complete
+forcefully/aborted termination
+	can be done by program that
+	started the thread
+	by calling stop method
+
+
