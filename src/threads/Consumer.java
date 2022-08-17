@@ -14,14 +14,18 @@ public class Consumer implements Runnable{
 			try{
 			while(true)
 			{
+				// randomly pickk any number between 1 and 10
 					int order = new Random().nextInt(10 - 1 + 1) + 1;
 					synchronized (demand) {
-					while(demand.quantity < order) {
-						System.out.println("Notify Producer OUT OF STOCK : Total stocks :"+demand.quantity+" orders placed :"+ order);
-						demand.notify();// notify producer thread to start producing
-						demand.wait();// wait until producer thread notifies new stock
-						}
-					demand.updateStock(-order);
+						if(demand.quantity < order) {
+								System.out.println("Notify Producer OUT OF STOCK : Total stocks :"+demand.quantity+" orders placed :"+ order);
+								demand.notify();// notify producer thread to start producing
+								demand.wait();// wait until producer thread notifies new stock
+							}
+							//		7		= 10 - 3
+							demand.quantity=demand.quantity-order;
+							System.out.println("customer purchased :"+order+" , total stock quantity :"+demand.quantity);
+							
 					}
 			}
 			
