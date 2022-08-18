@@ -1632,4 +1632,23 @@ forcefully/aborted termination
 	started the thread
 	by calling stop method
 
+Collection
+	List : dynamic, indexed, dupliates
+		ArrayList : uses array and is not synchronized(FASTER)
+			fastest reading slower editing
+		Vector : uses array and IS synchronized (SLOWER)
+			slower reading slower editing
+		LinkedList : Editing collection is FASTEST
+			slower reading faster editing
+
+	Set : dynamic, unique
+		HashSet
+		LinkedHashSet
+		TreeSet
+
+
+	Map : dynamic, key-value pair information
+
+
+
 
