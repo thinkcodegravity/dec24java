@@ -2,6 +2,7 @@ package coll;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Vector;
 
 import ExcpHand.Student;
@@ -18,7 +19,7 @@ public class ListSetTest {
 		names[3]="john";
 		names[4]="john";
 		
-		Vector<String> namesList=new Vector<String>();
+		LinkedList<String> namesList=new LinkedList<String>();
 		namesList.add("jane");
 		namesList.add("john");
 		namesList.add("jane");

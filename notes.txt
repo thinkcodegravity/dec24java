@@ -1642,13 +1642,101 @@ Collection
 			slower reading faster editing
 
 	Set : dynamic, unique
-		HashSet
-		LinkedHashSet
-		TreeSet
+		HashSet  : Unordered
+		LinkedHashSet : Ordered
+		TreeSet : Sorted
 
 
 	Map : dynamic, key-value pair information
+		HashMap : Unordered by Key
+		LinkedHashMap : Ordered by Key
+		TreeMap : Sorted by Key
+		Hashtable : SYNCHRONIZED
+		
+when to implement hashcode and equals method ? (categorization & duplicate check)
+
+LIST : User defined program in a List : DO NOT need these methods
+	ArrayList<Student> school=new ArrayList<Student>();
+	
+SET : User defined program in a Set : NEED these methods
+	HashSet<Student> school=new HashSet<Student>();
+
+MAP : User defined program in Key section of map: NEED these methods
+	HashMap<Integer,Student> school=new HashSet<Integer,Student>();
+		above line doesnot need equals and hashcode method since 
+		user defined program is in value section
+	HashMap<Student,Integer> school=new HashSet<Student,Integer>();
+		above line need equals and hashcode method since 
+		user defined program is in key section
+			
 
 
 
-
+File
+	text file : text content... String data type
+	binary file : byte content... byte[] data type
+	
+	character Stream	
+		xxxxxReader
+		xxxxxWriter
+	Binary Stream
+		xxxxxInputStream
+		xxxxxOutputStream
+	
+	netflix video
+		source : Netflix m/c >>>>>>>>>>>>   your browser/tv
+		data content : video... binary file
+			binary stream
+	sending email
+		source : your browser >>>>>>>> gmail m/c 
+		data content : text content
+			character stream
+	chatting Im
+		character  stream
+	youtube
+		binary stream
+	commenting FB
+		character stream
+	upload pic on DB
+		binary stream
+	
+	
+	character stream
+		Read
+			BufferedReader br = new BufferedReader(file location); 
+			String line = br.readLine();		
+			while (line  != null) {			
+				line = br.readLine();
+			}
+	
+		write
+			BufferedWriter bw= new BufferedWriter(file location); 
+			bw.write(text to write here);			
+			bw.close();		
+	
+	binary stream
+		Read
+			BufferedInputStream br = new BufferedInputStream(binary file location); 
+			byte[] content= br.read();	
+			while (line  != null) {			
+				line = br.read();
+			}
+	
+		write
+			BufferedOutputStream bw= new BufferedOutputStream(binary file location); 
+			bw.write( byte[] );			
+			bw.close();	
+			
+			
+			
+			
+		Download 
+			Recive Data from Outside 
+			reading data
+		
+		Upload
+			sending Data to outside
+			write data
+		
+		
+		
