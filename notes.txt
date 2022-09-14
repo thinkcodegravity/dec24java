@@ -57,3 +57,61 @@ public class BankAccount{
 		balance=balance+amount;
 	}
 }
+
+
+
+
+Inheritance : Reusability
+
+	Iphone -- 2006  (10 years R and D)
+		call, text, camera, browse
+	Iphone3 -- 2007
+		call, text, camera, browse, Apple map
+	Iphone4 -- 2008
+		call, text, camera, browse, Apple map, Apple pay
+
+
+curly brackets or blocks
+
+Shopping page{
+	buy{
+		add items to my cart
+	}
+	checkout{
+		use credit card for payment
+	}
+}
+welcome page{
+	login{
+		enter userid and passwrod
+	}
+	register{
+		enter userid and password and phone
+	}
+}
+
+www.amazon.com
+
+com.amazon.www.login
+	Login.java
+	Register.java
+
+com.amazon.www.browsing
+	shopping.java
+	payment.java
+
+
+variable cannot have value
+
+
+
+
+Person
+	// long term
+	name=john // specific to each person (Instance variable)
+	species=human // shared by every person (static variable)
+	
+	// short term
+	add 2,5,7 // input/parametric variable
+	answer = 7 , 7 // lo			
+			= 14
