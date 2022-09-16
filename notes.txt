@@ -40,7 +40,10 @@ GmailAccount
 		
 		
 BankAccount
+	// composition = bank account made up of
 	has - balance, accountNumber,customername,phone ( VARIABLE )
+	
+	// action/functionality/features
 	does - 
 		deposit (METHOD)
 			balance increases (LOGIC/ALGORITHM)
@@ -118,3 +121,42 @@ Person
 			
 			
 			
+*************** method declaration *****************
+program that provides service
+	
+	what is the name of service/action ?  locateRestaurant
+	how many inputs ? what is the data type of each input ?
+		1 ,	restaurantName		String
+	how many output ? what is the data type of each output ?
+		4, String street , String ciity, String state, int zip
+
+	// public, input	= optional
+	// output, name = mandatory
+	
+	public 	output		name(	input )
+	
+	Input
+		0 : leave it blank
+		1 : write the data type followed by name of the input
+		more : a) write multiple data_type input_name comma separated
+			b) create new complex program that can hold all the multiple output
+			mention the name of that program
+	Output
+		0 : void
+		1 : data type of output
+		more : create new complex program that can hold all the multiple output
+			mention the name of that program
+
+	public 	int		add   (int number1,int number2	)
+	public 	int		areaOfRectangle( int length   , int breadth  )
+	public	boolean	login( String email , String password  )
+	public	RestauAddress	locateRestaurant( String restaurantName) 
+	
+	public int add(int a,int b)
+	// blue print
+	public class RestauAddress{
+		String street;
+		String ciity;
+		String state;
+		int zip;
+	}
