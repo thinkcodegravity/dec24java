@@ -162,5 +162,40 @@ program that provides service
 	}
 
 
+*************8
+
+shopping.java
+
+companyName = shared (static global)
+CartItem = specific (instance global)
+productToBuy = input (parameteric)
+TotalCost =  (local)
+public class shopping{
+	static String companyName;
+	String cartItem;
+	
+	public void buy(String productToBuy){
+		int TotalCost;
+	}
+	
+}
+
+blocks defines boundary of programs and section in program
+
+Banking {
+	withdraw{
+		deduct money
+	}
+	deposit{
+		increase money
+	}
+}
 
 
+
+Shopping{
+	checkout
+	makepayment
+	browse
+	show product
+}
