@@ -199,3 +199,46 @@ Shopping{
 	browse
 	show product
 }
+
+differntiate variable...  value
+
+variable dont have quotes = "john" , 'j' , abcd : abcd
+variables dont start with a number = 123 , "123" , a123 : a123 
+variables are not address = #abc, "new york" , newyork :  newyork
+
+values start with quotes = 'j' , john, a123 : 'j'
+value can be a whole or fraction number = 123, 123a , 12.a , 12.35 :  123 , 12.35
+values can be address = (complex data type) "new york", 12345, #abc : #abc
+
+
+*** RHS = if you see a variable. replace that with its value ***
+*** RHS ALWAYS resovles to a single value that matches LHS data type ****
+
+
+int x=10;
+int y=20;
+int z=x+30;
+	int z=10+30;
+	int z=40;
+int a=x+y+10;
+	int a=10+20+10;
+	int a=40
+int b=30;
+int c=add(x,y);
+	int c=add(10,20); // replace all variable with its value
+	int c=add(10,20); // give control to add method
+	int c=replace whatever add method returned back
+	int c=30;
+String john="john";
+String doe="doe";
+String fullName1= john + "joe";
+	String fullName1= "john" + "joe";
+	String fullName1= "johnjoe";
+String fullName1= john + doe;
+	String fullName1= "john"+"doe";
+	String fullName1= "johndoe";
+
+	
+
+
+variable = value;

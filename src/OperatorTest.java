@@ -2,15 +2,15 @@
 public class OperatorTest {
 
 	public void test() {
-		// "semicolon" statement are lines ending with semicolon 
+//"semicolon" statement are lines ending with semicolon 
 		int a; // variable declare
 		int b=10; // variable initilize
 		b=30;// reassign variabel value
 		int sum=add(10,20); // method call
 		
-		// { = block, defines boundary of program and section inside program
+// { = block, defines boundary of program and section inside program
 		
-		// =... assignment operator
+// =... assignment operator
 		/*
 		 	LHS = RHS
 		 	1) LHS should always be variable
@@ -30,7 +30,7 @@ public class OperatorTest {
 		// LHS = ALWAYS VARIABLE
 		// RHS = ALWAYS VALUE
 		
-		//Arithemtic operator
+//Arithemtic operator
 		// INPUT : LHS and RHS should be numeric data type
 		// OUTPUT : numeric data type
 		int d=21;
@@ -45,6 +45,7 @@ public class OperatorTest {
 		System.out.println( f );// 2
 		f=d%e; // modulous / remainder 
 		System.out.println( f );// 1
+// Equality operator
 		
 		
 		
