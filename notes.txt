@@ -242,3 +242,53 @@ String fullName1= john + doe;
 
 
 variable = value;
+
+LHS   RHS
+10 == 20 (NO.. false)
+5 == 5 ( YES... true)
+
+20 == john
+
+true = 120.3
+
+true==true
+john==jane
+12.2=12.2
+'a'='a'
+
+
+10 greater than 5 ? true
+5 is less than 2 ? false
+john is less than mike ? 
+
+
+-( + 5  ) = -5
+- ( - 5) = +5
+
+
+++ = increment operator (increase by 1 )
+-- = decrerement operator ( decreases by 1)
+
+
+cart
+	iphone  800$ . 2 orders
+	samsung 500$ . 1 orders
+	moto 300$ . 2 orders
+	
+logical / conditional operator
+operates on boolean
+
+output is boolean
+
+BOTH
+true and true = true
+true and false = false
+false and true = false
+false and false = false
+
+CHOICE
+true or true = true
+true or false = true
+false or true = true
+false or false = false
+
