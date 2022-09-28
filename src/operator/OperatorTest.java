@@ -164,6 +164,23 @@ public class OperatorTest {
 		//System.out.println(   true || false );
 		//System.out.println(   true OR false );
 		//System.out.println(   true  );
+		
+		
+// bitwise operator & | 
+// input = numeric data type
+// output =numeric data type
+		System.out.println(   23 & 12);
+		System.out.println(   23 | 12);
+		System.out.println(   23 ^ 12);
+		
+		int aa=5;
+		int bb=7;
+		int cc=6;
+		int dd=10;
+		
+		System.out.println(   aa+bb*cc+(dd+aa)*bb > cc || aa < bb );
+				
+		
 	}
 	
 	public int add(int a, int b) {

@@ -46,7 +46,7 @@ BankAccount
 	// action/functionality/features
 	does - 
 		deposit (METHOD)
-			balance increases (LOGIC/ALGORITHM)
+			balance increases (LOGIC/ALGORITHM) Operators and Control flows
 		withdraw(METHOD)
 			balance decreases(LOGIC/ALGORITHM)
 		
@@ -292,3 +292,69 @@ true or false = true
 false or true = true
 false or false = false
 
+operator precedence(priority)
+1) brackets ()
+2) * / %
+3) + - 
+4) > <
+5) ||
+6) more than 1 operator with same priotity ... process Left to right
+
+int aa=5;
+int bb=7;
+int cc=6;
+int dd=10;
+
+aa+bb*cc+(dd+aa)*bb > cc || aa < bb
+5+7*6+(10+5)*7 > 6 || 5 < 7
+5+7*6+15*7 > 6 || 5 < 7
+5+42+15*7 > 6 || 5 < 7
+5+42+105 > 6 || 5 < 7
+47+105 > 6 || 5 < 7
+152 > 6 || 5 < 7
+true || 5 < 7
+true || true
+true
+
+**************** control flow *************
+
+for : fixed loop
+while : 0 or more loop
+do-while : 1 or more loop
+
+Shopping : add items to the cart 1 by 1 (WHILE)
+ATM : do transaction 1 by 1 (DO-WHILE)
+Flight AA123 seat booking : book each seat 1 by 1 (FOR)
+
+For loop
+for( initializing ;condition stop; modification){
+	Repeating code
+}
+// infinite loop
+for( int i=1 ; i<=3 ; i++){
+	sysout("hi");
+}
+
+I C R 	= i-1,	true	print hi
+M C R	= i-2,	true	print hi
+M C R	= i-3,	true	print hi
+M C R	= i-4,	false
+M C R	
+
+
+continue : skip all lines in current loop .. and CONTINUE to next loop
+break : EXIT..
+
+for( int i=1 ; i<=3 ; i++){
+	sysout("hi");
+	if(i==2){
+		break;
+	}
+	sysout("bye");
+}
+
+I C R 	=	i-1,	true,	print hi	print bye
+M C R	=	i-2,	true,	print hi
+M C R	=
+M C R	=
+M C R	
