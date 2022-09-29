@@ -1,0 +1,159 @@
+Create database Shopping_Cart;
+
+use shopping_Cart; /* Used to Select the Specific Database*/
+
+/* This Query is Used for Creating Table in Database*/
+Create table Users (
+UserId varchar (64),
+password varchar (64),
+emailID varchar (64),
+mobile int 
+);
+/* One more Example Table Creation Example*/
+Create table orders (
+Odrderid int,
+UserId varchar (10),
+Product varchar (20),
+Quantity int,
+Price float
+)
+
+/* Modifying the Existing Table*/
+/*Add new Column*/
+
+alter table users add address varchar(30);
+select * from users;
+
+/*Delete new Column*/
+
+alter table users drop column address;
+select * from users;
+
+/*Truncate Table Example*/
+Insert into users (userId,password,emailId,mobile) values(‘John’, ‘John!1’ , ‘test1@gmail.com’ , 123456);
+Insert into users (userId,password,emailId,mobile) values(‘Andrew1’, ‘and1!’ , ‘test2@gmail.com’ , 1234567);
+Select * from users;
+Truncate table users;
+
+/* Drop Table Example*/
+Insert into users (userId,password,emailId,mobile) values(‘John’, ‘John!1’ , ‘test1@gmail.com’ , 123456);
+Insert into users (userId,password,emailId,mobile) values(‘Andrew1’, ‘and1!’ , ‘test2@gmail.com’ , 1234567);
+Select * from users;
+Drop table users;
+
+<======================Working Queries=========================>
+Used to create Database.This Query should execute only Once*/
+Create database ShoppingMart;
+
+use shoppingMart; /* Used to Select the Specific Database*/
+
+/* This Query is Used for Creating Table in Database*/
+Create table Usersdetails (
+UserId varchar (64),
+pass varchar (64),
+emailID varchar (64),
+mobile int 
+);
+select * from usersdetail;
+/* One more Example Table Creation Example*/
+Create table orders (
+Odrderid int,
+UserId varchar (10),
+Product varchar (20),
+Quantity int,
+Price float
+);
+select * from orders;
+
+/* Modifying the Existing Table*/
+/*Add new Column*/
+
+alter table orders add status varchar(30);
+select * from orders;
+
+/*Delete new Column*/
+
+alter table orders drop column status;
+select * from orders;
+
+/*Truncate Table Example*/
+insert into orders (Odrderid,UserId,Product,Quantity,Price) values('123','John','iPhone','1','999.0');
+select * from orders;
+insert into Usersdetails(UserId,emailID,mobile,pass) values('Mike','Mike!1','test12@gmail.com','1234567');
+Select * from Usersdetails;
+Truncate table orders;
+/*Drop Table Example*/
+insert into Usersdetails (UserId,pass,emailID,mobile,pass) values('John','john@1','test1@gmail.com','123456');
+select * from Usersdetails;
+insert into Usersdetails(UserId,pass,emailID,mobile) values('Mike','Mike!1','test12@gmail.com','1234567');
+Select * from Usersdetails;
+Truncate table Usersdetails;
+Drop table orders;
+
+<===============================DML Examples=========================>
+use shoppingmart;
+select * from Usersdetails;
+select * from orders;
+/* DML Operations*/
+/* SELECT Query Examples*/
+ Select UserId from Usersdetails;
+ Select UserId, pass, emailID from Usersdetails;
+ Select * from Usersdetails;
+ Select UserId, pass, emailID from Usersdetails where UserId = 'john';
+
+/*INSERT Query Examples*/
+
+insert into Usersdetails (UserId,pass,emailID,mobile,FirstName,LastName) values('James','j234@','James123@gmail.com','1234567895','James','Test203');
+insert into Usersdetails(UserID) value('Paul');
+/* Wrong Query*/
+insert into Usersdetails (UserId,pass,emailID,mobile) values('James','j234@','James123@gmail.com','1234567895','James','Test203');
+/* Wrong Query*/
+insert into Usersdetails (UserId,pass,emailID,mobile,FirstName,LastName) values('James','j234@','James123@gmail.com','1234567895');
+
+/*UPDATE Query Examples*/
+
+/* Writing a condition in the Update query is very important and we should not forget*/
+update Usersdetails set pass ='abc' where UserId = 'Mike';
+update Usersdetails set mobile ='1111111' where FirstName = 'Mike1';
+select UserID from Usersdetails where UserId = 'Mike';
+/* Wrong Query*/
+update Usersdetails set pass ='abc';
+
+/*DELETE  Query Examples*/
+delete from Usersdetails where UserId = 'Mike';
+select UserID from Usersdetails where UserId = 'Mike';
+/* Wrong Query*/
+delete from Usersdetails;
+
+/*Where Conditions*/
+/*AND*/
+select * from Usersdetails where UserID = 'Robert1' and pass = 'test@12';
+select * from Usersdetails where UserID = 'Robert1' and pass = 'test@12'and FirstName = 'Robert';
+select * from Usersdetails where UserID = 'Robert1' and pass = 'test@123' /*What is the output?*/
+
+/*OR Condition*/
+select * from Usersdetails where UserID = 'David1' or emailID = 'test134@gmail.com';
+select * from Usersdetails where UserID = 'tttt' or emailID = 'test134555@gmail.com';
+
+/*IN or Not IN Condition*/
+select * from Usersdetails where UserID in('David1','John','Thomas1');
+select * from Usersdetails where UserID not in('David1','John','Thomas1');
+insert into Usersdetails (UserId,pass) values('123David123','D23422@');
+
+/* LIKE Condition*/
+Select * from Usersdetails where userid like '123John%'; 
+Select * from Usersdetails where userid like '123%';
+Select * from Usersdetails where userid like '%123';
+
+/*DISTINCT Condition*/
+Select distinct UserID from Usersdetails;
+
+/*COUNT Function*/
+Select count(UserId) from Usersdetails;
+Select count(UserId) from Usersdetails where UserID = 'John';
+
+/*ORDER BY */
+ Select * from Usersdetails order by UserID;
+ Select * from Usersdetails order by UserID desc;
+ Select * from Usersdetails order by UserID,pass;
+

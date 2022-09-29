@@ -1,5 +1,7 @@
 package controlflow;
 
+import java.util.Scanner;
+
 public class ControlFlowTest {
 
 	public static void main(String[] args) {
@@ -30,23 +32,27 @@ public class ControlFlowTest {
 		// never break the chain
 		
 		// either or choices
-		System.out.println("entering if else if");
-			int choice=2;
-			if( choice== 1) {//false
-				System.out.println(" enter withdraw amount");
-			}
-			else if( choice== 2) {//true
-				// if you enter one of the block .. you exit this sequence entirely
-				System.out.println(" enter deposit amount");
-			}
-			else if( choice== 3) {
-				System.out.println(" your balance is 100$");
-			}
-			else { // default block
-				System.out.println("please enter any number between 1 and 3");
-			}
-		System.out.println("existing if else if");
-		
+		Scanner sc=new Scanner(System.in);
+		boolean oneMoreTransaction=true;
+		do {
+				System.out.println("enter 1 for withdraw , 2 for deposit, 3 for balance inqueiry");
+				int choice=sc.nextInt(); // 
+					if( choice== 1) {//false
+						System.out.println(" enter withdraw amount");
+					}
+					else if( choice== 2) {//true
+						// if you enter one of the block .. you exit this sequence entirely
+						System.out.println(" enter deposit amount");
+					}
+					else if( choice== 3) {
+						System.out.println(" your balance is 100$");
+					}
+					else { // default block
+						System.out.println("please enter any number between 1 and 3");
+					}
+				System.out.println("Do you want one more transaction");
+				oneMoreTransaction=sc.nextBoolean();
+		}while(oneMoreTransaction==true);
 		// ; in if is considered as empty block
 		int x=10;
 		if( x==12 ){
@@ -60,6 +66,38 @@ public class ControlFlowTest {
 				break;
 			System.out.println("bye");
 		}
+		
+		// while - 0 or more loop
+		System.out.println(" Do you wish to add this item to shopping cart ? Enter True/false");
+		boolean shoppingInput=sc.nextBoolean();
+		while(  shoppingInput  ) {
+			System.out.println("item added to shopping cart");
+			System.out.println(" Do you wish to add another item to shopping cart ? Enter True/false");
+			shoppingInput=sc.nextBoolean();
+		}
+		
+		
+		
+		
+		String choice="2"; // 
+		switch(choice){
+			case "1":
+				System.out.println(" enter withdraw amount");
+				break;
+			case "2":
+				System.out.println(" enter deposit amount");
+				break;
+			case "3":
+				System.out.println(" your balance is 100$");
+				break;
+			default   :
+				System.out.println("please enter any number between 1 and 3");
+				break;
+		}
+		
+		
+		
+		sc.close();
 		
 	}
 

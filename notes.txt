@@ -358,3 +358,61 @@ M C R	=	i-2,	true,	print hi
 M C R	=
 M C R	=
 M C R	
+
+
+while( boolean condition ){
+
+
+
+}
+
+
+in-built or library program : written by others
+	and used by us
+	Thread
+	collection
+	sysout
+	scanner
+	String
+user-defined program : programmer write
+
+int a=10; // a is variable of data type int
+Calculator c=new Calculator(); //
+	// calculator is a program.. c is reference variable
+	// pointing to calculator program
+Scanner sc=new Scanner(System.in);	
+	// Scanner is a program.. sc is refernce variable
+	// pointing to scanner program
+Scanner has the code that allows to take input
+from screen
+
+MULTIPLE CHOICE - control flow
+
+int choice=123; 
+String name="john";
+if( choice== 1) {
+	System.out.println(" enter withdraw amount");
+}
+else if( choice== 2) {
+	// if you enter one of the block .. you exit this sequence entirely
+	System.out.println(" enter deposit amount");
+}
+else if(name=="john") {
+	System.out.println(" your balance is 100$");
+}
+
+performance is slower than switch case
+switch case operates on primitive and String
+	data type
+if-else if allows to define complex/multiple conditions
+	and match any conditions
+
+if( userid=loginuserid && pwd=loginpwd) {
+	System.out.println(" welcome to website");
+}
+else if( phone=loginphone && pwd=loginpwd) {
+	System.out.println(" welcome to website");
+}
+else if( email=loginemail && pwd=loginpwd) {
+	System.out.println(" welcome to website");
+}
