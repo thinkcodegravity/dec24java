@@ -1,5 +1,7 @@
 package controlflow;
 
+import java.util.Scanner;
+
 public class Question3 {
 	/*
 	 * Write a program that has-a registered phone, userid, password
@@ -21,16 +23,10 @@ public class Question3 {
 		
 		
 	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Question3 qq = new Question3();
-		String userid=qq.idRegistration(1231231231);// return type hanlding ???
-		System.out.println("userid retrieved is:"+userid);
-	}
+ 
 	
 	public String pwdRegistration(String loginUserId) {
-		if(loginUserId == userId) {
+		if(loginUserId.equals(userId)) {
 			System.out.println(password);
 			return password;
 		}else {
@@ -39,6 +35,35 @@ public class Question3 {
 		}
 		
 		
+	}
+	public static void main(String argsp[]) {
+		menuItems();
+	}
+	public static void menuItems() {
+		System.out.println("enter 1. for Pizza");
+		System.out.println("enter 2. for Pasta");
+		
+		int option = 0;
+		Scanner sc = new Scanner(System.in);
+		try{
+			sc.reset();
+			option=sc.nextInt();
+		}
+		catch(Exception e) {
+			System.out.println("please enter numbers only");
+			System.exit(-1);
+		}
+		
+		switch(option) {
+		case 1: 
+			System.out.println("The price of pizza is: $15");
+			break;
+		case 2:
+			System.out.println("The price for Pasta is: $10");
+			break;
+		default :
+			System.out.println("Salad for $5");
+		}
 	}
 
 	

@@ -3,6 +3,8 @@ package methods;
 public class AccountantRules {
 	public static void main(String[] arg) {
 		Calculator cal=new Calculator();
+		System.out.println();
+		
 		// consumes/uses/needs addition service
 //	PASSING INPUT
 		// 1) number of input should match
@@ -21,8 +23,12 @@ public class AccountantRules {
 		
 		int x=20;
 		String y="john";
-	// METHOD CALL
-		int result=cal.add(15,x ,y);
+	// METHOD CALL - consuming services
+		// provided by other program
+		int result=cal.add(1,12,"as");
+			  
+					
+	// println is method call
 		System.out.println(" output is :"+result);
 // HANDLING OUTPUT/RETURN TYPE	
 // LHS declare a variable 

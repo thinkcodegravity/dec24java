@@ -11,4 +11,12 @@ public class Calculator {
 	public int mul(int p, int q) {
 		return p * q;
 	}
+// compiler provides default construsctor
+// that has NO input
+// that does NOTHING
+// it is provided ONLY if no constrcutor
+// defined
+	public Calculator() {
+		
+	}
 }

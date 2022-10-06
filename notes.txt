@@ -416,3 +416,35 @@ else if( phone=loginphone && pwd=loginpwd) {
 else if( email=loginemail && pwd=loginpwd) {
 	System.out.println(" welcome to website");
 }
+
+
+method call passing input rules
+	number of inputs
+	type of inputs
+	order of inputs
+
+Constructor call has same input rules as above
+
+
+
+
+
+****************** INHERITANCE ****************** 
+
+
+Super > Sub class
+Parent > Child class
+
+
+extends
+multiple inheritance
+multilevel inheritance
+overriding
+super
+constructor behaviour in inheritance
+
+
+
+
+
+
