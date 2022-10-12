@@ -445,6 +445,186 @@ constructor behaviour in inheritance
 
 
 
+Concrete program : has solution for all methods
+	100% complete program
+abstract program : does not has solution for all methods
+	incomplete program
+partial abstract program : there are some solution and some dont have solution for method
+	partial complete program
+	
+	
+LHS=RHS should be same
+int a=10;
+int b=30;
+a=b; // LHS and RHS should be same
+	
+RHS can be same as LHS
+OR
+RHS can be child of LHS AND is also concrete program
 
+interface = 100% incomplet program
+abstract = partial complete program
+concrete = 100% compelte program
+
+interface 	> abstract > concrete > concrete
+Food 	> Tomato 	> pizza	 > hawaianPizza
+
+interface 	> abstract > concrete	  >  concrete
+ICar 		> Nissan   > NextGenNissan > NissanZ60
+
+Food f=new Food(); // NO .. food is incomplete program
+ICar ic=new Nissan(); // NO... Nissan is related to ICar however not a complete (abstract/partial)
+Food f=new NextGenNissan(); // NO... NextGenNissan is concrete however not related to Food
+Tomato t=new pizza(); // YES... pizza is child/related to tomato... also concrete program
+NextGenNissan ngn=new Nissan();// NO... Nissan is NOT child of NextGenNissan or concrete program
+hawaianPizza hp=new pizza(); // NO... pizza is NOT child of hawaianPizza
+Icar ic=new NissanZ60(); // YES... 
+
+
+IIphone= 3 incompete method ( PLAN / IDEA )
+	call
+	text
+	default browse(){
+		asdasdasd
+	}
+	
+Iphone3 implements IIphone = 2 complete methods 
+	call
+		code
+	text
+		code
+		
+Iphone4 extends Iphone3 = 3 complete methods 
+	map
+		code
+
+Iphone5 extends Iphone4 = 4 complete mthods 
+	fingerPrintScan
+		code
+
+IphoneX extends Iphone5 = 5 complete methods  
+	facialRecogScan
+		code
+		
+FORWARD looking
+Backward compatibility issue = default methods ( interface are allowed to have complete methods/ method logic/body)
+
+
+Solution for Backward compatibility issue =Default methods(contains logic/method body)
+Default methods intrdoduced Diamond problem
+Solution for diamond problem was Overriding
+
+
+Abstract class - Generalization
+
+Car Manufacture Nissan
+
+Nissan SE = 20,000
+Nissan LE = LCD display 25000
+Nissan CE = moonroof and LCD 28000
+Nissan Limited Edition = rearview camera, parking assit etc 32000
+
+4 big factories for all 4 model = EXPENSIVE
+Generalization
+	1 Big factory = 90% of components for all 4 models
+	1 small factory = assemble LCD
+	1 small factory = camera
+	1 small factory = praking assistance
+	
+	
+WITHOUT ABSTRACT DESIGN
+	not convinient/flexible for changes in existing features
+	new features addition requires changes in all places
+	
+WITH ABSTRACT DESIGN
+IPayment - 3 incomplete
+	ShippingAddress
+	Contact 
+	payment
+	advertisement
+abstract class AbsPayment implements IPayment
+	ShippingAddress
+		code
+	Contact 
+		code email and phone
+	advertisement
+		sell amazon card code
+CreditCard extends AbsPayment 
+	payment
+		code
+	 
+Paypal  extends AbsPayment 
+	payment
+		code
+	  
+Crypto  extends AbsPayment 
+	payment
+		code
+	 
+********** poly morphism *****
+
+compiletime- overloading
+	same method name and different input
+	can be in same class or in parent and child class
+	
+runtime - overriding
+	same method name and SAME input
+	can be only across parent and child
+	
+	
+********
+
+public int add(int a, int b){
+	return a+b;
+}
+
+add("john",12); // add requires 2 int.... passsing 1 string and 1 int
+add(10,12);
+
+NEW RULE FOR METHOD CALL WITH inheritance
+
+you can pass a variable of same type
+iphone > iphone3 > iphoneX
+food > tomato > pizza
+
+Iphone i=new Iphone();
+Iphone3 i3=new Iphone3();
+IphoneX iX=new IphoneX();
+food f=new Food();
+tomato t=new tomato();
+pizza p=new pizza();
+
+// u can pass any variable that is of same type
+	test( i  ); // BASIC rule
+// OR any child of input data type
+	test(i3);
+	test(iX);
+public void test(Iphone ip){
+}
+
+************** String ***********
+
+String pool : Objects in pool are shared by identical value variables
+String immutable : object in pool cannot be changed. ( changing
+	value for one might change value for all variable sharing 
+	that address)
+benefits of pool : sharing will save lot of memory
+issues with immutable : more changes will results in new objects
+	created every time
+soltion of immutable issue : stringbuffer and string builder
+difference between literal value and new value :
+	literal value are created inside pool
+	new value are created outside pool
+	
+String phone="1234567890";
+String phone="(123)4567890";
+
+String phone="123-456-7890";
+phone=phone.replaceAll("-","");
+1234567890
+
+String phone="123-456-7890";
+phone=phone.replaceFirst("-","");
+123456-7890	
 
 
