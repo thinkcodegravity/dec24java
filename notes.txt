@@ -628,3 +628,96 @@ phone=phone.replaceFirst("-","");
 123456-7890	
 
 
+String fullName="john doe";
+String[] fullNameSplit=fullName.split(" "); // string array... group of string vlues
+fullNameSplit[0] // john
+fullNameSplit[1] // doe
+
+
+
+String name="john doe";
+name.substring(2); // starting from position 2 till the end : "hn doe"
+name.substring(2,6); // starting from position 2 till the position 6(not including 6)
+				// "hn d"
+
+************* exception handling ****************
+
+Customer : what should customer do if software fails/crashes ?
+	1) what the customers can do to avoid this failure in future. Simple message
+		that customers can understand
+	2) Custom error message for every problem
+
+Developer : what is the reason for software fails/crashes ?
+	1) why did program fail ( first line in error message )
+	2) where is the problem in program ( first line that starts with "at " )
+
+try : write the code where we suspect program might fail
+catch : in the event of failure ... this is where we take counter action
+	to address the problem
+finally : mandatory code block
+
+	// simple code that never throws error
+	sysout("welcome to bank");
+	try{ // code that we suspect might fail
+		// this line might fail, if customer atm card is damaged
+		swipe atm card
+	}
+	catch(Exception e){// safety net // optional code
+		// if above line fails..
+		sysout(" please call 1800, request for new card");
+	}
+	
+try catch
+try catch finally
+try catch catch catch
+try catch catch catch finally
+try finally
+
+Customer using ATM
+	try{
+		swipe atm card
+		enter atm pin
+		choose withdraw option
+		enter withdraw amount
+		collect cash
+	}
+	catch(card has a problem){
+		sysout("please dial 1800 , and request for new card");
+	}
+	catch(pin is wrong){
+		sysout("please enter valid atm pin");
+	}
+	catch(insufficient fund){
+		sysout("please withdraw amount as per your current balance");
+	}
+throws
+
+userdefined exception
+
+
+public class telecom{
+	public void call(long phoneNumber){
+		dialing phone; // WILL FAIL
+	}
+}
+
+call(0); // NO technical limitation. in storing 0 for long data type.
+	// BUT HAS BUSINESS LIMITATION.
+
+
+
+
+public class Banking{
+	int balance=100;
+	public void withdraw(int amount){
+		withdraw money, deduct from balance
+		// new balance = -9900 // NO technical limitation
+		// banking/financial BUSINESS LIMITATION
+	}
+}
+
+
+withdraw(  10000 );
+
+
+
