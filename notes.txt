@@ -720,4 +720,24 @@ public class Banking{
 withdraw(  10000 );
 
 
+collection of objects (String, Person,Car, integer,  float, double )
+	List : indexed, duplicates
+		ArrayList : fastest for reading or simple inserting in collections
+		Vector : (Exactly similar to arraylist but synchronized)
+			Slower than ArrayList. But ensure data consistency by synchronization
+		LinkedList : fastest for editing (inserting or removing in the middle)
 
+	Set : Unique, not-indexed
+		HashSet : unordered
+		LinkedHashSet : ordered
+		TreeSet : sorted
+		
+		Restaurant order display screen : LinkedHashSet
+		Airport terminal screen : TreeSet
+
+	Map : pair of information. (string int) (String Passenger)
+		HashMap
+		LinkedHashMap
+		TreeMap
+		Hashtable
+	
