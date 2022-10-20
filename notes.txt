@@ -736,8 +736,66 @@ collection of objects (String, Person,Car, integer,  float, double )
 		Airport terminal screen : TreeSet
 
 	Map : pair of information. (string int) (String Passenger)
-		HashMap
+		HashMap		
 		LinkedHashMap
 		TreeMap
 		Hashtable
+		
+		
+		
+Son s=new Son();
+public class parent{
+	// no default constructor provided, since developer already
+	// wrote a constructor below
+	
+	public parent(String s){
+		sysout(parent);
+	}
+}
+
+public class son extends parent{
+	public son( ){
+		super(); //line automatically addded by compiler
+				// to call parent construcitor with no param
+				// but since it doesnt exist . its an error
+		sysout( son );
+	}
+}
+
+son s=new son();
+
+
+when using  Set or Map(key) with user-defined data type
+uniqueness check wont work
+HashSet<Student> duplicate removal wont work
+HashSet<String>  duplicate removal work
+
+how does collection remove duplicates : by looking at equals and hashcode methods
+
+String	: inbuilt complex/object data type
+int		: inbuilt primitive data type
+float		: inbuilt primitive data type
+Student	: user-defined data type
+Product
+
+
+List : indexed, allow duplicates
+Set : not-indexed, does not allow duplicates
+
+
+ArrayList<Student> li=new ArrayList<Student> ();
+// hashcode and equal method needed in Student = NO
+	// hashcode and equal required if no duplicated allowed
+	// Since list allows dupliate no need to write hashcode and equal
+
+LinkedHashSet<Student> se=new LinkedHashSet<Student> ();
+// hashcode and equal method needed in Student = ??????
+	// hashcode and equal required if no duplicated allowed
+	// since Set does not allow duplicated we NEED to write hashcode and equal
+
+If collection program requires sorting
+	implements comparable... write code for compareTo method
+	applies to TreeSet or TreeMap
+	
+	
 	
