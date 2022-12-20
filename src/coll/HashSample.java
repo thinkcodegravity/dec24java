@@ -15,7 +15,6 @@ public class HashSample {
 		//LinkedHashMap<String, String> studentPercent =new LinkedHashMap<String, String>();
 		//HashMap<String, String> studentPercent =new HashMap<String, String>();
 		//TreeMap<String, String> studentPercent =new TreeMap<String, String>();
-		int[] arr=new int[5];
 		// wrapper classes... Object version of primitive data type.
 		Hashtable<String, Integer> studentPercent =new Hashtable<String, Integer>();
 		studentPercent.put("ram", 65);
@@ -52,7 +51,7 @@ public class HashSample {
 		{
 			System.out.println("student scored 65");
 		}
-	
+		studentPercent.valu
 	for(String s:studentNameKey)
 	{
 		System.out.println("Key is:"+s);

@@ -798,4 +798,14 @@ If collection program requires sorting
 	applies to TreeSet or TreeMap
 	
 	
+MAP
+	HashMap - unordered keys
+	LinkedHashMap - ordered keys
+	TreeMap - sorted keys
+	HashTable - synchronized
 	
+	hashset - unordered
+	linkedhashset - ordered
+	treeset - sorted
+	
+	vector - 

@@ -22,8 +22,11 @@ public class ListSample {
 		// char= Character
 		int[] arr=new int[5];
 		Student[] stu=new Student[5];
+
+		String s;
 		
-		ArrayList<Integer> ww=new ArrayList<Integer>();
+		LinkedList<Integer> ww=new LinkedList<Integer>();
+		
 		ww.add(10);
 		ww.add(20);
 		ww.add(25);
