@@ -80,3 +80,69 @@ gmail
 
 products
 	
+
+Iphone = 2006 - 5 years
+	call
+	text
+	browse
+
+Iphone2 = 2013 - 7 year
+	call - REUSE(inherits)
+	text - REUSE(inherits)
+	browse - REUSE(inherits)
+	camera
+	
+
+Iphone3 = 2008
+	call - REUSE(inherits)
+	text - REUSE(inherits)
+	browse - REUSE(inherits)
+	camera - REUSE(inherits)
+	apple pay
+
+
+programmer (english)
+	src - source code ( human readable format )
+
+
+
+machine(french)
+	bin - binary code (machine readable format)
+
+
+JDK = compiler + interpreter
+JRE = interpreter
+
+bankaccount{  // opening curly bracket 
+	money=100$
+	balance
+
+	deposit 10{
+		add 10 money=110
+	}
+
+	withdraw 5{
+		deduct 5 money
+	}
+
+}// closing curly bracket
+
+product{
+name
+price
+	buy{
+		take paymet
+	}
+	
+	sell{
+		receive payment
+	}
+}
+
+camel case = tall neck,,, shorter body
+	uppercase lower case
+	
+Bank	= "B" upper case.... "ank" lower case
+
+PaypalPayment
+ThisIsMyProgramName
