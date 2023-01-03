@@ -146,3 +146,52 @@ Bank	= "B" upper case.... "ank" lower case
 
 PaypalPayment
 ThisIsMyProgramName
+
+
+
+**********************************************
+
+int age=95;
+
+int = numeric data type
+age = variable (changing)
+95 = numeric value
+
+
+int age; // declaration - age can hold numeric value
+age=20; // initialization - value provided to a variable for the FIRST time
+age=21; // reassignment - overwrites previous value of this variable
+
+???? name="john";
+
+int age=95;//declaration and init on same line
+int x;
+x=20;
+
+LHS : int age
+RHS : 95
+
+95= int age;
+
+int a=10;
+int b=20;
+int c=30;
+
+int x= a + 10 + c;
+
+1) if variable on RHS = replace their values
+	int x= 10 + 10 + 30;
+2) if operation on RHS = solve operation to single value
+	int x= 10 + 10 + 30;
+	int x= 20 + 30;
+	int x= 50;
+
+
+data type
+variable
+value
+LHS
+RHS
+declaration
+initializtion
+reassignment

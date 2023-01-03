@@ -1,9 +1,10 @@
 package restaurant;
 
 public class Addr {
-	String	street;
-	int	houseNumber;
+	String	streetName;
+	int	streetNumber;
 	String	city;
 	String	state;
 	int	zip;
+
 }
