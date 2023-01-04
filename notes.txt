@@ -195,3 +195,104 @@ RHS
 declaration
 initializtion
 reassignment
+
+
+20= int a;
+b=30;
+int x=10;
+int y=20;
+int z=25;
+
+int p=x+y+10;
+	//int p=10+20+10;
+int q=p;
+int r=10;
+int r=20; // re-declaration not allowed
+r=20;	// re-assignment allowed
+int s=r+20;
+int t=10-5;
+int u="100";
+
+LHS   =  RHS
+
+Variable  =  Single Value
+int a	= 20
+int b = 10+30 = 40
+int c = a = 20
+
+
+
+bank account
+	variable/information 
+		balance=100
+		address=ny
+		
+	method/actions = manipulate/act upon the information
+		deposit - balance goes up
+		withdraw - balance foes down
+		updateAddress = address changes from ny to nj
+	
+variable and method= camelcase from second word onwards	
+classs name = camelcase from first word onwards	
+
+how to recognize methods : Does-A exercise
+	Facebook does login
+how to code methods :
+	What to name this activity ???   "allBasicMathOperation"
+	how many inputs are required 2  ??? what are the data type of each inputs ???  int int
+		If  0 input leave it blank
+		If 1 input write data type and input name(parameter)
+		If more than 1 input ,write pair of data type and input name(parameter) comma separated
+			 "int number1, int number2"
+			
+	how many returns/outputs are required 4 ??? what is the data type of each output ???   int
+		If 0 output write void
+		If 1 output write data type
+		If more than 1 output, create complex class and write class name
+			 "AllMathOutput"
+
+access	output	method_name	( input)
+public 	int 		charity		(   )
+public	int		square		(int number)
+public	int		addition		(int number1 , int number2)
+
+public 	void		deposit		(int amount)
+public	boolean	login			(String email, String password)
+public	AllMathOutput    allBasicMathOperation(int number1, int number2)
+
+public class AllMathOutput{
+	int sum;
+	int sub;
+	int mul;
+	int div;
+}
+
+
+public class bankAccount{
+	// variable
+	int balance=100;
+	
+	// method declaration
+	public void deposit(int amount){
+		// logic
+		// control flows and operators
+	}
+	
+	public int withdraw(int amount){
+		return 123;
+	}
+}
+
+
+Create a method that can accept appropriate input for payment webpage
+	and returns payment response.
+
+
+input : credtNumber, secCode, expDate
+
+output : boolean
+
+public boolean payment(long credtNumber, short secCode, String expDate){
+	return false;
+}
+
