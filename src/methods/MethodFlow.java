@@ -1,21 +1,24 @@
 package methods;
-// callee
-// provider
-// publishers
+
 public class MethodFlow {
 	public void method1() {
-		System.out.println("entering method 1");
-		method2(); // method call within same program
-		System.out.println("exiting method 1");
+		System.out.println("method1 start");
+		method2(); // internal method call
+		System.out.println("method1 end");
 	}
 	public void method2() {
-		System.out.println("entering method 2");
-		method3();// method call within same program
-		System.out.println("exiting method 2");
+		System.out.println("method2 start");
+		method3();
+		System.out.println("method2 end");
 	}
 	public void method3() {
-		System.out.println("entering method 3");
-		System.out.println("exiting method 3");
+		System.out.println("method3 start");
+		method4();
+		System.out.println("method3 end");
 	}
+	public void method4() {
+		System.out.println("method4 start");
+		System.out.println("method4 end");
+	}
+	
 }
-//Method stack - LIFO
