@@ -296,3 +296,129 @@ public boolean payment(long credtNumber, short secCode, String expDate){
 	return false;
 }
 
+int a; // primitive int variable declaration
+a=20; // primitive int variable initializtion
+a=40; // primitive int variable reassignment
+public int add(int a, int b) // method declaration
+{// method body
+	
+}
+add(x,20); // method call
+
+System.out.println(  x );
+System.out.println(  20 );
+
+
+Person p; // Object Person variable declaration
+p=new Person(); // Object Person variable iniitlza
+p=new Person(); // 
+
+declaration = data type
+
+int a; // variable declaration
+a=20; // variable initializtion
+int b=20;// variable declaration & initlization(variable first assign)
+b=30;// variable new assignment/ reassignment
+a=40; // variable reassignment
+
+public void add(int a, int b )// method declaration
+				// inside the bracket there is data type mentioend
+public void sub(int x,int y)// method declaration
+	
+METHOD CALL IS TO PASS VALUE (NEVER VARIABLE)
+int x=20;
+	x=30;
+int y=25;
+
+add(10,20);// method call with direct/literal value
+
+add(x,y); // method call with variable
+	add(30,25); // program/java platform interprets 
+sub(10,y); // method call
+	sub(10,25);
+
+
+public class Iphone{
+	int modelNumber=345345;
+	int phoneNumber=123;
+	static String category="electronics";	
+}
+
+Iphone i1=new Iphone();
+Iphone i2=new Iphone();
+Iphone i3=new Iphone();
+Iphone i4=new Iphone();
+
+
+
+&& = AND (need BOTH, BOTH has true)
+	true && true = true
+	true && false = false
+	false && true = false
+	false && false = false
+
+|| = OR ( Atleast one has true )
+	true || true = true
+	true || false = true
+	false || true = true
+	false || false = false
+
+&
+	1 & 1 = 1
+	1 & 0 = 0
+	0 & 1 = 0
+	0 & 0 = 0
+|
+	1 | 1 = 1
+	1 | 0 = 1
+	0 | 1 = 1
+	0 | 0 = 0
+	
+	
+	
+	
+1+ 2 * 4 - 6 +2
+left to right = 8
+right to left = 9
+
+operator precedence(priority)
+
+1) ()
+2) * / 
+3) + - 
+4) < >
+5) &&
+6) ||
+7) if operators at same level ... go left to right
+
+(1+2) * (4-1) + 2 - 1 + (3-5)
+3 * (4-1) + 2 - 1 + (3-5)
+3 * 3 + 2 - 1 + (3-5)
+3 * 3 + 2 - 1 - 2
+9 + 2 - 1 - 2
+11 - 1 - 2
+10 - 2
+8
+
+1) ()
+2) * / 
+3) + - 
+4) < >
+5) &&
+6) ||
+7) if operators at same level ... go left to right
+
+(1+2) > (1-3) && (2+5+6) < 12 || 2<3
+3 > (1-3) && (2+5+6) < 12 || 2<3
+3 > -2 && (2+5+6) < 12 || 2<3
+3 > -2 && 13 < 12 || 2<3
+true && 13 < 12 || 2<3
+true && false || 2<3
+true && false || true
+false || true
+true
+
+|| atleast one should be true
+(1+2) > (1-3) && (2+5+6) < 12 || 2<3
+(1+2) > (1-3) && (2+5+6) < 12 || true
+true

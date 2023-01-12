@@ -1,190 +1,197 @@
 package operator;
 
-public class OperatorTest {
+public class OperatorTest {//class block or class body
 
-	public static void main(String arg[]) {
-//"semicolon" statement are lines ending with semicolon 
-		int a; // variable declare
-		int b=10; // variable initilize
-		b=30;// reassign variabel value
-		//int sum=add(10,20); // method call
+	public static void main(String arg[]) {// method block or method body 
+		int a; // declaration statement
+		int b=10; // iniitialization statement
+		b=20;// assignment statement
+		int sum=add(10,20);//method invocation/call statement
+		{// local block
+			{
+				
+			}
+		}
+		//assignment operator = sign
+		// LHS = RHS
+		// LHS should always be variable
+		// RHS will always convert/resolve to a single value
+		// RHS can be value,variable,expression,method call
+		// LHS and RHS values or data type should match
+		int c=20;
+		int d=c;// replace value of RHS variable... int d=20;
+		int e=10+20;// replace the result of RHS operation.. int e=30;
+		int f=add(10,5);// replace the result of method call on RHS... int f=15;
+		//int g="john";
 		
-// { = block, defines boundary of program and section inside program
-		
-// =... assignment operator
-		/*
-		 	LHS = RHS
-		 	1) LHS should always be variable
-		 	2) RHS can be literal value, another variable,
-		 			expression,method call
-		 	3) RHS has to match LHS
-		 */
-		int w=20;
-		//20=int w;
-		int y=10;
-		y=w; // replace RHS with its value "y=20;"
-		y=10+20; // solve the expression. "y=30;"
-		y=10+w;// 1) replace value y=10+20 2) solve express "y=30"
-		//y=add(11,5); // replace returned value from add method
-					// "y=16;"
-		
-		// LHS = ALWAYS VARIABLE
-		// RHS = ALWAYS VALUE
-		
-//Arithemtic operator
-		// INPUT : LHS and RHS should be numeric data type
-		// OUTPUT : numeric data type
-		int d=21;
-		int e=10;
-		int f= d+e;
-		System.out.println( f );// 31
-		f=d-e;
-		System.out.println( f );// 11
-		f=d*e;
-		System.out.println( f );// 210
-		f=d/e;
-		System.out.println( f );// 2
-		f=d%e; // modulous / remainder 
-		System.out.println( f );// 1
-// Equality operator
-		// LHS and RHS can be any data type
-		// BUT they have to be same
-		// output = boolean
-		System.out.println(  10 == 10 ); // true
-		System.out.println(  "john" == "jane" ); // false
-		System.out.println(  10.1 == 10.1 ); // true
-		
-		// System.out.println(  10 == "john" );
-		
-		String regUserid="john";
-		String regpass="john1!";
+		//Arithmetic operator + - * / %
+		// LHS + - * / % RHS (LHS and RHS should be of numeric data type)
+		// Result is numeric data type
+		String o="john";
+		int p=20;
+		int q=10;
+		int r=p + q;// Result =  LHS + RHS ... 31
+		r=p - q;// r=11
+		r=p * q;// r=210
+		r=p / q;// r=2
+		r=p % q;// r=0
 		
 		
-		String loginUserid="john";
-		String loginPwd="john2@";
+		//equality operators
+		// check if LHS is same or equal to RHS
+		// LHS == RHS (LHS and RHS data type should match)
+		// Result is always boolean (yes/no) (true/false)
+		String aa="john";
+		String bb="john";
+		int cc=10;
+		int dd=11;
+		boolean ee= (cc == dd);
+		// boolean ee= (10 == 11);
+		// boolean ee= false;
+		System.out.println( ee ); // false
+		System.out.println( aa==bb  ); // is aa and bb same /equal ... YES/TRUE
+		System.out.println( cc==dd  ); // is cc and d same /equal ... NO/FALSE
+		// check if LHS is different or not equal to RHS
+		// LHS != RHS(LHS and RHS data type should match)
+		// Result is always boolean (yes/no) (true/false)
+		System.out.println( aa!=bb  ); // is aa and bb different /not equal ... NO/FALSE
+		System.out.println( cc!=dd  ); // is cc and d different /not equal ... YES/TRUE
 		
-		System.out.println( regUserid == loginUserid ); // true
-		System.out.println( regpass == loginPwd ); // false
+		String regUserid="asd";
+		String refPwd="asd1!";
 		
-		int regPin=1234;
-		int loginPin=2345;
+		String loginUserid="asdqq";
+		String loginPwd="asd1!";
 		
-		System.out.println( regPin == loginPin ); // false
-	
-		// not equal !=
+		System.out.println( regUserid == loginUserid );
 		
-		System.out.println( 10 != 10 );// false ( is 10 NOT EQUAL to 10) 
-		System.out.println( 5.5 != 6.5 );// true ( is 5.5 NOT EQUAL to 6.5)
-	
-// relational operator : greater than and less than
-		// LHS and RHS has to be numeric data type
-		// output is boolean
-		System.out.println(   10 > 5 ); // true ( 10 greater than 5)
-		System.out.println(   2 < 5 ); // true ( 2 less than 5 )
+		// relational operator
+		// LHS < > RHS... LHS and RHS is always numeric data type
+		// result is always boolean
 		
+		int ff=10;
+		int gg=12;
+		String hh="john";
+		System.out.println(   ff < gg ); // is ff(10) less than gg(12) ... true
+		System.out.println(   ff > gg ); // is ff(10) greater than gg(12) ... false
 		
-		int warehouseStock=100;
-		int orderQuantity=50;
-		System.out.println(  warehouseStock > orderQuantity );
-		//System.out.println(  100 > 50 ); // true
+		int stock=10;
+		int orderQuantity=11;
+		System.out.println(  stock > orderQuantity  );// false.. order cannot be accepted
 		
 		int balance=100;
 		int withdrawAmount=100;
-		System.out.println(  withdrawAmount <= balance); 
-		//System.out.println(  100 <= 100 ); // true ( is 100 less than or equal to 100)
-// unary operators
-		// operates on numeric data type
-		 // output is numeric
-		int x=-5;
-		System.out.println(  -(-x) );// - 5
-		//System.out.println(  -(-(-5)) );
+		System.out.println(  withdrawAmount <= balance );// withAm should be less than or equal to balance
 		
 		
-		// increment and decrement = 
-		// operate on numeric data type
-		// output is numeric
+		// unary operator
+		// + and - applies tonumeric data type
+		// result is numeric
+		int ii=-10;
+		System.out.println( +ii  );//  +( -10 ) = -10
+		System.out.println( -ii  );//  -( -10 ) = +10
 		
+		int jj=+11;
+		System.out.println( +jj  );//  +( +11 ) = +11
+		System.out.println( -jj  );//   -( +11 ) = -11
 		
-		int z=10;
+		// ! negation operator applies to boolean.. true
+		// result is boolean
+		boolean kk=false;
+		System.out.println( !kk  );
 		
-		z++;// z = 11
-		z--;// z=10
-		z++;// z=11
-		z--;// z=10
-		z--; // z=9
-		System.out.println( z );
+		// incremenet and decremeent operator
+		// applies on numeric data type
+		// result is numeric data type
+		int mm=10;// mm is 10
+		mm++;// mm is 11
+		mm--;// mm is 10
+		mm--;// mm is 9
+		System.out.println(mm);
 		// pre and post
-		// ++z and z++  --z and z--
-		// pre = increment or decrement before this line
-		// post = increment or decrement after this line
+		// pre - increase or decrease on previous line
+		// post - increase or decrease on next line
 		
-		System.out.println("**********");
+		int nn=20;
 		
-		int p=10;
+		System.out.println( nn++  );  // print 20
+		// nn=21
+		System.out.println( nn--  ); // print 21
+		// nn=20
+		System.out.println( nn++  ); // print 20
+		// nn=21
+		// nn=20
+		System.out.println( --nn  ); // print 20
+		// nn=19
+		System.out.println( --nn  ); // print 19
+		
+		// conditional opeator && AND || OR
+		// LHS and RHS should always be boolean 
+		// LHS and RHS should be other operator that results as boolean
+		// result is boolean
+		int oo=10;
+		int pp=11;
+		boolean qq=true;
+		boolean rr=false;
+		
+		System.out.println(  qq && rr   );// false
+		System.out.println(  qq || rr   );// true
 
-		System.out.println( p-- ); //  print 10
-		// p=9
+		// LHS and RHS should be other operator that results as boolean
+		// LHS and RHS equality and relational operators results as boolean
+		System.out.println(  (oo==pp ) && (oo<pp )   );// false
+		//					 (10==11 ) && (10<11 )
+		//					 (false  ) && (true)
+		//							   false
 		
-		System.out.println( p++ ); // print  9
-		// p=10
+		System.out.println(  (oo==pp ) || (oo<pp )   );// true
+		//		 			 (10==11 ) || (10<11 )
+		//					 (false  ) || (true)
+		//							  true 
 
-		System.out.println( p++ ); //  print 10
-		// p=11
-		// p=10
-		System.out.println( --p ); //  print 10
 		
-		// ! negate
-		// operates on boolean
-		// output is boolean
-		boolean flag=false;
-		System.out.println(   !flag ); // oppostie of false
-		// System.out.println(   !false ); // opposite of false
-		// System.out.println(   true ); 
+
+
+		String regUserid1="asd";
+		String refPwd1="asd1!";
 		
+		String loginUserid1="asdqq";
+		String loginPwd1="asd1!";
 		
-		
-// conditional operator = and && .... or ||
-		// operates on boolean
-			// most often used in combination of other operators
-			// that give boolean output
-		// output is boolean
-		String loginUser="john";
-		String loginPw="john2@";
-		
-		String regUser="john";
-		String regPw="john2@";
-		
-		System.out.println( loginUser==regUser  &&  loginPw==regPw  );
-		//System.out.println( "john"=="john"  &&  "john2@"=="john2@"  );
-		//System.out.println( true  &&  true  );
-		//System.out.println( true  AND  true  );
-		// System.out.println( true  );
-		
-		System.out.println(   12>5 || 10 > 100 );
-		//System.out.println(   true || false );
-		//System.out.println(   true OR false );
-		//System.out.println(   true  );
+		System.out.println( (regUserid1 == loginUserid1) && (refPwd1==loginPwd1) );
+		//				( 	(asd == asdqq) 				 && (asd1!==asd1!) );
+		//				( 	(false) 				 	 && (true) );
+		//												false
 		
 		
-// bitwise operator & | 
-// input = numeric data type
-// output =numeric data type
-		System.out.println(   23 & 12);
-		System.out.println(   23 | 12);
-		System.out.println(   23 ^ 12);
+		System.out.println(  21 & 7 );
+		System.out.println(  21 | 7 );
+		System.out.println(  21 ^ 7 );
 		
-		int aa=5;
-		int bb=7;
-		int cc=6;
-		int dd=10;
-		
-		System.out.println(   aa+bb*cc+(dd+aa)*bb > cc || aa < bb );
-				
-		
+		System.out.println( (1+2) > (1-3) && (2+5+6) < 12 || 2<3);
+		/*
+		 	1) ()
+			2) * / 
+			3) + - 
+			4) < >
+			5) &&
+			6) ||
+			7) if operators at same level ... go left to right
+			
+			(1+2) > (1-3) && (2+5+6) < 12 || 2<3
+			3 > (1-3) && (2+5+6) < 12 || 2<3
+			3 > -2 && (2+5+6) < 12 || 2<3
+			3 > -2 && 13 < 12 || 2<3
+			true && 13 < 12 || 2<3
+			true && false || 2<3
+			true && false || true
+			false || true
+			true
+
+		 */
 	}
 	
-	public int add(int a, int b) {
-		return a+b; // return 11+5;  // return 16;
+	public static int add(int a,int b) {
+		return a+b;// return 10+5... return 15
 	}
-	
 }
