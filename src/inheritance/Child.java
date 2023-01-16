@@ -1,20 +1,18 @@
 package inheritance;
 
 public class Child extends Parent{
-	
-	int x=20;
-	public int add(int a, int b) {
-		int sum=a+b;
-		return sum;
-	}
-	public int sub(int a, int b) {
-		add(10,20);// default access to child's add method
-		super.add(10,20);// exclusively access parent add
-		int x=10;
-		System.out.println( x );// local
-		System.out.println( this.x );// global
-		System.out.println( super.x );// parent global
-		System.out.println( z );// parent global
-		return a-b;
+	public Child() {
+		super(); // super constructor
+		System.out.println("constructing Child");
+
+	}	
+	int a=20;
+	public void test() {
+		int a=30;
+		System.out.println( a );//local var print
+		System.out.println( this.a );// global var print
+		System.out.println( super.a );// super var print
+		super.test();// super /parent class method
+		
 	}
 }
