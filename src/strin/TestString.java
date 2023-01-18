@@ -4,15 +4,16 @@ public class TestString {
 	{
 		// array of character
 		// index of first character = 0
-		String name="john";
+		String name="john";// group of character
 		// String is a array of characters.. same as array index starts at zero
+		// 2nd index character of name ?? k
 		
 		// get first character (indexed zero) from the string
-		System.out.println(name.charAt(3));// t
+		System.out.println(name.charAt(3));// name=john... n
 		// join name string value with the input 
 		System.out.println(name.concat(" jane")); // john jane
 		// return true if input exist inside name variable value
-		System.out.println(name.contains("name"));
+		System.out.println(name.contains("abc"));// false
 		// return true if name variable value ends with input 		
 		System.out.println(name.endsWith("e"));
 		// return true if name variable value is equal to input	, case should match as well
@@ -20,7 +21,7 @@ public class TestString {
 		// return true if name variable value is equal to input	, case need not match		
 		System.out.println(name.equalsIgnoreCase(" FIRST name "));
 		// same as contains method, except it returns the index position of input first occurence
-		System.out.println(name.indexOf("o"));// 1
+		System.out.println(name.indexOf("h"));// 2
 		// same as contains method, except it returns the index position of input last occurence
 		System.out.println(name.lastIndexOf("o")); // 6 "john doe"
 		// replace all occurence of the input1 with input2

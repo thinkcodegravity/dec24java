@@ -553,3 +553,60 @@ else  // default block.. if none of the above condi matched
 
 
 
+******** new = of assignment rules from inheritance **********
+
+Car c=new Car();
+Nissan n=new Nissan();
+
+RHS should be concrete			
+RHS should be same family as LHS			
+RHS should be same or child of LHS			
+
+Car > nissan > nissanZ60
+
+Car c=new Nissan();
+Nissan nz=new NissanZ60();
+
+
+******** new method call rules from inheritance **********
+
+public class Payment{
+	public void transfer(){
+		adads
+	}
+}
+
+public class paypal extends Payment{
+	public void transfer(){
+		qwe
+	}
+}
+
+public class creditcard extends Payment {
+	public void transfer(){
+		dfg
+	}
+}
+
+Payment pay=new Payment();
+paypal pp=new paypal();
+shopping(pay); // default rule
+shopping(pp); // new rule = u can pass child of method declaration
+			//		u can pass paypal variable which is child of method delcation payment p
+public void shopping(Payment p)
+
+
+
+String num="1234567890";
+String num="123-456-7890";
+String num="(123)4567890";
+String num="(123)(456)7890";
+
+// search and replace
+num.replaceAll("-",""); // 123-456-7890 ...  1234567890
+num.replaceAll("(","").replaceAll(")",""); 
+	// (123)(456)7890
+	// 123)456)7890
+	// 1234567890
+	
+num.replaceFirst("-",""); // 123-456-7890 ...  123456-7890
