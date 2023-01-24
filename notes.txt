@@ -610,3 +610,42 @@ num.replaceAll("(","").replaceAll(")","");
 	// 1234567890
 	
 num.replaceFirst("-",""); // 123-456-7890 ...  123456-7890
+*********************
+Exception handling
+	1) customer : provides custom error message
+		what is the problem
+		how to avoid the problem
+	2) developer
+		what is the problem
+		where is the problem
+		where problem started
+		
+	Exception in thread "main" java.lang.ArithmeticException: / by zero (what is the problem)
+		at exceptin.Test.method3(Test.java:18) ( where is the problem )
+		at exceptin.Test.method2(Test.java:11)
+		at exceptin.Test.method1(Test.java:6)
+		at exceptin.TestException.main(TestException.java:8) ( where problem started)
+		
+		
+		
+		
+		
+
+123 * 0 = 0
+123 / 0 = infinite
+
+try
+catch
+finally
+exception stack trace
+
+NullPointerException - 99%
+compile time exception
+runtime exception
+user-defined exception
+throws
+
+
+
+
+
