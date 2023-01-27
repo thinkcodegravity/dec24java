@@ -60,7 +60,7 @@ public class ListSample {
 		studentsCollection.add("laxman");//2  ram,shyam,laxman
 		studentsCollection.add("laxman"); //3  inserted the string name towards the end
 											// ram,shyam,laxman,laxman
-		studentsCollection.add(3,"tony");// ram,shyam,laxman,tony,laxman
+		studentsCollection.add(2,"tony");// ram, shyam, tony, laxman, laxman
 		
 		// get size of list collection 
 		int no_of_students=studentsCollection.size();
@@ -73,8 +73,8 @@ public class ListSample {
 		// ram, shyam, bharat, laxman
 		
 		// set item at specific index ( not part of set collection )... UPDATE
-		studentsCollection.set(2, "bharat"); // ram,shyam,laxman,tony,laxman
-											// ram,shyam,bharat,tony,laxman
+		studentsCollection.set(2, "bharat"); // ram, shyam, tony, laxman, laxman
+											//  ram, shyam, bharat, laxman, laxman
 		
 
 		// find the items index ( not part of set collection )
@@ -82,12 +82,11 @@ public class ListSample {
 		System.out.println("List find index of an item:"+itemNo);
 		
 		// remove an item by index and by item
-		studentsCollection.remove(0); // ( not part of set collection ) // shyam, bharat, laxman
-		// ram,shyam,bharat,tony,laxman
-		// shyam,bharat,tony,laxman
+		studentsCollection.remove(0); // ram, shyam, bharat, laxman, laxman
+									  // shyam, bharat, laxman, laxman
 		
-		studentsCollection.remove("shyam");//  bharat, laxman
-		// bharat,tony,laxman
+		studentsCollection.remove("bharat");//   shyam, bharat, laxman, laxman
+									  	   //    shyam, laxman, laxman
 		
 		firstStudent=studentsCollection.get(0);
 		
@@ -109,8 +108,8 @@ public class ListSample {
 		}
 		// for-each.. enchanced for loop
 		// studentsCollection = john, jane, mike,andy
-		for(String s:studentsCollection) {
-			System.out.println(s);
+		for(String ss:studentsCollection) {
+			System.out.println(ss);
 		}
 	}
 }

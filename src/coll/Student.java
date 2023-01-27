@@ -3,20 +3,12 @@ package coll;
 public class Student implements Comparable<Student> {
 	int grade;
 	String fullName;
-	String lastName;
-	String address;
-	long phone;
-	int registerNumber;
-	// 1 , john, 123
-	// 1 , john, 333
-	// 2 , asds, 123
-	// 2 , asds, 222
 	
-	public Student(String fn,int g, int r) {
+	public Student(String fn,int g) {
 		grade=g;
 		fullName=fn;
-		registerNumber=r;
 	}
+
 	// categorization
 	public int hashCode() {
 		return grade;
@@ -24,28 +16,21 @@ public class Student implements Comparable<Student> {
 	// duplicate check
 	public boolean equals(Object anotherObject) {
 		Student anotherStuObject=(Student)anotherObject;
-		if( this.grade == anotherStuObject.grade   
-				&&	
-			this.registerNumber == anotherStuObject.registerNumber		
-					
-				)
+		if( 	
+			this.fullName== anotherStuObject.fullName )
 			return true;
 		else
 			return false;
 			
 	}
 	public String toString() {
-		return fullName +":"+grade +":"+registerNumber;
-	}
-	// a=1 , b=2, c=3
-	// barny andy cathy
-	// andy - barny = -1
-	// barny - cathy = -1
-	// cathy - andy = -2
+		return fullName +":"+grade ;
+	} 
+	
 	public int compareTo(Student anotherObject)
 	{	
-		//int difference= this.fullName.compareTo(anotherObject.fullName);
-		int difference= this.registerNumber - anotherObject.registerNumber;
+		int difference= this.fullName.compareTo(anotherObject.fullName);
+		//int difference= this.registerNumber - anotherObject.registerNumber;
 		return difference;
 		 
 	}

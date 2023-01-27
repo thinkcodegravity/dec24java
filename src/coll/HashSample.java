@@ -16,23 +16,24 @@ public class HashSample {
 		//HashMap<String, String> studentPercent =new HashMap<String, String>();
 		//TreeMap<String, String> studentPercent =new TreeMap<String, String>();
 		// wrapper classes... Object version of primitive data type.
-		Hashtable<String, Integer> studentPercent =new Hashtable<String, Integer>();
+		HashMap<String, Integer> studentPercent =new HashMap<String, Integer>();
 		studentPercent.put("ram", 65);
-		studentPercent.put("shyam", 23);
-		studentPercent.put("bharat", 55);
-		studentPercent.put("shyam", 45);
+		studentPercent.put("shyam", 65);
+		studentPercent.put("bharat", 65);
+		studentPercent.put("shyam", 45);// new record is NOT created
+										// however values are overwritten
 		
 		// get size of hash
-		int studentSize=studentPercent.size();
+		int studentSize=studentPercent.size(); // ram-65, shyam-45, bharat-65
 		System.out.println("hash : number of students :"+studentSize);
 		
 		// remove an items from hash by key
-		studentPercent.remove("bharat");
+		studentPercent.remove("bharat");// ram-65, shyam-45 
 		studentSize=studentPercent.size();
 		System.out.println("after removing bharat. hash : number of students :"+studentSize);
 		
 		// get value by key
-		int percent=studentPercent.get("ram");
+		int percent=studentPercent.get("ram"); // ram-65, shyam-45
 		
 		// check if key exists 
 		if(studentPercent.containsKey("ram"))
@@ -41,7 +42,7 @@ public class HashSample {
 		}
 
 		// check if value exists 
-		if(studentPercent.contains("65"))
+		if(studentPercent.containsValue(65))
 		{
 			System.out.println("student scored 65");
 		}
@@ -51,7 +52,7 @@ public class HashSample {
 		{
 			System.out.println("student scored 65");
 		}
-		studentPercent.valu
+		 
 	for(String s:studentNameKey)
 	{
 		System.out.println("Key is:"+s);

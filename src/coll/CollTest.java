@@ -1,6 +1,7 @@
 package coll;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
@@ -9,45 +10,55 @@ import java.util.TreeSet;
 public class CollTest {
 
 	public static void main(String[] args) {
-		HashSet<String> names=new HashSet<String> ();
-		//names.add(10);
-		names.add("john");
-		names.add("jane");
-		names.add("john");// duplicate ignored
-		names.add("jane");// duplicate ignored
-		names.add("mike");
-		System.out.println(names.size());
-		System.out.println(names);
+		String[] names=new String[5];
+		names[0]="john";
+		names[1]="jane";
+		names[4]="andy";
+		for(String s:names)
+			System.out.println(s);
 		
-		HashSet<Student> school=new HashSet<Student> ();
-		String a="jane";
-		Student s1=new Student("john",1,123);
-		Student s2=new Student("jane",1,222);
-		Student s3=new Student("mike",2,333);
-		Student s4=new Student("john",1,456);
-		Student s5=new Student("jane",1,223);
-		//school.add(a); // school is collection of student data type...
-						// adding string will give error
-		school.add(s1);
-		school.add(s2);
-		school.add(s3);
-		school.add(s4);
-		school.add(s5);
-		System.out.println("student collection : "+school.size());
+		// list is indexed and ordered and dynamic size
+		LinkedList<String> nameColl=new LinkedList<String>();
+		nameColl.add("john");
+		nameColl.add("jane");
+		nameColl.add("andy");
+		nameColl.add("mike");
+		System.out.println(nameColl);
+		System.out.println( nameColl.indexOf("andy"));
 		
-		TreeSet<String> ts=new TreeSet<>();
-		ts.add("john");
-		ts.add("andy");
-		ts.add("mike");
-		System.out.println(ts);
+		Collections.synchronizedList(nameColl);
 		
-		TreeSet<Student> tss=new TreeSet<Student>();
-		tss.add(s1);
-		tss.add(s2);
-		tss.add(s3);
-		tss.add(s4);
-		tss.add(s5);
-		System.out.println(tss);
+		for(String s:nameColl)
+			System.out.println(s);
+		
+		
+		
+		nameColl.remove("jane");
+		System.out.println(nameColl);
+		System.out.println( nameColl.indexOf("andy"));
+		
+		
+		// HashSet : unique, unordred
+		// LinkedHashSet : unqiue, ordered
+		// TreeSet : unqiue, sorted
+		System.out.println("***** set *****");
+		HashSet<String>  nameSet=new HashSet<String>();
+		nameSet.add("john");
+		nameSet.add("jane");
+		nameSet.add("mike");
+		nameSet.add("john");
+		System.out.println( nameSet );
+		
+		// wrapper class
+		// collections operate only on object/complex data type... not on primitive 
+		// int = Integer , float = Float , double=Double, boolean = Boolean, char=Character
+		// short=Short, long=Long, byte=Byte
+		ArrayList<Integer> scores=new ArrayList<Integer> ();
+		scores.add(10);
+		scores.add(20);
+		scores.add(30);
+		scores.add(22);
+		
 	}
 
 }

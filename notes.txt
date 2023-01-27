@@ -645,7 +645,63 @@ runtime exception
 user-defined exception
 throws
 
+List
+	ArrayList : indexed, duplicate, ordered, fastest, less memory
+	Vector : indexed, duplicate, ordered, synchronized
+	LinkedList :  : indexed, duplicate, ordered , (faster for editing )
+		consumes memory
+		fastest editing
+	
+Set
+	HashSet : unique, unordered
+	LinkedHashSet : unique, ordered
+	TreeSet : unique, sorted
+	
+shopping cart
+	iphone 1
+	samsung 2
+	mac 1
+	iphone 1
+	
+Restaurant order display screen
+	
+	john x doe - pizza (order 1)
+	jane x joe - pasta (order 2)
+	mike x moe - salad (order 3)
+	
+	no duplicates , 
 
 
 
+Collection can store any data type
 
+ArrayList<String> : categorization/unique code ??? no uniqueness required... no code required
+HashSet<String> : categorization/unique code ??? uniqueness required... no code required
+HashMap<String,String>: categorization/unique code ??? uniqueness required... no code required
+
+
+ArrayList<Student>: categorization/unique code ??? no uniqueness required.. no code required
+HashSet<Student> : categorization/unique code ???uniqueness required.. YES code required
+
+HashMap<key,value>
+HashMap<Student,String> :  categorization/unique code ???keys are unique.. YES code required
+HashMap<String,Student>:  categorization/unique code ???value can be duplicate.. NO code required
+
+
+Set : single value ( uses key section of Map)
+	HashSet : unique and unordered
+	LinkedHashSet : unique and ordered
+	TreeSet : unique and sorted
+	
+	
+Map : Key-value pair
+	HashMap : Keys are unique and unordered
+	LinkedHashMap : Keys are unique and ordered
+	TreeMap : Keys are unique and sorted
+	HashTable : synchronized
+		pros : data is consistent
+		cons : slower(wait)
+		
+		
+TreeSet and TreeMap requires programmer to implement comparable interface
+	compareTo method
