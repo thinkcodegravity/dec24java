@@ -1,707 +1,168 @@
-THIS IS TEST COMMENT
+Programming concepts
 
-Information storage
-	variables
-		2 and 3 multiplication (MEMORY)
+Procedure oriented programming
+	focus on the task
+Object oriented programming
+	focus on the system
+	
+Problem statement : Rocket fly	
+	
+Procedure oriented programming : expert
+	focus on FLY
+	
+Real world problem or beginner
 
-
-Information Proessecing
-	methods/function/interface
-		2 + 2 + 2  = 6 (INSTRUCTION TO THE CPU)
+Object oriented programming - modular approach
+	focus on Rocket
 	
-procedure oriented programming
-	c programming
-	main focus on the task 
-	
-	fly : 
-	
-object oriented programming
-	java programming
-	main focus on the system as a whole
-	
-	Rocket
-		has-a : fuel tank, exhaustion chamber, cockpit
+	Rocket 
+		Has -A : propeller, combustion chamber, Fuel, cockpit
 		
-		does-a :
-			fly
-				combustion : ignite the fuel
-				propel : exhaust all downward angle
-			life support
+		Does-A : fly
+					take fuel
+					burn fuel in combustion chamber
+					exhaust gas from propeller compoent
+					
+	
+	BankAccount : accountNumber,routingnumber, withdraw,userid, deposit, id,password, balance, login, 
+			applyLoan, pincode
+	
+		Store/Hold information
+		HAS-A : accountNumber,routingnumber, userid,id,password,balance,pincode=5678
 			
-BankAccount
-
-money, account number, routing number,deposit,withdraw,address, transfer, branch,
-phone, name
-
-(variables) has-a : money=100$,account number=123213213132
-,routing=0000011111111,address=123 street ny,branch= New york,
-	phone=123123123,name=john
-
-(method) does-a (actions/activity): deposit,withdraw,transfer
-	deposit : 10 $
-		add 10 $ to the money= 90$
+			pincode , enterPin
+			
+		Manipulate/changing/processing information
+		DOES-A : withdraw (Action), deposit, login, applyLoan
 	
-public class BankAccount{
-	// variables/ has-a/ store information
-	int money=100;
-	String name="john";
 	
-	// method/ does-a / action/functionality
-	public void deposit(int depositAmount){
-		// instruction
-		money=money+depositAmount;
-		110 = 100 + 10;
-	}
-
-}	
+	Memory : store information
+	CPU : process information
 	
-
-fan
-	blades, button, increase speed, on , off, 
-	has-a : blades,button
-	does-a : increase speed, on, off
-bank 
-
-	( has-a or does-a )
-	int money;
-
-	public void deposit
+	
+	BankAccount : 
 		
+		Store/Hold information
+		HAS-A : balance=1000
+			
+		Manipulate/changing/processing information
+		DOES-A : 
+			withdraw (10000$)
+				if balance is greater than withdraw amount
+					then balance minus withdraw amount
+				or else if balance is less than withdraw amount
+					low balance. cannot withdraw
+					
+	public class BankAccount{
+		int balance=1000;
+		
+		public  void withdraw(int withdrawAmount){
+			if(balance >= withdrawAmount)
+				balance=balance-withdrawAmount;
+			else
+				sysout("low balance. cannot withdraw);
+		}
+	}
 	
-School
-	students, teacher, grade ,classes, teach, learn, exams, takeexams
-	has-a : teacher, students, grade, clases
-	does-a : teach, learn, 
 
-gmail
-	inbox, mail, userid, password,send email, read email, delete email
-	has-a
-	does-a
+GMAIL
 
-products
-	
+Facebook
 
-Iphone = 2006 - 5 years
+Amazon
+
+Fan
+
+TV
+
+Car
+
+
+
+Computer programmer
+Object Oriented Programmer
+Java programmer
+
+
+Research 5 years to launch the first smart phone
+Iphone3 2006
 	call
 	text
 	browse
-
-Iphone2 = 2013 - 7 year
-	call - REUSE(inherits)
-	text - REUSE(inherits)
-	browse - REUSE(inherits)
-	camera
 	
-
-Iphone3 = 2008
-	call - REUSE(inherits)
-	text - REUSE(inherits)
-	browse - REUSE(inherits)
-	camera - REUSE(inherits)
-	apple pay
-
-
-programmer (english)
-	src - source code ( human readable format )
-
-
-
-machine(french)
-	bin - binary code (machine readable format)
-
-
-JDK = compiler + interpreter
-JRE = interpreter
-
-bankaccount{  // opening curly bracket 
-	money=100$
-	balance
-
-	deposit 10{
-		add 10 money=110
-	}
-
-	withdraw 5{
-		deduct 5 money
-	}
-
-}// closing curly bracket
-
-product{
-name
-price
-	buy{
-		take paymet
-	}
 	
-	sell{
-		receive payment
-	}
+Iphone4 2007
+	call - inherited (REUSABILITY)
+	text - inherited
+	browse - inherited
+	appleMap - 1 year
+	
+	
+Inheritance
+Encapsulation
+Abstraction
+	hide internal complexity
+	provide easy to use interface to your customers
+	
+	Iphone
+		Inside : wireless tech, hardware tech,wire,circuit
+		Outside : screen
+	
+	
+Polymorphism
+
+
+Language - Stickiness, tightly coupled
+
+
+Analysis
+
+BankAccount : accountNumber,routingnumber, withdraw,userid, deposit, id,password, balance, login, 
+		applyLoan, pincode
+
+	variable = vary various = changes
+	Store/Hold information
+	HAS-A : accountNumber,routingnumber, userid,id,password,balance,pincode=5678
+	
+	// variables hold information, that can change over the time.
+	int balance=100; // balance is a varible.. variable
+	
+	method
+	Manipulate/changing/processing information
+	DOES-A : withdraw (Action), deposit, login, applyLoan
+
+
+Create program BankAccount
+
+guideline 
+
+camel case
+first letter is UPPERCASE
+remaining letter are lower case
+
+public class BankAccount{
+	accountNumber;
+	routingnumber;
 }
 
-camel case = tall neck,,, shorter body
-	uppercase lower case
+amazon
+	has-a : product,price,quantity, customers, buyer,seller
 	
-Bank	= "B" upper case.... "ank" lower case
-
-PaypalPayment
-ThisIsMyProgramName
-
-
-
-**********************************************
-
-int age=95;
-
-int = numeric data type
-age = variable (changing)
-95 = numeric value
-
-
-int age; // declaration - age can hold numeric value
-age=20; // initialization - value provided to a variable for the FIRST time
-age=21; // reassignment - overwrites previous value of this variable
-
-???? name="john";
-
-int age=95;//declaration and init on same line
-int x;
-x=20;
-
-LHS : int age
-RHS : 95
-
-95= int age;
-
-int a=10;
-int b=20;
-int c=30;
-
-int x= a + 10 + c;
-
-1) if variable on RHS = replace their values
-	int x= 10 + 10 + 30;
-2) if operation on RHS = solve operation to single value
-	int x= 10 + 10 + 30;
-	int x= 20 + 30;
-	int x= 50;
-
-
-data type
-variable
-value
-LHS
-RHS
-declaration
-initializtion
-reassignment
-
-
-20= int a;
-b=30;
-int x=10;
-int y=20;
-int z=25;
-
-int p=x+y+10;
-	//int p=10+20+10;
-int q=p;
-int r=10;
-int r=20; // re-declaration not allowed
-r=20;	// re-assignment allowed
-int s=r+20;
-int t=10-5;
-int u="100";
-
-LHS   =  RHS
-
-Variable  =  Single Value
-int a	= 20
-int b = 10+30 = 40
-int c = a = 20
-
-
-
-bank account
-	variable/information 
-		balance=100
-		address=ny
-		
-	method/actions = manipulate/act upon the information
-		deposit - balance goes up
-		withdraw - balance foes down
-		updateAddress = address changes from ny to nj
-	
-variable and method= camelcase from second word onwards	
-classs name = camelcase from first word onwards	
-
-how to recognize methods : Does-A exercise
-	Facebook does login
-how to code methods :
-	What to name this activity ???   "allBasicMathOperation"
-	how many inputs are required 2  ??? what are the data type of each inputs ???  int int
-		If  0 input leave it blank
-		If 1 input write data type and input name(parameter)
-		If more than 1 input ,write pair of data type and input name(parameter) comma separated
-			 "int number1, int number2"
-			
-	how many returns/outputs are required 4 ??? what is the data type of each output ???   int
-		If 0 output write void
-		If 1 output write data type
-		If more than 1 output, create complex class and write class name
-			 "AllMathOutput"
-
-access	output	method_name	( input)
-public 	int 		charity		(   )
-public	int		square		(int number)
-public	int		addition		(int number1 , int number2)
-
-public 	void		deposit		(int amount)
-public	boolean	login			(String email, String password)
-public	AllMathOutput    allBasicMathOperation(int number1, int number2)
-
-public class AllMathOutput{
-	int sum;
-	int sub;
-	int mul;
-	int div;
-}
-
-
-public class bankAccount{
-	// variable
-	int balance=100;
-	
-	// method declaration
-	public void deposit(int amount){
-		// logic
-		// control flows and operators
-	}
-	
-	public int withdraw(int amount){
-		return 123;
-	}
-}
-
-
-Create a method that can accept appropriate input for payment webpage
-	and returns payment response.
-
-
-input : credtNumber, secCode, expDate
-
-output : boolean
-
-public boolean payment(long credtNumber, short secCode, String expDate){
-	return false;
-}
-
-int a; // primitive int variable declaration
-a=20; // primitive int variable initializtion
-a=40; // primitive int variable reassignment
-public int add(int a, int b) // method declaration
-{// method body
-	
-}
-add(x,20); // method call
-
-System.out.println(  x );
-System.out.println(  20 );
-
-
-Person p; // Object Person variable declaration
-p=new Person(); // Object Person variable iniitlza
-p=new Person(); // 
-
-declaration = data type
-
-int a; // variable declaration
-a=20; // variable initializtion
-int b=20;// variable declaration & initlization(variable first assign)
-b=30;// variable new assignment/ reassignment
-a=40; // variable reassignment
-
-public void add(int a, int b )// method declaration
-				// inside the bracket there is data type mentioend
-public void sub(int x,int y)// method declaration
-	
-METHOD CALL IS TO PASS VALUE (NEVER VARIABLE)
-int x=20;
-	x=30;
-int y=25;
-
-add(10,20);// method call with direct/literal value
-
-add(x,y); // method call with variable
-	add(30,25); // program/java platform interprets 
-sub(10,y); // method call
-	sub(10,25);
-
-
-public class Iphone{
-	int modelNumber=345345;
-	int phoneNumber=123;
-	static String category="electronics";	
-}
-
-Iphone i1=new Iphone();
-Iphone i2=new Iphone();
-Iphone i3=new Iphone();
-Iphone i4=new Iphone();
-
-
-
-&& = AND (need BOTH, BOTH has true)
-	true && true = true
-	true && false = false
-	false && true = false
-	false && false = false
-
-|| = OR ( Atleast one has true )
-	true || true = true
-	true || false = true
-	false || true = true
-	false || false = false
-
-&
-	1 & 1 = 1
-	1 & 0 = 0
-	0 & 1 = 0
-	0 & 0 = 0
-|
-	1 | 1 = 1
-	1 | 0 = 1
-	0 | 1 = 1
-	0 | 0 = 0
-	
-	
-	
-	
-1+ 2 * 4 - 6 +2
-left to right = 8
-right to left = 9
-
-operator precedence(priority)
-
-1) ()
-2) * / 
-3) + - 
-4) < >
-5) &&
-6) ||
-7) if operators at same level ... go left to right
-
-(1+2) * (4-1) + 2 - 1 + (3-5)
-3 * (4-1) + 2 - 1 + (3-5)
-3 * 3 + 2 - 1 + (3-5)
-3 * 3 + 2 - 1 - 2
-9 + 2 - 1 - 2
-11 - 1 - 2
-10 - 2
-8
-
-1) ()
-2) * / 
-3) + - 
-4) < >
-5) &&
-6) ||
-7) if operators at same level ... go left to right
-
-(1+2) > (1-3) && (2+5+6) < 12 || 2<3
-3 > (1-3) && (2+5+6) < 12 || 2<3
-3 > -2 && (2+5+6) < 12 || 2<3
-3 > -2 && 13 < 12 || 2<3
-true && 13 < 12 || 2<3
-true && false || 2<3
-true && false || true
-false || true
-true
-
-|| atleast one should be true
-(1+2) > (1-3) && (2+5+6) < 12 || 2<3
-(1+2) > (1-3) && (2+5+6) < 12 || true
-true
-
-
-public bank
-	int balance =100;
-	public void withdraw(int amount){
-	// logic of method/service written by 
-	// control flow = either or.... If else
-	// operators = relational, arithment etc
-		if balance > amount
-			withdraw money
-			balance=balance-amount
-		else
-			insufficient fund error
-	}
-
-	withdraw(200); // method call
-	
-	
-if(  boolean condition ){
-	code executed if above condition is true
-}
-else{
-	code executed if above boolean condition false
-}
-
-boolean condition
-	boolean variable
-	operators that provide boolean result
-		equality, relational, conditional 
-Fixed(finite) loop= FOR
-0 or more(infinite) loop = WHILE
-1 or more(infinite) loop = DO-WHILE
-
-747 boeing airline seat booking app = Fixed loop
-Shopping - add 2 cart = 0 or more loop
-ATM - transaction = 1 or more loop
-
-for( Initialization,  Condition check,  Modification){
-	// execute repetetive code 
-}
-// INFINITE LOOP
-for( int i=0 ;  i < 3 ; i--){
-	sysout("hi");
-}
-
-I C E	= i:0, true, print hi
-M C E = i:-1 , true, print hi
-M C E = i:-2, true, print hi
-M C E = 
-
-continue : skip remaining code in current block
-break : exit entire loop
-
-for( int i=0 ;  i < 3 ; i++){
-	sysout("hi");
-	if(i==1)
-		break;
-	
-	sysout("bye");
-}
-
-// asdsadas
-
-I C E	= i:0 , true, print hi print bye
-M C E =  i:1, true , print hi
-M C E = 
-M C E = 
-
-
-0 or more loop while
-	
-while( condition check ){
-	repetetive code
-}
-
-
-multiple choice
-	if / else if / else if / else
-performance SLOWER
-	
-int f=99;
-if(f==1)
-	System.out.println("printing 1");
-else if(f==2)
-	System.out.println("printing 2");
-else if(f==3)
-	System.out.println("printing 3");
-...
-else if(f==99)
-	System.out.println("printing 99");
-else if(f==100)
-	System.out.println("printing 100");
-else  // default block.. if none of the above condi matched
-	System.out.println("unknown number");
-
-
-multiple choice
-	switch case
-performance FASTER
-	
-int f=99;
-switch(f)
-	case 1:
-		System.out.println("printing 1");
-	case 2:
-		System.out.println("printing 2");
-	case 3:
-			System.out.println("printing 3");
-	...
-	case 99:
-		System.out.println("printing 99");
-	case 100:
-		System.out.println("printing 100");
-	default // default block.. if none of the above condi matched
-		System.out.println("unknown number");
-
-// USE IF-ELSE WHEN NEEDED 
-// MULTIPLE CHOICE WITH COMPLEX CONDITION
-if( userid==regUserid && pwd=regPwd)
-	System.out.println("welcome");
-else if( email==regEmail && pwd=regPwd)
-	System.out.println("welcome");
-else if( phone==regPhone && pwd==regPwd)
-	System.out.println("welcome");
-else  // default block.. if none of the above condi matched
-	System.out.println("login failed");
-
-
-
-
-
-******** new = of assignment rules from inheritance **********
-
-Car c=new Car();
-Nissan n=new Nissan();
-
-RHS should be concrete			
-RHS should be same family as LHS			
-RHS should be same or child of LHS			
-
-Car > nissan > nissanZ60
-
-Car c=new Nissan();
-Nissan nz=new NissanZ60();
-
-
-******** new method call rules from inheritance **********
-
-public class Payment{
-	public void transfer(){
-		adads
-	}
-}
-
-public class paypal extends Payment{
-	public void transfer(){
-		qwe
-	}
-}
-
-public class creditcard extends Payment {
-	public void transfer(){
-		dfg
-	}
-}
-
-Payment pay=new Payment();
-paypal pp=new paypal();
-shopping(pay); // default rule
-shopping(pp); // new rule = u can pass child of method declaration
-			//		u can pass paypal variable which is child of method delcation payment p
-public void shopping(Payment p)
-
-
-
-String num="1234567890";
-String num="123-456-7890";
-String num="(123)4567890";
-String num="(123)(456)7890";
-
-// search and replace
-num.replaceAll("-",""); // 123-456-7890 ...  1234567890
-num.replaceAll("(","").replaceAll(")",""); 
-	// (123)(456)7890
-	// 123)456)7890
-	// 1234567890
-	
-num.replaceFirst("-",""); // 123-456-7890 ...  123456-7890
-*********************
-Exception handling
-	1) customer : provides custom error message
-		what is the problem
-		how to avoid the problem
-	2) developer
-		what is the problem
-		where is the problem
-		where problem started
-		
-	Exception in thread "main" java.lang.ArithmeticException: / by zero (what is the problem)
-		at exceptin.Test.method3(Test.java:18) ( where is the problem )
-		at exceptin.Test.method2(Test.java:11)
-		at exceptin.Test.method1(Test.java:6)
-		at exceptin.TestException.main(TestException.java:8) ( where problem started)
+	does-a :
+		shopping
+		login
+		payment
+		checkOut
+		cancelOrder
 		
 		
-		
-		
-		
-
-123 * 0 = 0
-123 / 0 = infinite
-
-try
-catch
-finally
-exception stack trace
-
-NullPointerException - 99%
-compile time exception
-runtime exception
-user-defined exception
-throws
-
-List
-	ArrayList : indexed, duplicate, ordered, fastest, less memory
-	Vector : indexed, duplicate, ordered, synchronized
-	LinkedList :  : indexed, duplicate, ordered , (faster for editing )
-		consumes memory
-		fastest editing
+public class Amazon{
 	
-Set
-	HashSet : unique, unordered
-	LinkedHashSet : unique, ordered
-	TreeSet : unique, sorted
+	int product;
+	float price;
+	int quantity;
+	String customers;
+	String buyer;
+	String seller;
 	
-shopping cart
-	iphone 1
-	samsung 2
-	mac 1
-	iphone 1
-	
-Restaurant order display screen
-	
-	john x doe - pizza (order 1)
-	jane x joe - pasta (order 2)
-	mike x moe - salad (order 3)
-	
-	no duplicates , 
-
-
-
-Collection can store any data type
-
-ArrayList<String> : categorization/unique code ??? no uniqueness required... no code required
-HashSet<String> : categorization/unique code ??? uniqueness required... no code required
-HashMap<String,String>: categorization/unique code ??? uniqueness required... no code required
-
-
-ArrayList<Student>: categorization/unique code ??? no uniqueness required.. no code required
-HashSet<Student> : categorization/unique code ???uniqueness required.. YES code required
-
-HashMap<key,value>
-HashMap<Student,String> :  categorization/unique code ???keys are unique.. YES code required
-HashMap<String,Student>:  categorization/unique code ???value can be duplicate.. NO code required
-
-
-Set : single value ( uses key section of Map)
-	HashSet : unique and unordered
-	LinkedHashSet : unique and ordered
-	TreeSet : unique and sorted
-	
-	
-Map : Key-value pair
-	HashMap : Keys are unique and unordered
-	LinkedHashMap : Keys are unique and ordered
-	TreeMap : Keys are unique and sorted
-	HashTable : synchronized
-		pros : data is consistent
-		cons : slower(wait)
-		
-		
-TreeSet and TreeMap requires programmer to implement comparable interface
-	compareTo method
+}
