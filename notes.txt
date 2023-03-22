@@ -166,3 +166,30 @@ public class Amazon{
 	String seller;
 	
 }
+
+
+Programs
+	Store information (HAS-A)
+	
+	Actions based on information(DOES-A)
+	
+	
+BankAccount
+	balance=100$ (BankAccount HAS-A balance)
+	
+	Deposit( 10$ )(BankAccount DOES Deposit)
+		deduct balance by 10$
+	
+	
+Digital Information :
+	Alphabetic : single character, Group of character
+		single character : IsActive , IsLoggedIn, IsOrderCompleted
+		Group of character : name, city
+	Numeric :
+		whole : 18,21,55
+		fractional : 5.10 , 140.23
+	Yes/NO : true, false
+	Complex : 
+		contains sub information
+		Address : 
+			street, bldgNumber, city, state, zip
