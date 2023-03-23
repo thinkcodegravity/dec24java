@@ -17,6 +17,7 @@ public class VariableRulesTest {
 		// rule 4) If a variable appears on RHS, 
 		//			program substitutes with its respective value
 		
+		int asd;
 		int x=10;
 		
 		//20=x;
@@ -55,4 +56,10 @@ public class VariableRulesTest {
 		
 		
 	}
+	
+	
+	public void haveBreakfast() {
+		
+	}
+	
 }

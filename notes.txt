@@ -193,3 +193,81 @@ Digital Information :
 		contains sub information
 		Address : 
 			street, bldgNumber, city, state, zip
+			
+			
+			
+			
+			
+			
+			
+			Variable : store information
+
+	Long term information : name, age, native
+		race : asian	(Shared) Static or Class variable
+		planet : earth	 
+		name : john	(Specific)	instance variable
+		fingerprint : qwewqeqwe   
+		
+	Short term information: 
+		Input : 10 X 20 (Parametric variable)
+			1000000$
+		local : 5 + 3 + 7 + 4
+			5 + 3= 8	(local variable)
+			8 + 7= 15
+			15 + 4 = 19
+
+Class BankOfAmericaCustomer
+	accountNumber=12345
+	i want to withdraw - how much ? 10$
+	bankName="bankOfAmerica";
+	simpleinterest calculator
+		int a=multiply P and T
+		int b=multiply a and R
+		int c=divide b by 100
+		PTR/100
+	
+
+
+methods (actions)
+
+who can access this functionality ? public 
+Output of this functionality ?
+Name of this functionlity ?
+Input for this functionality ?
+	
+access_privilege   Output   name ( input) 
+public		int		add(int a)
+	Name : what do you want to call this functionality ?
+	Input :
+		0 input : leave blank ( )
+		1 input : data type and name of variable input  ( int withdrawAmount)
+		more than 1 input : multiple pair comma separate (data type and name of variable input)
+					(int number1 , int number2)
+	Output : 
+		0 output : void
+		1 output : mention the data type of that output 
+		more than 1 output : create a complex program that can hold multiple output information
+			write the name of this program 
+	
+
+write a program method to calculate area of square
+Name : areaOfSquare
+input : just 1... side... int..... (int side)
+Output : int
+public 	int 	areaOfSquare(int side)
+	
+write a program method to calculate area of rectangle
+Name : areaOfRectangle
+input : 2 input... length and breadth... int... (int length  , int breadth)
+Output :  int
+public 	int 	areaOfRectangle(int length  , int breadth)
+	
+write a program method to provide LOGIN on website
+Name : userLogin
+input : 2... userid and password... String... (String userid, String password)
+Output :  boolean
+public 	boolean	userLogin(String userid, String password)
+
+	
+	
+	
