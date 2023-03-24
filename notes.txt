@@ -238,6 +238,7 @@ Input for this functionality ?
 access_privilege   Output   name ( input) 
 public		int		add(int a)
 	Name : what do you want to call this functionality ?
+		
 	Input :
 		0 input : leave blank ( )
 		1 input : data type and name of variable input  ( int withdrawAmount)
@@ -268,6 +269,35 @@ input : 2... userid and password... String... (String userid, String password)
 Output :  boolean
 public 	boolean	userLogin(String userid, String password)
 
+Naming RULES	
+1)Naming conventions
+	Class : AmazonEcommerce	(camelcase starts from first word)
+	Variable : amazonProduct (camelcase starts from second word)
+	Method : sellAmazonProduct() (camelcase starts from second word and is followed by () )
+
+System.out.print()
+
+2)should start with alphabet or $ or _
+3)can contain any alphabet or number or $ or _
 	
-	
-	
+amazon_Buy123
+
+4) cannot use any reserved keywords (purple colored words in program)
+
+
+
+
+void add(  int x, int y)   {
+
+}
+
+
+void sub(  )
+
+
+
+
+
+
+
+
