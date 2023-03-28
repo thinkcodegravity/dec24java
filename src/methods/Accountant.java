@@ -15,13 +15,18 @@ public class Accountant {
 		// method caller
 		// INPUT : 50,43,"jane"
 		// OUTPUT : result
-		int result=c.add(50,43,"jane");
+		int y=30;
+		int result=c.add(50, y,"jane");
 /*
+ METHOD CALL/INVOKE
  Rules on 
  passing input/request/data
  1) number of inputs should match
  2) data type of input should match
  3) order of input should match
+ 4) do not declare variables here..
+ 	values or already declared variable
+ 	
  Rule on
  handling return type/output
  1) method output should match
