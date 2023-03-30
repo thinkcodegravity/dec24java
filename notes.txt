@@ -294,8 +294,36 @@ void add(  int x, int y)   {
 
 void sub(  )
 
-
-
+variable = store information
+Long term info
+	generic info
+		live = earth
+	Specific info
+		name = john
+	
+Short term info
+	input info
+		
+	local info
+		what u had for breakfast
+arithmetic 
+	bank withdraw and deposit
+	loan simple interset = p x t x r / 100
+	Ecommerce
+		warehouseStock=100 (96)
+		buy = 4 product ? ( minus from stock)
+		10% discount on product
+			iphone 1000 = 900
+equality 
+	login - compare login uid/pwd TO sign-up uid/pwd
+relational
+	bank witdraw : check sufficient balance
+		balance is greater than withdraw amount
+	Ecommerce
+		warehouseStock=100 
+		buy = 104 product 
+		is stock greater than buy quantity ?
+		
 
 
 

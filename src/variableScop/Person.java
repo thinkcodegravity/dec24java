@@ -1,121 +1,38 @@
 package variableScop;
 
 public class Person {
-	// Global variable
-		// long term information
-		static String planet = "earth"; // shared/class/static variable
-		String name = "john"; // specific/instance variable
-		int age = 20; // specific/instance variable
-		//static String age = 21;
-		static String speices = "human being"; // shared
+// Long term info "Global variable"	
+	// specific ... "Instance variable"
+	String name="john";
+	//String name="jane";
+	// shared... "static/class variable"
+	static String planet="earth";
+	//static String planet="jupiter";
+// RULES : cannot have duplicate global variable
+// RULES : duplicate allowed between global and local 
+	
+	// short term info "Local variable"
+	// a and b are input variable... "Parameteric variable"
+// RULES : input variable cannot have values here
+	public int add(int a, int b) {
+		String name="jane";
+		int sum=0;// defined inside curly bracket
+		sum=a+b;
+		System.out.println( name );// when dup global and local... local gets prefernece
+		System.out.println( this.name );// i know there is dup local variable..
+									// but i am intereseted in the one that is global
 		
-		String fingerprint="qwe";
-		static String breathe="oxygen";
-		
-	// Rules
-	// names conflict
-	// global and global cannot conflict
-	// local and local cannot conflict in the same block
-	// global and local can conflict
-			
-	// local variable
-	// short term information
-	// paramteres/ input variable : variable in the method
-	// declaration = no values should be provided here
-	// time = scope/lifespan of entire method body
-	public void breakFast(int time) {
-		System.out.println(time);
-		String food = "toast";
-		System.out.println(planet);
-		System.out.println(name);
-		System.out.println(age);
-		System.out.println(speices);
-		System.out.println(food);
-		System.out.println(time);
+		System.out.println( sum );
+		System.out.println( a );
+		System.out.println( b );
+		return sum;
 	}
-
+	
 	public void test() {
-
-		{
-			//local and local cannot conflict in the same block
-			int x = 10;
-			System.out.println(x);
-		}
-		System.out.println(x);
-		{
-			//local and local cannot conflict in the same block
-			int x=20;
-			System.out.println(x);
-		}
-		System.out.println(x);
-
+		System.out.println( name );
+		System.out.println( sum );
+		System.out.println( a );
+		System.out.println( b );
 	}
-
-	public void test2() {
-
-		{
-			System.out.println(x);
-			{
-				int x = 10;
-				x=10;
-				{
-					System.out.println(x);
-				}System.out.println(x);
-			}
-		}
-		System.out.println(x);
-	}
-	// scope
-	/*
-	 	start : line it was declared  : 66
-	 	end : find out closing bracket of x block
-	 		find out the closest opening bracket above : 64
-	 		click on it
-	 		look for square on closing bracket : 78
-	 */
-	
-	public void test3() {
-		System.out.println(y);
-		int y=20;
-		{
-			int y=30;
-			System.out.println(y);
-			{
-				System.out.println(y);
-			}
-		}
-		{
-			System.out.println(y);
-		}
-		System.out.println(y);
-	}
-	
-	
-	public void run() {
-		System.out.println(planet);
-		System.out.println(name);
-		System.out.println(age);
-		System.out.println(speices);
-		System.out.println(time);
-		System.out.println(food);
-		
-	}
-
-	 void abc() {
-		
-	}
-	// global
-	int abc=20;
-	
-	public void test4() {
-		// global and local CAN conflict
-		// local
-		int abc=30;
-		// 30 .. local get first preference
-		System.out.println( abc ); 
-		// 20 .. if need exclusive access to global 
-		System.out.println( this.abc );
-	}
-	
 	
 }
