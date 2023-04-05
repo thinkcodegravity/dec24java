@@ -55,7 +55,7 @@ public class OperatorTest {//class block or class body
 			
 			
 			boolean v= ("jane" == "john");
-			boolean w= ( 10 == "john"); // cannot compare different types
+			//boolean w= ( 10 == "john"); // cannot compare different types
 
 		// relational operator
 			//RULES
@@ -64,20 +64,68 @@ public class OperatorTest {//class block or class body
 			boolean e=10 > 5 ; // Is 10 greater than 5 = true
 			boolean f=10 < 21 ; // Is 10 less than 21 = true
 			boolean g=6 > 8 ; // is 6 greater than 8 = false
-			boolean aa="john" < "jane" // cannot operate on non-numeric
+			//boolean aa="john" < "jane" // cannot operate on non-numeric
 			
 			boolean bb=10 >= 9; //Either 10 is greater or equal to 9 = true
 			boolean cc= ( 10 <= 11 );//Either 10 is less or equal to 11 = true
 			boolean dd= ( 10 <= 8 );// Either 10 is less or equal to 8 = false
 			
+			// unary operator - works on numeric data type
+			// ++ = increment by 1
+			// -- = decrement by 1
+			// pre = increment/decrement before the current line
+			// post = increment/decrement after the current line
+			int ee=10;
 			
 			
+			System.out.println(  ee-- ); // ee=10 print 10
+			//ee=9
+			//ee=8
+			System.out.println(  --ee ); // ee=8 print 8
 			
 			
+			System.out.println(  ee++ ); // ee=8 prinnt 8 
+			//ee=9
+			//ee=10
+			System.out.println(  ++ee ); // ee=10 print 10 
 			
+			//ee=9
+			System.out.println(  --ee ); // ee=9 print 9 
 			
+			// conditional operator - works on boolean data type
+			/*								 
+					true and true = true
+					true and false = false
+					false and true = false
+					false and false = false
+					
+					or = one of the things to happen
+					
+					true or true = true
+					true or false = true
+					false or true = true
+					false or false = false
+			 */
+			// input : can be boolean or it can be an operator that generates boolean(equality / relational)
+			// output is boolean
+			boolean ff=true;
+			boolean gg=false;
+			int hh=10;
+			int ii=11;
+			System.out.println(   ff && gg );// true && false .... false
+			System.out.println(   ff || gg );// true || false .... true
+			System.out.println(   (hh!=ii) && (hh<ii)  );
+			//(hh is not equal to ii) AND (hh is less than ii) 
+			//		true			  AND		true	
+			//						true
+			// bitwise operator
+			// operates on numeric data type
+			// convert decimal into binary ... then applies and/or/ex-or rules with 1/0
+			System.out.println(  14 & 5 ); 
+			System.out.println(  14 | 5 );
+			System.out.println(  14 ^ 5 );
 			
-			
+			System.out.println(  12+ 5 - 5 +3 * 2 +(1-2) > 12 || 10 -2 > 4-3 );
 	}
 	
 	public static int getANumber() {

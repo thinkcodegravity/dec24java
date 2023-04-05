@@ -3,133 +3,115 @@ package controlflow;
 import java.util.Scanner;
 
 public class ControlFlowTest {
-
-	public static void main(String[] args) {
-
-		// If - else ... either or
-		//boolean condition
-		//boolean variable OR operators that provide boolean result
-		//	equality, relational, conditional 
-
-		int a=10;
-		int b=11;
-		boolean c=false;
-		if( a == b  || a < b) {// code executed upon condition being true
-			System.out.println("hi");
-		}
-		else {// code executed upon above condition being false
-			System.out.println("bye");
-			System.out.println("bad");
-		}
-		// a == b  || a < b
-		// 10==11  || 10<11
-		// false   || true
-		// true
-		int balance=100;
-		int withAmount=20;
-		if( balance >= withAmount) {
-			System.out.println("tran is successful");
-			System.out.println("good");
-		}// 
-		//int x;
-		else{
-			System.out.println("tran failed");
-			System.out.println("bad");
-		}
+	public static void main(String args[]) {
+		// swtich case 
 		// rules
-		// 1) if is mandatory.. else cannot exists without if
-		// 2) else is optional
-		// 3) in IF or ELSE if you have more than 1 line use the block
-		// 4) dont interrupt if-else chain.. no code written in-between
-		// 5) do not end if with a semicolon.. considered as empty block
-		
-		int d=10;
-		int e=11;
-		if(d==e); {
-			System.out.println("d and e are same");
-		}
-		
-		// if can be used as multiple choice
-		// if condition doesnt match.. move on to the next condition
-		// if a condition mathces... u exist multiple choice 
-		System.out.println("begin");
-		
-		int f=7;
-		// 59 to 66... sequence of multiple choice
-		if(f==1)
-			System.out.println("withdraw");
-		else if(f==2)
-			System.out.println("deposit");
-		else if(f==3)
-			System.out.println("balance inquiry");
-		else  // default block.. if none of the above condi matched
-			System.out.println("thanks for using our bank");
-		
-		
-		System.out.println("end");
-		
-		/*
-		Scanner sc=new Scanner(System.in);
-		int bal=100;
-		System.out.println(  "enter the amount to withdraw" );
-		int amount=sc.nextInt();
-		if( bal > amount) {
-			System.out.println("please collect your cash");
-		}
-		else {
-			System.out.println("insufficient fund");
-		}
-		*/
-		for( int i=0 ;  i < 3 ; i++){
-			System.out.println("hi");
-			if(i==1)
+		// works with primitive(int, float, char, boolean) and String
+		// switch input data type should match case options.
+		// every case should end with a break;
+		int id=3;
+		switch (id) {
+			case 1:
+				System.out.println("welcome tom");
 				break;
-			
-			System.out.println("bye");
-		}
-		
-		Scanner sc=new Scanner(System.in);
-		System.out.println(  "do you wish to add item to cart.. type true or false" );
-		boolean choice=sc.nextBoolean();
-		// 0 or more loop.. condition could fail the first time itself
-		while(choice == true) {
-			System.out.println("item added to cart");
-			System.out.println(  "do you wish to add another item to cart.. type true or false" );
-			choice=sc.nextBoolean();
-		}	
-		
-		// 1 or more loop.. condition comes after first loop
-		do{
-			System.out.println("bank transaction completed");
-			System.out.println(  "do you wish to do another bank transaction.. type true or false" );
-			choice=sc.nextBoolean();
-		}while(choice == true) ;
-		
-		// if comparing just a value against primitive or string data type
-		// primitive and string data type 
-		int s=2;
-		switch(s) {
-			case 1: // case values should match switch input data type
-				System.out.println("print 1");
-				break; // break mandatory for all cases
 			case 2:
-				System.out.println("print 2");
+				System.out.println("welcome john");
 				break;
 			case 3:
-				System.out.println("print 3");
+				System.out.println("welcome jane");
 				break;
 			case 4:
-				System.out.println("print 4");
+				System.out.println("welcome mike");
 				break;
-			default :
-				System.out.println("unknown number");
+			case 5:
+				System.out.println("welcome andy");
 				break;
-					
+			default:
+				System.out.println("invalid user");
+				break;
 		}
 		
-		
-		
-		
-		
+
+		for (int i = 1; i < 5; i++) {
+			System.out.println("hi");
+			if (i == 3)
+				break;
+			System.out.println("bye");
+		}
+
+		System.out.println("Do you want to add to cart ? type true or false");
+		Scanner sc = new Scanner(System.in);
+		boolean choice = sc.nextBoolean();
+		// 0 or MORE loop :
+		// since condition is checked in the begining of first loop
+		while (choice) {
+			System.out.println("ADDING TO CART");
+			System.out.println("Do you want to add to cart ? type true or false");
+			choice = sc.nextBoolean();
+		}
+		// 1 or MORE loop
+		// since condition is checked in the end of first loop
+		do {
+			System.out.println("BANKING transaction");
+			System.out.println("Do you have any more transaction? type true or false");
+			choice = sc.nextBoolean();
+		} while (choice);
+
+	}
+
+	public static void main2(String[] args) {
+
+		if (4 == 5)
+			;
+		{
+			// empty block
+		}
+
+		{
+			System.out.println("4 is equal to 5");
+		}
+
+		int registeredPin = 1234;
+		System.out.println("enter the atm pin");
+		Scanner sc = new Scanner(System.in);
+		int enteredPin = sc.nextInt();
+		// ********* EITHER_OR CONDITION FLOW :: IF-ELSE ****************
+		// input boolean variable
+		// or any operator thats provides boolean output
+		// equality , relational, conditional
+		// EITHER go to shopping OR watch movie
+		// EITHER go to shopping .. hi how are you, had your dinner ? OR watch movie
+		// OR watch movie
+		// rules
+		// curly brackets are not mandatory.. if single line of code in the if/else part
+		// curly brackets should be used if multi line of code in the if/else part
+		// else is optional.. but u cannot have an else without an if
+		// if-else chain should be contagious block of code... no code should be written
+		// in between
+		// do not end if condition with semi colon
+		if (registeredPin == enteredPin) {
+			// if above condition true. enter the if block
+			System.out.println("Welcome to java bank");
+			// ********* MULTI CHOICE CONDITION FLOW:: IF-ELSE IF-ELSE IF-ELSE*********
+			System.out.println("Press 1 to withdraw, 2 to deposit, 3 to exit");
+			int enteredChoice = sc.nextInt();
+			System.out.println("hi");
+			if (enteredChoice == 1) {
+				System.out.println("enter the amount to withdraw");
+			} else if (enteredChoice == 2) {
+				System.out.println("enter the amount to deposit");
+			}
+
+			else if (enteredChoice == 3) {
+				System.out.println("Thank you for using java bank");
+			}
+			// default block
+			else {
+				System.out.println("invalid input : please enter 1,2,3 options");
+			}
+			System.out.println("bye bye");
+		} else
+			System.out.println("Error : invalid pin entered");
+
 	}
 }

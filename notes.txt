@@ -323,9 +323,218 @@ relational
 		warehouseStock=100 
 		buy = 104 product 
 		is stock greater than buy quantity ?
+	
+and = both things to happen
+
+true and true = true
+true and false = false
+false and true = false
+false and false = false
+
+or = one of the things to happen
+
+true or true = true
+true or false = true
+false or true = true
+false or false = false
+
+
+12+ 5 - 5 +3 * 2 +(1-2) = 29 ( left to right)
+12+ 5 - 5 +3 * 2 +(1-2) = 15 ( right to left)
+
+1) () 
+2) * / %
+3) + -
+4) > < 
+5) == !=
+6) &&
+7) ||
+8) left to right (if more than operator in same category)
+
+12+ 5 - 5 +3 * 2 +(1-2) > 12 || 10 -2 > 4-3
+12+ 5 - 5 +3 * 2 - 1 > 12 || 10 -2 > 4-3
+12+ 5 - 5 +6 - 1 > 12 || 10 -2 > 4-3
+17 - 5 +6 - 1 > 12 || 10 -2 > 4-3
+12 +6 - 1 > 12 || 10 -2 > 4-3
+18 - 1 > 12 || 10 -2 > 4-3
+17 > 12 || 10 -2 > 4-3
+17 > 12 || 8 > 4-3
+17 > 12 || 8 > 1
+true || 8 > 1
+true || true
+true
+
+
+11 + 45 - 3 * 4 11 + 45 - 3 * 4 / 2 +(1-2) > 12 + 44 * 23 / 5 - 1 +12 || 5 > 2
+
+
+
+
+variable
+method
+operator
+control flow
+
+public class BankAccount{
+	variables // storing information
+	int balance=100;
+	
+	// manipulating information
+	method
+	public void withdraw()
+	{
+		// logic / algorithm
+		control flows and operators
+	}
+}
+
+
+Loop
+	Airline booking software : book 1 by 1 each seats
+		FIXED LOOP : "FOR"
+	Shopping software : browse browse add 2cart... browse browse add 2cart
+		0 or MORE LOOP : "WHILE"
+	ATM software : complete 1st transaction, then repeat again if needed
+		1 or MORE LOOP : "DO-WHILE"
+
+	for( start from seat 1 : Until seat 200 :  go to next seat 1 by 1){
+		book passenger for the current seat
+	}
+	
+	for( Initialize : Condition check : Modification){
+		Repeat Code
+	}
+
+	for( int i=1 ; i<5 ; i++){
+		sysout("hello");
+	}
+
+	ICR		: i=1, true, print hello
+	MCR		: i=2, true, print hello
+	MCR		: i=3, true, print hello
+	MCR		: i=4, true, print hello
+	MCR		: i=5, false
+	MCR
+
+	// 0 LOOP
+	for( int i=1 ; i>5 ; i++){
+		sysout("hello");
+	}
+
+	ICR		: i=1, false
+	MCR		: 
+	MCR		: 
+	
+	// INFINITE LOOP
+	for( int i=1 ; i<5 ; i--){
+		sysout("hello");
+	}
+
+	ICR		: i=1, true, print hello
+	MCR		: i=0, true, print hello
+	MCR		: i=-1, true, print hello
+	MCR		: i=-2, true, print hello
+	MCR		: 
+	
+	
+	for( int i=1 ; i<5 ; i++){
 		
+	}
+
+	
+	{
+		sysout("hello");
+	}
+
+	ICR		: i=1, true, DO NOTHING
+	MCR		: i=2, true, DO NOTHING
+	MCR		: i=3, true, DO NOTHING
+	MCR		: i=4, true, DO NOTHING
+	MCR		: i=5, false
+	MCR		:
+	MCR		:
+
+	
+	
+	continue : skip all remaining lines in current loop... AND continue with next
+	break : EXIT loop
+	
+	for( int i=1 ; i<5 ; i++){
+		sysout("hi");
+		if(i==3)
+			continue;
+		sysout("bye");
+	}
+
+	ICR		: i=1, true, print hi print bye
+	MCR		: i=2, true, print hi print bye
+	MCR		: i=3, true, print hi 
+	MCR		: i=4, true, print hi print bye
+	MCR		: i=5, false 
+	
+	for( int i=1 ; i<5 ; i++){
+		sysout("hi");
+		if(i==3)
+			break;
+		sysout("bye");
+	}
+
+	ICR		: i=1, true, print hi print bye
+	MCR		: i=2, true, print hi print bye
+	MCR		: i=3, true, print hi  EXIT LOOP
+	MCR		: 
+	
+WHILE(CONDITION){
+
+}
+
+multi choice - if  , else if, else 
+int userid=100000;
+if(userid == 1)
+	sysout(welcome john);
+else if(userid == 2)
+	sysout(welcome jane);
+else if(userid == 3)
+	sysout(welcome mark);
+...............................
+else if(userid == 1000000000)
+	sysout(welcome andy);
+
+if else if is not suitable for large
+multi choice code - HIGH performance cost
+Swithc case is better choice
+switch case is limited to primitive 
+	simple data comparison
+
+for COMPLEX multi choice ... if - elseif  is the only option
+
+if(email=="john@g.com" && pwd="john1!")
+	sysout(welcome john);
+else if(userid=="john" && pwd="john1!")
+	sysout(welcome john);
+else if(phone=="123345" && pwd="john1!")
+	sysout(welcome john);
+else
+	sysout(invalid userid pwd);
+
+
+multi choice - switch case
+int userid=100000;
+switch(userid){
+	case 1: sysout(welcome john);
+		break;
+	case 2: sysout(welcome jane);
+		break;
+	case 3: sysout(welcome mark);
+		break;
+	...............................
+	case 10000000: sysout(welcome andy);
+		break;
+}
 
 
 
 
 
+	
+	
