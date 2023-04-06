@@ -3,17 +3,29 @@ package constructor;
 public class ConstructorTest {
 
 	public static void main(String[] args) {
+		// constrcutor/method call input rules
+		/*
+		 1) number of inputs should match
+		 2) data type should match
+		 3) order of data type should match
+		 */
+		Car c1=new Car( "red" );
+		Car c2=new Car( 2 );
+		Car c3=new Car( "blue",2 );
+		Car c4=new Car("green",3);
+		Car c5=new Car(); // car program has 3 constructors
+						// so compiler didnt provide default constructor
+		//() = constructor or method call
+		// constructor call always appears after the 
+		// new keyword
+		BankAccount ba=new BankAccount();
+		// BankAccount() is a constructor call
+		// BankAccount does not have ANY constructor
+		// so compiler provided a default constructor
 		
-		Car customer1=new Car( "red" );// constrcutor call
-		Car customer2=new Car( 2 );
-		Car customer3=new Car( "black",6 );
-		
-		// method input rules
-		// 1) number of input
-		// 2) data type of input
-		// 3) order of input
-		
-		BankAcc ba1=new BankAcc(  );
+		ba.deposit(100);
+		// deposit is a method call
+		// deposit method does not exist
 	}
 
 }

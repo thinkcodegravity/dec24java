@@ -1,12 +1,15 @@
 package inheritance;
 
 public class Parent extends GrandParent{
-	int a=10;
-	public Parent() {
-		super( "");
-		System.out.println("constructing Parent");
+	
+	
+	public Parent(String s ) {
+		System.out.println("in parent constructor");
 	}
-	public void test() {
-		System.out.println("test method");
+	
+	
+	int a=20;
+	public void test2() {
+		System.out.println("parent test2 method");
 	}
 }

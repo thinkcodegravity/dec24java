@@ -1,7 +1,7 @@
 package inheritance;
 
 public class GrandParent {
-	public GrandParent(String s ) {
-		System.out.println("constructing grandparent");
+	public void test1() {
+		System.out.println("grandparent test1 method");
 	}
 }

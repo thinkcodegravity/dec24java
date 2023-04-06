@@ -5,17 +5,25 @@ public class Car {
 	String color="white";
 	int door=4;
 	
-	// 1) there is no output/return type
-	// 2) name should be exactly similar to class name
+	/*
+	 Constructor :
+	 1) name should be same as class name
+	 2) no return type/output
+	 3) more than 1 constructor..(polymorphism)
+	 many forms : many ways to create Car
+	 */
+	public int add(int a,int b) {
+		return a+b;
+	}
 	public Car(String c) {
 		color=c;
 	}
-	// more than 1 constructor
 	public Car(int d) {
-		door=d;
+		door = d;
 	}
-	public Car(String c, int d) {
+	public Car(String c,int d) {
 		color=c;
 		door=d;
 	}
+	
 }
