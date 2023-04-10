@@ -537,4 +537,61 @@ switch(userid){
 
 
 	
-	
+public class BankAccount{
+	int balance=100;
+	balance=90;// cannot change variabels from outside method
+	public void witdraw(10$){
+		balance= balance - 10; // balance=100-10... balance=90
+	}
+	// if method body is missing.. there is no way to reassign/change the 
+	// variable value
+	// which is the case typically in interface program
+}	
+
+
+ LHS = RHS
+ int x="john";
+ LHS and RHS data type should match
+ 
+ Student s1=new Student();
+ Student s2=new Student();
+ Person p1=new Person ();
+ Person p2=new Person ();
+ s1=s2;
+ s1=p1; // NO
+ s2=p2; // NO
+ p1=p2;
+ 
+ Iphone1 i1=new Iphone1();
+ Iphone1 i1a=new Iphone1();
+ Iphone3 i3=new Iphone3();
+ Iphone4 i4=new Iphone4();
+ Iphone5 i5=new Iphone5();
+ 
+ Iphone1 > Iphone3 > Iphone4 > Iphone5
+RHS should be same as LHS 
+    OR
+RHS should be child of LHS
+ i1=i1a; // Iphone1=Iphone1..                          YES
+ i3=i1;   // Iphone3=Iphone1.... child=parent .... NO
+ i4=i5; //   Iphone4=Iphone5.... parent=child... YES
+ i1=i4; //   Iphone1=Iphone4..... parent=child... YES
+ 
+ IIphone // vision, to-do list
+	call();
+	text();
+	browse();
+	default void applePay(){
+		sysout(make paymet);
+	}
+Iphone3  
+	call() {}
+	text() {}
+	browse(){}
+Iphone4 inherit Iphone3  
+	map() {}
+Iphone5 inherit Iphone4  
+	camera() {}
+IphoneX inherit Iphone5   
+	facialRecog() {}
+backward compatibility issue - default method is solution
