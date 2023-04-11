@@ -594,4 +594,41 @@ Iphone5 inherit Iphone4
 	camera() {}
 IphoneX inherit Iphone5   
 	facialRecog() {}
+Iphone14 inherit IphoneX
+	camera(){} // OVERRIDING - since Iphone14 found a better solution
+							than its parent Iphone5 for camera 
 backward compatibility issue - default method is solution
+
+
+
+Iphone > Iphone3 > Iphone5 > IphoneX
+
+Iphone i=new Iphone();
+Iphone i=new Iphone3();
+Iphone i=new Iphone5(); 
+Iphone i=new IphoneX();
+
+Iphone5 i5=new Iphone(); // RHS cannot be Parent
+
+method call new rule
+1)number of input should match
+2)does the data type should match
+3)order should match
+4) input can be child of method  data type
+add("12","1");
+public int add(int a, int b){
+	...
+}
+parent > child > grandchild
+
+int x=0;
+String y="john";
+parent p1=new parent()
+child c=new child()
+grandchild gc=new grandchild()
+
+test(p1);
+test(c);
+test( gc  );// c is child data type.... c is child of parent
+public int test(parent p)
+	
