@@ -632,3 +632,67 @@ test(c);
 test( gc  );// c is child data type.... c is child of parent
 public int test(parent p)
 	
+
+
+*****************
+Exception handling :
+	Developer - printStackTrace
+		Why -
+		Where - 
+	Customer
+		let customer know the error message in SIMPLE terms
+		provide instructions on how they can fix the problem
+		
+Throwable
+exception
+error
+
+try : {} block of code that we suspect might fail
+catch  : {} take actions if program failed
+finally : guaranteed block
+
+null pointer exception
+
+multiple catches
+Checked exception : has to fix before running the program
+Unchecked exception : not required to fix before running the program
+
+throws
+User defined exception
+
+
+BankingATM
+try{
+	swipe card
+		failure :damaged card
+		failure :expired card
+	enter pin
+		failure:invalid pin
+	choose withdraw
+		failure:invalid choice
+	withdraw money
+		failure:insufficient fund
+		failure:atm ran out money
+}
+catch(damagedCard e){
+	sysout("dial 1800-xxx rquest new card");
+}
+catch(expiredCard e){
+	sysout("dial 1800-yyy req new card");
+}
+catch(insufficient e){
+	sysout("withdraw below the bank account balance");
+}
+
+
+public bank
+	int balance=100;
+
+	withdraw(150)
+		balance=100-150=-50
+			NO TECHNICAL LIMITATION
+			BUT YES, BUSINESS LIMITATINO
+
+public ATT
+	make phonecall (int phonenumber =12345 )
+			NO TECHNICAL LIMItATION
