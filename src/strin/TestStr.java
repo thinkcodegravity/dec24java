@@ -3,60 +3,63 @@ package strin;
 public class TestStr {
 
 	public static void main(String[] args) {
-		String firstName="john";
-		String lastName="doe";
-		
-		String fullName=firstName.concat(lastName);
+		String a="john"; // #abc , sharing inside pool
+		String b="john"; // #abc , sharing inside pool
+		String c=new String("john"); // #xyz , outside pool
+		String d=new String("john"); // #pqr , outside pool
 
-		String email="qwe@gmail.com";
-		//		FALSE and TRUE  and TRUE 
-		// 			FALSE 		and TRUE
-		//				FALSE
-		if( email.indexOf("@")!=0 && email.contains("@")  && email.endsWith(".com"))
-			System.out.println("email is valid");
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
+		
+		// equal sign with string...
+		// DOES NOT COMPARE VALUES(john)
+		// compares address
+		if( a==b)// NOT john==john, #abc==#abc
+			System.out.println(" a and b are same");
+		if( a==c)// #abc==#xyz
+			System.out.println(" a and c are same");
+		if( c==d)// #xyz==#pqr
+			System.out.println(" c and d are same");
+
+		System.out.println("*************");
+		if( a.equals(b))// john==john
+			System.out.println(" a and b are same");
+		if( a.equals(c))// john==john
+			System.out.println(" a and c are same");
+		if( c.equals(d))// john==john
+			System.out.println(" c and d are same");
+
+		String name="john";
+		//abcd1@D
+		String email="john@gmail";
+		if(email.endsWith(".com")== false
+				|| email.charAt(0) == '@' 
+				|| email.indexOf("@") == -1)
+			System.out.println("invalid email id");
+		
 		else
-			System.out.println("email is invalid");
+			System.out.println("valid email id");
+		String regUid="joHn";
+		String regPwd="John1!";
+		String loginUid="John";
+		String loginPwd="john1!";
+		// traditionally used
+		// equalsIgnoreCase used for userid
+		// equals used for password
+		if(regUid.equalsIgnoreCase(loginUid))
+		{
+			System.out.println("yes login uid is correct");
+		}
+		String x="JoHN@gmail.com";
+		System.out.println(x);
+		System.out.println(x.toLowerCase());
+		System.out.println(x.toUpperCase());
 		
-		String a="john";// inside pool #aaa
-		String b=new String("john");// outside pool #bbb
-		String c="john"; // inside pool #aaa
-		//if(a == b).. comparing address of variabel a and b 
-		if(a.equals(b)) // compare value in respective address
-			System.out.println("a and b are same");
-		else
-			System.out.println("a and b are different");
-		
-		String loginUserid="john";
-		String regisUserid=new String("John");
-		if( loginUserid.equalsIgnoreCase(regisUserid) )
-			System.out.println("userid matched");
-		else
-			System.out.println("userid mismatched");
-		
-		String x="india";
-		System.out.println(  x.indexOf("i") );
-		System.out.println(  x.lastIndexOf("i") );
-		
-		String name="john doe";
-		System.out.println(   name.substring(5)   );// doe
-		System.out.println(   name.substring(2,6)   );// 
-		
-		String regName="JOhn";
-		System.out.println( regName );
-		System.out.println( regName.toLowerCase() );
-		System.out.println( regName.toUpperCase() );
-		
-		String reName=" john doe ";
-		String logName="john";
-		
-		System.out.println(reName);
-		System.out.println(reName.trim());
-		
-		
-		String regName1="JOhn";// inside pool.. #aaa 
-		regName1=regName1.toLowerCase();
-		// regName1="john"; // inside pool... #bbb since JOhn is different than john
-		System.out.println(regName1);// 
+		String loginEmail=" john@gmail .com ";
+		System.out.println( "::"+loginEmail+"::");
+		System.out.println( "::"+loginEmail.trim()+"::");
 	}
 
 }
