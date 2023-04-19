@@ -696,3 +696,52 @@ public bank
 public ATT
 	make phonecall (int phonenumber =12345 )
 			NO TECHNICAL LIMItATION
+			
+			
+			
+************ collection *************
+Single valued information
+	Array : fixed size
+
+	List : indexed, duplicates  
+		ArrayList : Fastest reading
+		Vector : Faster reading , Accurate (synchronized)
+		LinkedList : Fastest editing
+
+
+	Set : unique, not indexed
+		Hashset : unique and unordered
+		LinkedHashSet : unique and ordered
+		TreeSet : unique and sorted
+
+Pair valued innformation
+	Map : key-value pair of information
+		HashMap : unique and unordered by KEYS
+		LinkedHashMap : unique and ordered by KEYS
+		TreeMap : unique and sorted by KEYS
+		HashTable : synchronized(accurate
+		
+when to write the extra code for uniqueness ? hashcode and equals method
+	List : If user defined program (Student) is used in collection 
+			NO extra code needed
+	Set : If user defined program (Student) is used in collection 
+			YES needed
+	MAP :
+		Key : If user defined program (Student) is used in collection 
+			YES needed
+		Value :  If user defined program (Student) is used in collection 
+			NO extra code needed
+
+ArrayList<Student> : NO
+HashSet<Student>  : YES
+HashMap<key	    ,value>
+HashMap<String    ,Student> school=new HashMap<String,Student> (); : NO
+HashMap<Student ,Integer> school=new HashMap<Student,Integer> (); : YES
+
+
+If user defined program (student) is used in treeset or key section of a treemap
+	student program should implement comparable interface...
+		write code in compareTo method
+	
+
+

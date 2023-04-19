@@ -4,6 +4,7 @@ public class Student implements Comparable<Student> {
 	int grade;
 	String fullName;
 	
+	// Student s1=new Student("john",1);
 	public Student(String fn,int g) {
 		grade=g;
 		fullName=fn;
@@ -17,12 +18,15 @@ public class Student implements Comparable<Student> {
 	public boolean equals(Object anotherObject) {
 		Student anotherStuObject=(Student)anotherObject;
 		if( 	
-			this.fullName== anotherStuObject.fullName )
+			this.fullName.equals(anotherStuObject.fullName) &&
+			this.grade == anotherStuObject.grade
+				)
 			return true;
 		else
 			return false;
 			
 	}
+	
 	public String toString() {
 		return fullName +":"+grade ;
 	} 
@@ -31,6 +35,7 @@ public class Student implements Comparable<Student> {
 	{	
 		int difference= this.fullName.compareTo(anotherObject.fullName);
 		//int difference= this.registerNumber - anotherObject.registerNumber;
+		// this.grade-anotherObject.grade;
 		return difference;
 		 
 	}
