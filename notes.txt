@@ -1,747 +1,155 @@
-Programming concepts
+hardware-
+software-
+	middleware/firmware
+	
+Procedure oriented programming : Main focus is on the TASK
+	C program
 
-Procedure oriented programming
-	focus on the task
-Object oriented programming
-	focus on the system
+Object Oriretned programming : Main focus is on the system. 
+	modular architecutre
+	messages oriented architecutre - message pass
+	Java, c++, dotnet
 	
-Problem statement : Rocket fly	
-	
-Procedure oriented programming : expert
-	focus on FLY
-	
-Real world problem or beginner
-
-Object oriented programming - modular approach
-	focus on Rocket
-	
-	Rocket 
-		Has -A : propeller, combustion chamber, Fuel, cockpit
-		
-		Does-A : fly
-					take fuel
-					burn fuel in combustion chamber
-					exhaust gas from propeller compoent
-					
-	
-	BankAccount : accountNumber,routingnumber, withdraw,userid, deposit, id,password, balance, login, 
-			applyLoan, pincode
-	
-		Store/Hold information
-		HAS-A : accountNumber,routingnumber, userid,id,password,balance,pincode=5678
-			
-			pincode , enterPin
-			
-		Manipulate/changing/processing information
-		DOES-A : withdraw (Action), deposit, login, applyLoan
-	
-	
-	Memory : store information
-	CPU : process information
-	
-	
-	BankAccount : 
-		
-		Store/Hold information
-		HAS-A : balance=1000
-			
-		Manipulate/changing/processing information
-		DOES-A : 
-			withdraw (10000$)
-				if balance is greater than withdraw amount
-					then balance minus withdraw amount
-				or else if balance is less than withdraw amount
-					low balance. cannot withdraw
-					
-	public class BankAccount{
-		int balance=1000;
-		
-		public  void withdraw(int withdrawAmount){
-			if(balance >= withdrawAmount)
-				balance=balance-withdrawAmount;
-			else
-				sysout("low balance. cannot withdraw);
-		}
-	}
-	
-
-GMAIL
-
-Facebook
-
-Amazon
-
-Fan
-
-TV
-
 Car
+	drive - POP this focus on drive.
+	
+Car
+	power button
+		send signal fuel tank..
+	fuel tank
+		pour gas in combustion chamber
+	combustion chamber
+		lit gas... energy is generated
+	motor
+		use energy , rotate /move engine or motor
+	wheel
+		moving
+	
+Login
+browse
+checkout
+track order
+
+BankAccount : deposit, withdraw, name, accountNumber, balance,
+	address,phone
+
+	(composition) has-a : name, accountNumber,balance, address,phone
+	
+	(Actions)does-a : deposit 20$, withdraw
+
+BankAccount has-a/does-a name
+BankAccount has-a/does-a deposit
+
+Computer
+	store information
+	Memory : name=john, accountnumber=123, balance=120$
+	
+	process information
+	CPU 
+		deposit 20$ : add this new amount to existing balance
+
+
+person has/does legs - has... composition
+person has/does eat - does... action
 
 
 
-Computer programmer
-Object Oriented Programmer
-Java programmer
+BankAccount : deposit, withdraw, name, accountNumber, balance,
+	address,phone
+
+	(composition) has-a : name, accountNumber,balance=100$, address,phone
+	
+	(Actions)does-a : 
+		deposit 20$, 
+			add 20$ to existing balance - logic
+		withdraw 30$
+			deduct 30$ to existing balance
+
+public class BankAccount{
+	String name="john"; has-a
+	int balance=100;has-a
+	
+	doess-a
+	public void deposit(int depositAmount){
+		balance=balance+depositAmount; // logic 
+	}
+
+	public void withdraw(int withdrawAmount){
+		balance=balance-withdrawAmount;
+	}
+}
+
+public class SavingsBankAccount inherit from BankAccount{
+	
+	public void interest(){
+	}
+}
+inheritance -acquire freely
 
 
-Research 5 years to launch the first smart phone
-Iphone3 2006
+
+Iphone3 - 5 years... 
 	call
 	text
 	browse
+	camera
+	
+Iphone4 - 1 year
+	call - inherit
+	text - inherit
+	browse - inherit
+	camera - inherit
+	maps
+
+Iphone5 - 1 year
+	call
+	text
+	browse
+	camera
+	maps
+	fingerprintscan
+
+
+Encapsulation : Internal view "How does the system work"
+
+Abstraction : External view "How do i use the system"
+
+polymorphism : many forms
+	2 + 2 = 4
+	1.2 + 2.4 = 3.6
+	john + jane = johnjane
+
+	communication - text message, phone call, email , IM
+	Order - internet, phone, message, in-person
+	Payment - credit , debit, crypto, paypal, EMI
+	Login - userid/pwd , fingerprint scan, facial recogni, secret code on register phone
 	
 	
-Iphone4 2007
-	call - inherited (REUSABILITY)
-	text - inherited
-	browse - inherited
-	appleMap - 1 year
 	
-	
-Inheritance
-Encapsulation
-Abstraction
-	hide internal complexity
-	provide easy to use interface to your customers
-	
-	Iphone
-		Inside : wireless tech, hardware tech,wire,circuit
-		Outside : screen
-	
-	
-Polymorphism
+polygon - many sides
 
 
-Language - Stickiness, tightly coupled
+Stickiness
+
+Iphone - C sharp
+Android - J2ME
 
 
-Analysis
 
-BankAccount : accountNumber,routingnumber, withdraw,userid, deposit, id,password, balance, login, 
-		applyLoan, pincode
-
-	variable = vary various = changes
-	Store/Hold information
-	HAS-A : accountNumber,routingnumber, userid,id,password,balance,pincode=5678
-	
-	// variables hold information, that can change over the time.
-	int balance=100; // balance is a varible.. variable
-	
-	method
-	Manipulate/changing/processing information
-	DOES-A : withdraw (Action), deposit, login, applyLoan
+Laptop
+	Windows - java program
+	Mac
+	Unix
 
 
-Create program BankAccount
-
-guideline 
-
-camel case
-first letter is UPPERCASE
-remaining letter are lower case
-
-public class BankAccount{
-	accountNumber;
-	routingnumber;
-}
-
-amazon
-	has-a : product,price,quantity, customers, buyer,seller
-	
-	does-a :
-		shopping
-		login
-		payment
-		checkOut
-		cancelOrder
-		
-		
-public class Amazon{
-	
-	int product;
-	float price;
-	int quantity;
-	String customers;
-	String buyer;
-	String seller;
-	
-}
-
-
-Programs
-	Store information (HAS-A)
-	
-	Actions based on information(DOES-A)
-	
-	
-BankAccount
-	balance=100$ (BankAccount HAS-A balance)
-	
-	Deposit( 10$ )(BankAccount DOES Deposit)
-		deduct balance by 10$
-	
-	
-Digital Information :
-	Alphabetic : single character, Group of character
-		single character : IsActive , IsLoggedIn, IsOrderCompleted
-		Group of character : name, city
-	Numeric :
-		whole : 18,21,55
-		fractional : 5.10 , 140.23
-	Yes/NO : true, false
-	Complex : 
-		contains sub information
-		Address : 
-			street, bldgNumber, city, state, zip
-			
-			
-			
-			
-			
-			
-			
-			Variable : store information
-
-	Long term information : name, age, native
-		race : asian	(Shared) Static or Class variable
-		planet : earth	 
-		name : john	(Specific)	instance variable
-		fingerprint : qwewqeqwe   
-		
-	Short term information: 
-		Input : 10 X 20 (Parametric variable)
-			1000000$
-		local : 5 + 3 + 7 + 4
-			5 + 3= 8	(local variable)
-			8 + 7= 15
-			15 + 4 = 19
-
-Class BankOfAmericaCustomer
-	accountNumber=12345
-	i want to withdraw - how much ? 10$
-	bankName="bankOfAmerica";
-	simpleinterest calculator
-		int a=multiply P and T
-		int b=multiply a and R
-		int c=divide b by 100
-		PTR/100
+JDK : java development kit
+	development + jre
+JRE : java runtime environment
+	jre
 	
 
+Programmer - JDK
+Customer - JRE
 
-methods (actions)
-
-who can access this functionality ? public 
-Output of this functionality ?
-Name of this functionlity ?
-Input for this functionality ?
-	
-access_privilege   Output   name ( input) 
-public		int		add(int a)
-	Name : what do you want to call this functionality ?
-		
-	Input :
-		0 input : leave blank ( )
-		1 input : data type and name of variable input  ( int withdrawAmount)
-		more than 1 input : multiple pair comma separate (data type and name of variable input)
-					(int number1 , int number2)
-	Output : 
-		0 output : void
-		1 output : mention the data type of that output 
-		more than 1 output : create a complex program that can hold multiple output information
-			write the name of this program 
-	
-
-write a program method to calculate area of square
-Name : areaOfSquare
-input : just 1... side... int..... (int side)
-Output : int
-public 	int 	areaOfSquare(int side)
-	
-write a program method to calculate area of rectangle
-Name : areaOfRectangle
-input : 2 input... length and breadth... int... (int length  , int breadth)
-Output :  int
-public 	int 	areaOfRectangle(int length  , int breadth)
-	
-write a program method to provide LOGIN on website
-Name : userLogin
-input : 2... userid and password... String... (String userid, String password)
-Output :  boolean
-public 	boolean	userLogin(String userid, String password)
-
-Naming RULES	
-1)Naming conventions
-	Class : AmazonEcommerce	(camelcase starts from first word)
-	Variable : amazonProduct (camelcase starts from second word)
-	Method : sellAmazonProduct() (camelcase starts from second word and is followed by () )
-
-System.out.print()
-
-2)should start with alphabet or $ or _
-3)can contain any alphabet or number or $ or _
-	
-amazon_Buy123
-
-4) cannot use any reserved keywords (purple colored words in program)
-
-
-
-
-void add(  int x, int y)   {
-
-}
-
-
-void sub(  )
-
-variable = store information
-Long term info
-	generic info
-		live = earth
-	Specific info
-		name = john
-	
-Short term info
-	input info
-		
-	local info
-		what u had for breakfast
-arithmetic 
-	bank withdraw and deposit
-	loan simple interset = p x t x r / 100
-	Ecommerce
-		warehouseStock=100 (96)
-		buy = 4 product ? ( minus from stock)
-		10% discount on product
-			iphone 1000 = 900
-equality 
-	login - compare login uid/pwd TO sign-up uid/pwd
-relational
-	bank witdraw : check sufficient balance
-		balance is greater than withdraw amount
-	Ecommerce
-		warehouseStock=100 
-		buy = 104 product 
-		is stock greater than buy quantity ?
-	
-and = both things to happen
-
-true and true = true
-true and false = false
-false and true = false
-false and false = false
-
-or = one of the things to happen
-
-true or true = true
-true or false = true
-false or true = true
-false or false = false
-
-
-12+ 5 - 5 +3 * 2 +(1-2) = 29 ( left to right)
-12+ 5 - 5 +3 * 2 +(1-2) = 15 ( right to left)
-
-1) () 
-2) * / %
-3) + -
-4) > < 
-5) == !=
-6) &&
-7) ||
-8) left to right (if more than operator in same category)
-
-12+ 5 - 5 +3 * 2 +(1-2) > 12 || 10 -2 > 4-3
-12+ 5 - 5 +3 * 2 - 1 > 12 || 10 -2 > 4-3
-12+ 5 - 5 +6 - 1 > 12 || 10 -2 > 4-3
-17 - 5 +6 - 1 > 12 || 10 -2 > 4-3
-12 +6 - 1 > 12 || 10 -2 > 4-3
-18 - 1 > 12 || 10 -2 > 4-3
-17 > 12 || 10 -2 > 4-3
-17 > 12 || 8 > 4-3
-17 > 12 || 8 > 1
-true || 8 > 1
-true || true
-true
-
-
-11 + 45 - 3 * 4 11 + 45 - 3 * 4 / 2 +(1-2) > 12 + 44 * 23 / 5 - 1 +12 || 5 > 2
-
-
-
-
-variable
-method
-operator
-control flow
-
-public class BankAccount{
-	variables // storing information
-	int balance=100;
-	
-	// manipulating information
-	method
-	public void withdraw()
-	{
-		// logic / algorithm
-		control flows and operators
-	}
-}
-
-
-Loop
-	Airline booking software : book 1 by 1 each seats
-		FIXED LOOP : "FOR"
-	Shopping software : browse browse add 2cart... browse browse add 2cart
-		0 or MORE LOOP : "WHILE"
-	ATM software : complete 1st transaction, then repeat again if needed
-		1 or MORE LOOP : "DO-WHILE"
-
-	for( start from seat 1 : Until seat 200 :  go to next seat 1 by 1){
-		book passenger for the current seat
-	}
-	
-	for( Initialize : Condition check : Modification){
-		Repeat Code
-	}
-
-	for( int i=1 ; i<5 ; i++){
-		sysout("hello");
-	}
-
-	ICR		: i=1, true, print hello
-	MCR		: i=2, true, print hello
-	MCR		: i=3, true, print hello
-	MCR		: i=4, true, print hello
-	MCR		: i=5, false
-	MCR
-
-	// 0 LOOP
-	for( int i=1 ; i>5 ; i++){
-		sysout("hello");
-	}
-
-	ICR		: i=1, false
-	MCR		: 
-	MCR		: 
-	
-	// INFINITE LOOP
-	for( int i=1 ; i<5 ; i--){
-		sysout("hello");
-	}
-
-	ICR		: i=1, true, print hello
-	MCR		: i=0, true, print hello
-	MCR		: i=-1, true, print hello
-	MCR		: i=-2, true, print hello
-	MCR		: 
-	
-	
-	for( int i=1 ; i<5 ; i++){
-		
-	}
-
-	
-	{
-		sysout("hello");
-	}
-
-	ICR		: i=1, true, DO NOTHING
-	MCR		: i=2, true, DO NOTHING
-	MCR		: i=3, true, DO NOTHING
-	MCR		: i=4, true, DO NOTHING
-	MCR		: i=5, false
-	MCR		:
-	MCR		:
-
-	
-	
-	continue : skip all remaining lines in current loop... AND continue with next
-	break : EXIT loop
-	
-	for( int i=1 ; i<5 ; i++){
-		sysout("hi");
-		if(i==3)
-			continue;
-		sysout("bye");
-	}
-
-	ICR		: i=1, true, print hi print bye
-	MCR		: i=2, true, print hi print bye
-	MCR		: i=3, true, print hi 
-	MCR		: i=4, true, print hi print bye
-	MCR		: i=5, false 
-	
-	for( int i=1 ; i<5 ; i++){
-		sysout("hi");
-		if(i==3)
-			break;
-		sysout("bye");
-	}
-
-	ICR		: i=1, true, print hi print bye
-	MCR		: i=2, true, print hi print bye
-	MCR		: i=3, true, print hi  EXIT LOOP
-	MCR		: 
-	
-WHILE(CONDITION){
-
-}
-
-multi choice - if  , else if, else 
-int userid=100000;
-if(userid == 1)
-	sysout(welcome john);
-else if(userid == 2)
-	sysout(welcome jane);
-else if(userid == 3)
-	sysout(welcome mark);
-...............................
-else if(userid == 1000000000)
-	sysout(welcome andy);
-
-if else if is not suitable for large
-multi choice code - HIGH performance cost
-Swithc case is better choice
-switch case is limited to primitive 
-	simple data comparison
-
-for COMPLEX multi choice ... if - elseif  is the only option
-
-if(email=="john@g.com" && pwd="john1!")
-	sysout(welcome john);
-else if(userid=="john" && pwd="john1!")
-	sysout(welcome john);
-else if(phone=="123345" && pwd="john1!")
-	sysout(welcome john);
-else
-	sysout(invalid userid pwd);
-
-
-multi choice - switch case
-int userid=100000;
-switch(userid){
-	case 1: sysout(welcome john);
-		break;
-	case 2: sysout(welcome jane);
-		break;
-	case 3: sysout(welcome mark);
-		break;
-	...............................
-	case 10000000: sysout(welcome andy);
-		break;
-}
-
-
-
-
-
-	
-public class BankAccount{
-	int balance=100;
-	balance=90;// cannot change variabels from outside method
-	public void witdraw(10$){
-		balance= balance - 10; // balance=100-10... balance=90
-	}
-	// if method body is missing.. there is no way to reassign/change the 
-	// variable value
-	// which is the case typically in interface program
-}	
-
-
- LHS = RHS
- int x="john";
- LHS and RHS data type should match
- 
- Student s1=new Student();
- Student s2=new Student();
- Person p1=new Person ();
- Person p2=new Person ();
- s1=s2;
- s1=p1; // NO
- s2=p2; // NO
- p1=p2;
- 
- Iphone1 i1=new Iphone1();
- Iphone1 i1a=new Iphone1();
- Iphone3 i3=new Iphone3();
- Iphone4 i4=new Iphone4();
- Iphone5 i5=new Iphone5();
- 
- Iphone1 > Iphone3 > Iphone4 > Iphone5
-RHS should be same as LHS 
-    OR
-RHS should be child of LHS
- i1=i1a; // Iphone1=Iphone1..                          YES
- i3=i1;   // Iphone3=Iphone1.... child=parent .... NO
- i4=i5; //   Iphone4=Iphone5.... parent=child... YES
- i1=i4; //   Iphone1=Iphone4..... parent=child... YES
- 
- IIphone // vision, to-do list
-	call();
-	text();
-	browse();
-	default void applePay(){
-		sysout(make paymet);
-	}
-Iphone3  
-	call() {}
-	text() {}
-	browse(){}
-Iphone4 inherit Iphone3  
-	map() {}
-Iphone5 inherit Iphone4  
-	camera() {}
-IphoneX inherit Iphone5   
-	facialRecog() {}
-Iphone14 inherit IphoneX
-	camera(){} // OVERRIDING - since Iphone14 found a better solution
-							than its parent Iphone5 for camera 
-backward compatibility issue - default method is solution
-
-
-
-Iphone > Iphone3 > Iphone5 > IphoneX
-
-Iphone i=new Iphone();
-Iphone i=new Iphone3();
-Iphone i=new Iphone5(); 
-Iphone i=new IphoneX();
-
-Iphone5 i5=new Iphone(); // RHS cannot be Parent
-
-method call new rule
-1)number of input should match
-2)does the data type should match
-3)order should match
-4) input can be child of method  data type
-add("12","1");
-public int add(int a, int b){
-	...
-}
-parent > child > grandchild
-
-int x=0;
-String y="john";
-parent p1=new parent()
-child c=new child()
-grandchild gc=new grandchild()
-
-test(p1);
-test(c);
-test( gc  );// c is child data type.... c is child of parent
-public int test(parent p)
-	
-
-
-*****************
-Exception handling :
-	Developer - printStackTrace
-		Why -
-		Where - 
-	Customer
-		let customer know the error message in SIMPLE terms
-		provide instructions on how they can fix the problem
-		
-Throwable
-exception
-error
-
-try : {} block of code that we suspect might fail
-catch  : {} take actions if program failed
-finally : guaranteed block
-
-null pointer exception
-
-multiple catches
-Checked exception : has to fix before running the program
-Unchecked exception : not required to fix before running the program
-
-throws
-User defined exception
-
-
-BankingATM
-try{
-	swipe card
-		failure :damaged card
-		failure :expired card
-	enter pin
-		failure:invalid pin
-	choose withdraw
-		failure:invalid choice
-	withdraw money
-		failure:insufficient fund
-		failure:atm ran out money
-}
-catch(damagedCard e){
-	sysout("dial 1800-xxx rquest new card");
-}
-catch(expiredCard e){
-	sysout("dial 1800-yyy req new card");
-}
-catch(insufficient e){
-	sysout("withdraw below the bank account balance");
-}
-
-
-public bank
-	int balance=100;
-
-	withdraw(150)
-		balance=100-150=-50
-			NO TECHNICAL LIMITATION
-			BUT YES, BUSINESS LIMITATINO
-
-public ATT
-	make phonecall (int phonenumber =12345 )
-			NO TECHNICAL LIMItATION
-			
-			
-			
-************ collection *************
-Single valued information
-	Array : fixed size
-
-	List : indexed, duplicates  
-		ArrayList : Fastest reading
-		Vector : Faster reading , Accurate (synchronized)
-		LinkedList : Fastest editing
-
-
-	Set : unique, not indexed
-		Hashset : unique and unordered
-		LinkedHashSet : unique and ordered
-		TreeSet : unique and sorted
-
-Pair valued innformation
-	Map : key-value pair of information
-		HashMap : unique and unordered by KEYS
-		LinkedHashMap : unique and ordered by KEYS
-		TreeMap : unique and sorted by KEYS
-		HashTable : synchronized(accurate
-		
-when to write the extra code for uniqueness ? hashcode and equals method
-	List : If user defined program (Student) is used in collection 
-			NO extra code needed
-	Set : If user defined program (Student) is used in collection 
-			YES needed
-	MAP :
-		Key : If user defined program (Student) is used in collection 
-			YES needed
-		Value :  If user defined program (Student) is used in collection 
-			NO extra code needed
-
-ArrayList<Student> : NO
-HashSet<Student>  : YES
-HashMap<key	    ,value>
-HashMap<String    ,Student> school=new HashMap<String,Student> (); : NO
-HashMap<Student ,Integer> school=new HashMap<Student,Integer> (); : YES
-
-
-If user defined program (student) is used in treeset or key section of a treemap
-	student program should implement comparable interface...
-		write code in compareTo method
-	
 
 
