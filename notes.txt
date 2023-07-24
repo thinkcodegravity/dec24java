@@ -151,5 +151,124 @@ JRE : java runtime environment
 Programmer - JDK
 Customer - JRE
 
+eclipse
+netbeans
+intellij
+Spring tool suite
+
+helps with programming , compilation and execution
+
+programming - writing the source code
+compilation - convert the source code into binary code
+execution - use binary code to launch the software
+
+if you create program with name "welcome"
+source code : found in src folder, name of file is welcome.java
+binary code : found in bin folder, name of file is welcome.class
+
+bank {
+	login{
+		enter uid pwd
+	}
+	transfer{
+		send money to another acount 
+	}
+}
+
+amazon {
+	browse{
+		shop and add to cart
+	}
+	checkout{
+		make payment
+	}
+}
+
+Bank
+	// Variable - vary -something that keeps changing
+	has-a : name,number,balance=100$ .. changed from 100 to 120 and 120 to 70
+	
+	// Method or function or Service
+	does-a :
+		deposit -20
+			// logic / algorithm
+			instructions on how to perform deposit. increase balance by 20
+		withdraw - 50
+			decrease balance by 50
+
+person
+	has-a : legs=resting, mouth=closed
+	does-a :
+		walk
+			legs=moving
+		talk
+			mouth=open
+		eat
+			mouth=eat
+		
+		
+Variable - Store/hold information
+methods - Manipulate/change information
+
+
+Bank
+	has-a (variable): numeric balance=100$ 
+	
+	does-a (methods){
+		deposit =180
+	}
+
+declaration
+initialization
+reassignment
+
+
+
+= assignment operator
+LHS : Left Hand Side of equal sign
+RHS : Right Hand Side of equal sign
+
+
+LHS ALWAYS VARIABLE
+RHS ALWAYS VALUE
+
+
+int age = 10;
+Rules
+1) RHS value should match LHS data type
+	int age=10; // YES
+	int age="john"; // NO
+2) LHS can always be variables (NO VALUES)
+	10=int age;
+3) RHS can have one of these
+	3a can have matching value
+	3b can have matching data type variable ( substitue with its value)
+	3c can have expression ( solve expression on the right )
+	
+int x=10;
+x=20;
+int y=x; // int y=20;
+int z=x + 30;	// int z=20 + 30;   int z=50;
+sysout x y z	
+	
+	
+	
+asd= 10+20;	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
