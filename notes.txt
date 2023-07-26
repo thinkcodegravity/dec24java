@@ -258,14 +258,67 @@ asd= 10+20;
 
 
 
+Bank
+	has-a (variable): numeric balance=100$ 
+	
+	does-a (method) (service)
+	// method declaration
+	deposit - (input)accept amount and (output)return latest balance
+	{// method body
+		new amount is to be added to existing balance
+	}
+	
+	
+Methods 
+	method declaration - details on what is the input/output of the action
+	method body = LOGIC/algorithm
 
-
-
-
-
-
-
-
+Method declaration
+	
+	***access  data_output   name(data_input) errors***
+	
+	access = optional
+	data_output   = mandatory (Can be only one)
+		if 0 output = void
+		if 1 output = data type of the output
+		if more output = create a complex data type(program) and mention the name of the program
+	name = mandatory name that represents this action
+	data_input = optional( can be zero or more )
+		if 0 input = leave it blank
+		if 1 input = mention the data type and name of the input
+		if more input = mention the pair of data type and name with comma separated
+	errors = optional
+		
+	What is the name of the service ?  findRestaurant
+	What are the inputs of the service ?
+		 1 input... String foodType
+	What are the output of the service ?
+		Address
+	
+		payment
+		areaOfRectangle
+		findRestaurant
+	access  data_output   name   (data_input) 					errors
+	public  int 	       addition( int number1 ,  int number2   )
+	public  float	areaOfCircle  ( float radius)
+	public  boolean      loginInfo   (String userid, String password)
+	public  boolean      payment   (long ccNumber, short secCode, String expDate)
+	public  long	areaOfRectangle(int length , int breadth)
+	public  void       donation  (int donationAmount)
+	public Address   findRestaurant(String foodType)
+	
+	public class Address{
+		streName
+		streNum
+		city
+		state
+		zip
+	}
+	
+	
+	
+public iphone buyAppleProduct(int amount1000$)
+	
 
 
 

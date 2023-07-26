@@ -16,9 +16,7 @@ public class Facebook {
 		f1=f3;
 		
 	
-		System.out.println(f1.age);	
-		System.out.println(f2.age);	
-		System.out.println(f3.age);	
+		System.out.println(f1.age); 
 
 	}
 
