@@ -417,3 +417,138 @@ true
 10 * 3 -1 + 3 + 20 * ( 5 - 2) > 20 + 1 * 2 + 3  || true
 true
 
+
+
+Repetetive logic
+
+LOOP
+
+Fixed loop
+0 or more loop
+1 or more loop
+
+
+1 or more loop
+ATM software - Loop with transactions
+
+0 or more loop
+Browsing Amazon - Loop with browse and add to cart
+
+Fixed loop
+AA123 Airline seat booking - Loop with each seat number
+
+
+Fixed loop - For
+0 or more loop - While
+1 or more loop - Do while
+
+
+For ( Initialization ; Condition check ; Modification){
+	Repeat code
+}
+for ( int i=1 	; i <=5		 ; i++){
+	sysout( "hi" );
+}
+
+I  C R = i:1 , TRUE , print hi
+M C R = i:2 , TRUE , print hi
+M C R = i:3 , TRUE , print hi
+M C R = i:4 , TRUE , print hi
+M C R = i:5 , TRUE , print hi
+M C R = i:6 , FALSE
+
+INFINITE LOOP
+for ( int i=1 	; i < 5		 ; i--){
+	sysout( "hi" );
+}
+
+I  C R = i:1 , true , print hi
+M C R = i:0 , true , print hi
+M C R = i:-1 , true, print hi
+M C R = i:-2 , true , print hi
+M C R = 
+
+
+continue : skip all remaining lines and go to next loop
+break : exit loop
+
+for ( int i=1 	; i < 5		 ; i++){
+	sysout( "hi" );
+	if(i==3)
+		break;
+	sysout("bye");
+}
+I  C R = i:1 , true , print hi print bye
+M C R = i:2 , true , print hi print bye
+M C R = i:3 , true , print hi 
+M C R = 
+
+
+even number between 1 - 10 
+
+for ( int i=2 	; i <=10		 ; i=i+2){
+	sysout( i );
+}
+
+
+while (boolean){
+
+}
+
+
+int choice=1000;
+if( choice == 1) {
+	System.out.println("enter the amount to withdraw");
+}
+else if(choice ==2) {
+	System.out.println("enter the amount to deposit");
+}
+else if(choice ==3) {
+	System.out.println("your bank balance is 100$ ");
+}
+............
+else if(choice ==1000) {
+	System.out.println("your bank balance is 100$ ");
+}
+// default
+else {
+	System.out.println("please enter a choice between 1 and 3");
+}
+int choice=3;
+switch( choice ) {
+	case 1: 
+		System.out.println("enter the amount to withdraw");
+		break;
+	case:2
+		System.out.println("enter the amount to deposit");
+		break;
+	case:3
+		System.out.println("your bank balance is 100$ ");
+		break;
+	default : 
+		System.out.println("please enter a choice between 1 and 3");
+		break;
+}
+if else if suitable for complex conditions
+		if(userid == registered userid && pwd==regPwd)
+			sysout welcome
+		else if ( phone == registerePhone && pwd==regPwd)
+			sysout welcome
+		else if ( email = registeredEmail && pwd==regPwd)
+			sysout welcome
+		else
+			login failed
+
+
+switch case  suitble for simple value conditions
+	primitive or string data type value comparison
+
+if - single flow
+if else - 2 choice/ either or flow
+if , else if , else if , else if , else - multi choice flow ( complex condition checks in multiple choice)
+for - fixed loop flow
+while - 0 or more loop flow
+do-while - 1 or more loop flow
+switch case - multi choice flow ( simple primitive/string data type value comparison )
+
+
