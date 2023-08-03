@@ -552,3 +552,40 @@ do-while - 1 or more loop flow
 switch case - multi choice flow ( simple primitive/string data type value comparison )
 
 
+Parent/Super class
+Iphone1 - 3 years
+	phone
+	message
+	browse
+	
+Child/Sub class
+Iphone2 - 1 year
+		inherit Iphone1 (reuse all features from previous product)
+	camera
+	map
+	
+
+Bank
+	balance=100
+	
+	withdraw(){
+		// logic or method body
+		change balance... reduce balance
+	}
+	
+	deposit(){
+		change balance... increase balance
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
