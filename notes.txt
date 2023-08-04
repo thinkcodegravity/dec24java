@@ -578,14 +578,144 @@ Bank
 	}
 	
 	
+interface IIphone
+	makeCall();
+	sendText();
+	browse();
+	default maps()
+		logic
+Class Iphone3 implements IIPhone
+	makeCall() { logic }
+	sendText(){ logic }
+	browse(){ logic }
+Class Iphone4 extends Iphone3
+	fingerprintScan { logic }
+	applePay {logic }
+Class Iphone5 extends Iphone4
+	camera {}
+Class Iphone6 extends Iphone5
+	facialRecog {} 
+		
+Interface - backward compatibility - any changes in interface program can crash all children program
+		default method : allows logic in interface program
+		default method reintroduced the diamond problem
+				
+	
+IPayment
+	collectAddress();
+	contactInformation();
+	payment();
+abstract AbPayment implements IPayment
+	collectAddress()
+		logic
+	contactInformation
+		logic
+CreditCardPyament extends AbPayment
+	payment
+		logic
+		
+Abstract program - GENERALIZATION	/ COMMON
 	
 	
+IPayment
+	collectAddress();
+	contactInformation();
+	payment();
+CreditCardPyament implements IPayment
+	collectAddress()
+		logic
+	contactInformation()
+		collect phone AND EMAIL logic
+	payment
+		logic
+Paypal implements IPayment
+	collectAddress()
+		logic
+	contactInformation()
+		collect phone AND EMAIL logic
+	payment
+		logic
+BitcoinPyament implements IPayment
+	collectAddress()
+		logic
+	contactInformation()
+		collect phone AND EMAIL logic
+	payment
+		logic
+---------------- ABSTRACT PROGRAM IMPLEMENTATION BENEFITS ----------------
+IPayment
+	collectAddress();
+	contactInformation();
+	payment();
+abstract AbPayment implements IPayment
+// CODE NOT REPEAATED IN ALL CHILDREN PROGRAM (AVOID REDUNDANT/DUPLIATE CODING)
+// ANY CHANGES DONE HERE WILL BE INHERITED BY CHILD (CODE FLEXIBILITY)
+	collectAddress()
+		logic
+	contactInformation()
+		collect phone AND EMAIL logic
+
+CreditCardPyament extends AbPayment
+	payment
+		logic
+Paypal implements extends AbPayment
+	payment
+		logic
+BitcoinPyament extends AbPayment
+	payment
+		logic
+
+
+IJob
+	training();
+	marketing();
+	placement();
 	
+AbJob	
+	training() logic
+	marketing() logic
 	
-	
+JobW2
+	placement() logic
+
+JobC2C
+	placement() logic
+
+
 	
 	
 
+
+
+
+compile time polymorphism : OVERLOADING
+
+run time polymorphism : OVERRIDING
+
+
+MANY FORM
+Add = 2 numbers : number = 5 + 2 : 7
+	2 names : names    = john + jane : johnjane
+	
+Login = userid/pwd
+	gmail/pwd
+	fb/pwd
+	phone
+	email 
+	facial recog
+	
+public void testDrive(Car c){
+	c.drive();
+}
+public void testDrive(Nissan n){
+	n.drive();
+}
+public void testDrive(Toyota t){
+	t.drive();
+}
+public void testDrive(Ferrari f){
+	f.drive();
+}
 
 
 
