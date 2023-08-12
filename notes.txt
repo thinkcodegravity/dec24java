@@ -719,3 +719,79 @@ public void testDrive(Ferrari f){
 
 
 
+
+
+String first name : john
+String last name : doe
+String email id  : john@g.com
+String phone : 123 456 7890 , 1234567890 , 123-456-7890, (123)(456)(7890)
+
+phone.replaceAll(" ",""); 123 456 7890 >> 1234567890
+phone.replaceAll("-",""); 123-456-7890 >> 1234567890
+
+phone.replaceFirst("-",""); 123-456-7890 >> 123456-7890
+Register
+
+
+Login
+Welcome Mr x`
+firstname.concat(lastname)
+
+Name : john doe
+phone : 123213
+email : asd@g.com
+
+String Name="john doe";
+String [] temp=Name.split(" ");
+temp[0]   // john
+temp[1]   // doe
+
+
+
+Exception Handling : 
+	Programmer : where the problem is ? problem is in Engine
+				what is the problem ?
+	Customer : custom error message , that they can understand
+
+EXCEPTION STACK TRACE
+
+java.lang.ArithmeticException: / by zero (WHAT IS THE PROBLEM
+	at exception.ExceptionTest.main(ExceptionTest.java:7) WHERE IS THE PROBLEM
+main = method name
+ExceptionTest = class name 
+exception = package name
+
+10 x 0 = 0
+10 / 0 = infinity
+
+
+try - block that programmer suspects might fail
+	Is always only 1
+catch - block to take actions IF the program fail
+	catch can be 1 or more
+finally - 
+
+
+ATM software
+{
+	public void atmtransaction(){
+		welcome greeting
+		try{	
+			swipe card 
+			enter pin code
+			withdraw
+		}
+		catch(CardDamagedException e){
+			sysout("please dial 1800 number and request for new card");
+		}
+		catch(IncorrectPinException e){
+			sysout("Please enter correct pin");
+		}
+		catch(InsufficientBalanceException e){
+			sysout("please withdraw below your balance");
+		}
+		thank you greeting
+	}
+}
+
+call customer care
