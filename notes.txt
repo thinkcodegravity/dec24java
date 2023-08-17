@@ -769,7 +769,7 @@ try - block that programmer suspects might fail
 	Is always only 1
 catch - block to take actions IF the program fail
 	catch can be 1 or more
-finally - 
+finally - mandatory/guaranteed block of code
 
 
 ATM software
@@ -794,4 +794,32 @@ ATM software
 	}
 }
 
-call customer care
+
+
+compile time/checkd exception
+	Compiler OR Java editor , force you to prepare for such a failure
+Run time exception
+	Compiler OR Java editor , DOES NOT force you to prepare for such a failure
+
+User Defined exception
+
+int balance=100;
+int withdraw=20;
+balance=balance-withdraw; // 80
+
+// EXAMPLE : not a programming limitation... IT IS business limitation
+int balance=100;
+int withdraw=1000000;
+balance=balance-withdraw; // -40
+having a negative value in integer is NOT A PROBLEM (NOT A PROGRAMMING MISTAKE)
+int = range of 2 billion... from -2 billion to +2 billion
+
+Phone company
+int phoneNumberDial=1234567890;
+int phoneNumberDial=12;
+int phoneNumberDial=-1;
+
+
+NullPointerException
+
+
