@@ -823,3 +823,57 @@ int phoneNumberDial=-1;
 NullPointerException
 
 
+Object
+
+Additional Code
+	Unique
+		hashcode and equals (categorize and search)
+	Sorting
+		compareTo
+
+1) collection is Set or Map (uniqueness)
+2) if collection uses ( user /programmer defined class)
+
+public class Student{
+	asdsadasdasd
+}
+
+ArrayList<Student> names=new ArrayList<Student> (); // allows duplicate, NO EXTRA CODE
+HashSet<Student> names=new HashSet<Student> ();// is unique, NEEDS EXTRA CODE
+HashMap<Integer,Student> scores=new HashMap<Integer,Student> ();
+	// Student is in value, values can be duplicate... NO EXTRA CODE
+HashMap<Student,Integer> scores=new HashMap<Student,Integer> ();
+	// Student is in key, Keys are unique ... NEED EXTRA CODE
+
+compareTo method : List ??? NO, list is not SORTED
+compareTo method : Set ??? TreeSet are sorted.. need compareTo method
+compareTo method : Map - key ??? TreeMap KEYS are sorted.. need compareTo method
+compareTo method : Map - value ???  TreeMap Value are NOT sorted.. No compareTo method
+
+
+public void testDrive(Car c)
+
+testDrive(nissan);
+testDrive(toyota);
+testDrive(ferrari);
+testDrive(pizza);
+
+
+Primitive/simple Data type
+	Has single data CANT do anything
+	int a=10;
+
+Object/Complex Data type
+	Can have multiple data
+	AND can DO things
+	
+	public class Student{
+		String name="john";
+		int grade=10;
+		
+		public void learn(){
+		}
+		
+		public void takeExam(){
+		}
+	}
