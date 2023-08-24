@@ -10,9 +10,15 @@ import java.util.Scanner;
 public class ReadPermanantStorage {
 
 	public static void main(String[] args) throws Exception {
-		FileInputStream fos=new FileInputStream("d:/Tutorial/product.obj");
+		// Transfer info FROM a file on hard disk
+		FileInputStream fos=new FileInputStream("d:/product.obj");
+		// Transfer object info FROM above file
 		ObjectInputStream os=new ObjectInputStream(fos);
+		// Read java object info FROM above file
 		Product p=(Product)os.readObject();
+		System.out.println( p.name );
+		System.out.println( p.price );
+		
 		// deseralization
 		/// loading a file from disk space into java memory
 		System.out.println(p);

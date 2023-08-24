@@ -16,13 +16,17 @@ public class PermanantStorage {
 		System.out.println("enter prod price");
 		p.price=sc.next();
 		System.out.println(p);
-		
-		FileOutputStream fos=new FileOutputStream("d:/Tutorial/product.obj");
+
+		// Transfer info INTO a file on hard disk
+		FileOutputStream fos=new FileOutputStream("d:/product.obj");
+		// Transfer OBJECT info INTO above file
 		ObjectOutputStream os=new ObjectOutputStream(fos);
+		// Write Java object info into above file
 		os.writeObject(p); 
 		// serialization
 		/// loading a java object from java memory into disk space 
 		os.close();
+		
 		
 	}
 
