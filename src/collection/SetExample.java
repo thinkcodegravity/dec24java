@@ -1,10 +1,11 @@
 package collection;
 
-import java.util.*;
+import java.util.TreeSet;
 
 public class SetExample extends Object{
 
 	public static void main(String[] args) {
+		// Treeset is set collection
 		
 		TreeSet<String> names=new TreeSet<String>();
 		names.add("john");
