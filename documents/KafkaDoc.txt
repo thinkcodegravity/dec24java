@@ -1,0 +1,73 @@
+Go to server.properties :  and change here the log.dirs=c:/kafka/kafka-logs
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Go to zookeeper.properties : and change here the dataDir=c:/kafka/zookeeper-data
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Open cmd prompt and Start Zookeeper:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\kafka>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+See this line in Logs: INFO binding to port 0.0.0.0/0.0.0.0:2181 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+	- this means, your Zookeeper is runing with port number 2181.
+
+
+Open another cmd prompt and Start kafka server:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\kafka>.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+See this line in Logs: Awaiting socket connections on 0.0.0.0:9092. (kafka.network.DataPlaneAcceptor)
+	- this means, your Kafka server is runing with port number 9092. 
+
+
+
+Open another cmd prompt and Create topics:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\kafka>.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic topictest545
+
+O/P :
+Created topic topictest90m
+
+
+C:\kafka>.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic topictest549
+
+O/P:
+Created topic topictest549.
+
+
+List the topics created:
+~~~~~~~~~~~~~~~~~~~~~~~
+
+C:\kafka>.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+topictest545
+topictest549
+
+
+
+Create Producer to send message to the topic:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+C:\kafka>.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic topictest545
+>Hi All
+>Welcome to Kafka Training!
+>Nice to meet you!
+
+
+
+
+Open another cmd prompt and Create consumer to get the message from the same topic:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+C:\kafka>.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic topictest545 --from-beginning
+Hi All
+Welcome to Kafka Training!
+Nice to meet you!
+
+
+
+
+
+

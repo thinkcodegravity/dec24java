@@ -1,0 +1,109 @@
+* Create 1 docker-compose file and open it in any ID (IntelliJ  - folder : D:\docker\kafka-installation)
+* Create 1 yaml file like- 'docker-compose.yml'
+* Create 
+* Search zookeeper docker in google [ https://hub.docker.com/r/wurstmeister/zookeeper ]
+
+
+version: '3'   - version of docker compose
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper   - Search zookeeper docker in google and copy the image [ https://hub.docker.com/r/wurstmeister/zookeeper ]
+    container_name: zookeeper
+    ports:
+      - "2181:2181"                
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka
+    ports:
+      - "9092:9092"    -External (it can be anything):but Internal (This Kafka image has been exposed to 9092 which is internal  inside it, so it is fixed )  
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+
+
+* Now, execute this in cmd: [ D:\docker\kafka-installation> docker-compose -f docker-compose.yml up ]   or
+
+* execute this in cmd: [ docker-compose -f docker-compose.yml up -d (run in background mode)]
+
+* execute docker-compose down [ this will stop all the services which was running by this docker file ]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* D:\docker\kafka-installation>docker ps                   - This will gives all details of the services which was running by this docker file
+
+CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS                                                NAMES
+1892b0ec4b1a   wurstmeister/zookeeper   "/bin/sh -c '/usr/sb…"   8 minutes ago   Up 2 minutes   22/tcp, 2888/tcp, 3888/tcp, 0.0.0.0:2181->2181/tcp   zookeeper
+ad2165e7d1f6   wurstmeister/kafka       "start-kafka.sh"         8 minutes ago   Up 2 minutes   0.0.0.0:9092->9092/tcp                               kafka
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+* All the Kafka related script files you find here:
+
+D:\docker\kafka-installation>docker exec -it kafka /bin/sh
+# ls
+bin  boot  dev  etc  home  kafka  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+#cd /opt/kafka/bin
+# ls
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Create a topic:
+
+# ls
+bin  boot  dev  etc  home  kafka  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+# cd opt
+# ls
+kafka  kafka_2.13-2.8.1  overrides
+# cd kafka
+# ls
+LICENSE  NOTICE  bin  config  libs  licenses  logs  site-docs
+
+
+# ./bin/kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic selftest2
+Created topic selftest1.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+List topics:
+
+# ./bin/kafka-topics.sh --list --zookeeper zookeeper:2181
+selftest
+selftest2
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Shutdown all the services:
+
+
+D:\docker\kafka-installation>docker-compose down
+[+] Running 3/3
+ ✔ Container zookeeper                 Removed                                                                                                                        10.5s
+ ✔ Container kafka                     Removed                                                                                                                         5.8s
+ ✔ Network kafka-installation_default  Removed
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Notes:
+
+* First go to maven repository and add kafka-clients and slf4j-simple dependencies
+* create a Class SampleProducer.java
+* When we have to connect Kafka server we need some properties steps through which we can connect to Kafka server.
+  1 Bootstrap server. - this is address of Kafka server.
+* Create a Producer record Object.
+* Create Kafka Producer and initialise the Properties
+* Finally send the data to Kafka Server.
+
+
+
+TO see the message at consumer side.
+# ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic selftest2 --from-beginning

@@ -1,0 +1,116 @@
+1. To download the docker
+
+Go to this page docs.docker.com 
+click on Download all install.
+SO, on Mac and Windows, we have docker desktop. which is the combination of docker engine and bunch of other tools.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.  Check whether the Docker and Docker Compose is installed
+
+
+C:\Users\niros>docker -v
+Docker version 23.0.5, build bc4487a
+
+
+C:\Users\niros>docker-compose --version
+Docker Compose version v2.17.3
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+3.  To see Both Client and Server
+
+C:\Users\niros>docker version
+Client:
+ Cloud integration: v1.0.31
+ Version:           20.10.23
+ API version:       1.41
+ Go version:        go1.18.10
+ Git commit:        7155243
+ Built:             Thu Jan 19 17:43:10 2023
+ OS/Arch:           windows/amd64
+ Context:           default
+ Experimental:      true
+
+Server: Docker Desktop 4.17.0 (99724)
+ Engine:
+  Version:          20.10.23
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.18.10
+  Git commit:       6051f14
+  Built:            Thu Jan 19 17:32:04 2023
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.6.18
+  GitCommit:        2456e983eb9e37e47538f59ea18f2043c9a73640
+ runc:
+  Version:          1.1.4
+  GitCommit:        v1.1.4-0-g5fd4c4d
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+4. Creates a Container or immage of an application:
+
+docker-compose up
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5. Remove an application with all its dependencies:
+
+docker-compose down --rmi all
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+6. Create a folder called hellodocker
+	open this folder in visual studio.
+	create a file like app.js
+	inside this file write a small js code.
+	in CMD, go to that folder and type: [ it will execute that file]
+
+D:\docker\hellodocker>node app.js
+Hello world !
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+7. Create another file Dockerfile and the instructions there.
+	
+	FROM node:alpine  - Specify linux distribution
+	COPY . /app       - Copy from current dir to app dir
+	WORKDIR /app      
+	CMD node app.js
+
+Save this and go to CMD, and run the commmand:   docker build -t hellodocker .
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+8. To see all the images in the docker, we use this command:
+
+D:\docker\hellodocker>docker image ls
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+hellodocker   latest    c73c4e3d8f81   7 minutes ago   177MB
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+9. Finally, we can run the image by using this command:
+
+D:\docker\hellodocker>docker run hellodocker
+Hello world !
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
