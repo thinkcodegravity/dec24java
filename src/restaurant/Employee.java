@@ -1,8 +1,7 @@
 package restaurant;
 
-public class Emp {
+public class Employee {
 	String	name;
 	String	designation;
-	int	salary;
-// does - work, deliver
+	double	salary;
 }
