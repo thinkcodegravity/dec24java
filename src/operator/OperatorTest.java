@@ -8,6 +8,7 @@ public class OperatorTest {
 		// variable declara/initalizatino , method CALL
 		int x;
 		x=20;
+		x=30;
 		add(5,6);
 		// = ASSIGNMENT operator
 		/*
