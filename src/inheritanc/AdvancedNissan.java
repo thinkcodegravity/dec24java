@@ -1,7 +1,9 @@
 package inheritanc;
-// complete/concrete program
+// inherited - 2 complete and 1 incomplete
+// concrete program
 public class AdvancedNissan extends Nissan{
-	public void stop() {
-		System.out.println("stopping car");
+	public void turn() {
+		System.out.println("take turn");
 	}
+	
 }

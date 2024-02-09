@@ -4,7 +4,7 @@ public class CompilePolyTests {
 
 	public static void main(String[] args) {
 		Calculator cal=new Calculator();
-		cal.add(5, 6,9);
+		cal.add(5.0f , 6.0f);
 	}
 
 }

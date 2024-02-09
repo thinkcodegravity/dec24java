@@ -1,11 +1,15 @@
 package inheritanc;
+
 public class GrandParent {
-	public GrandParent( ) {
-		System.out.println("GrandParent");
+	
+	public GrandParent(String s) {
+		System.out.println("GrandParent is born");
 	}
 	
-	public int x=10;
-	public void methodX() {
-		System.out.println("methodX");
+	
+	
+	int a=10;
+	public void test1() {
+		System.out.println("test1");
 	}
 }

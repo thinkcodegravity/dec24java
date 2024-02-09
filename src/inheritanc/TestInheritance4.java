@@ -1,9 +1,9 @@
 package inheritanc;
 
-public class TestInheritance2 {
+public class TestInheritance4 {
 
 	public static void main(String[] args) {
-		Child c=new Child();		 
+		IPayment ip=new CreditCard();
 	}
 
 }

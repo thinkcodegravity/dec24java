@@ -1,17 +1,15 @@
 package inheritanc;
-
-// implements = write missing logic/code
-// partially abstract 
-// Abstract class = Partially incomplete/abstract
-public abstract class Nissan implements ICar{
+// abstract - partial incomplete
+// inherited - 3 incomplete methods
+public abstract class Nissan implements ICar,IMusic{
+// 2 completed method . 1 incomplete/ab methods	
 	public void drive() {
 		System.out.println("driving nissan");
+	}	 
+	public void music() {
+		System.out.println("play song");
 	}
-	public void takeTurn() {
-		System.out.println("taking turn");
+	public void play() {
+		System.out.println( "play something else");
 	}
-	public void start() {
-		System.out.println("starting car");
-	}
-	 // missing stop method logic
 }

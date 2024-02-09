@@ -1,15 +1,16 @@
 package inheritanc;
 
-public class Parent extends GrandParent {	
-	public Parent( boolean b) {
-		super();// super=GrandParent.. GrandParent()
-		System.out.println("Parent");
+public class Parent extends GrandParent{
+	public Parent() {
+		super("john");// public GrandParent("john")
+		System.out.println("parent is born");
 	}
 	
-	public int a=10;
-	public int b=10;
-	public void method1() {
-		a=20;
-		System.out.println("method1");
+	
+	
+	int b=10;
+	int x=20;
+	public void test2() {
+		System.out.println("test2");
 	}
 }

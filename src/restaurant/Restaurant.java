@@ -5,5 +5,6 @@ public class Restaurant {
 	Addr	address;
 	Food	food;
 	Employee	employee;
+	// resturan HAS-A customer
 	Customr	customer;
 }

@@ -6,6 +6,7 @@ public class Car {
 	int door=4;
 	
 	// polymorphism = overloading
+	// overloading polymorphism on constructor
 	public Car(String b){
 		brand=b;
 	}
