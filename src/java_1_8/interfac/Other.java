@@ -15,6 +15,7 @@ public class Other {
 			} ;	
 		// rule
 		/*
+		 * default & static methods allowed in functional interface
 		 1) functional interface only
 		 2) parameter section - (x,y,z)
 		    define variable comma separated without data type
