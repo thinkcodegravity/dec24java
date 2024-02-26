@@ -6,10 +6,6 @@ import java.util.Random;
 public class Consumer implements Runnable{
 	Stock demand;
 
-	public Consumer(Stock shareProd) {
-		demand=shareProd;
-	}
-
 	public void run() {
 			try{
 			while(true)
@@ -22,7 +18,7 @@ public class Consumer implements Runnable{
 						demand.wait();// wait until producer thread notifies new stock
 						}
 					else
-						demand.updateStock(-order);
+						demand.quantity=demand.quantity-order;
 					}
 			}
 			

@@ -1,5 +1,6 @@
 package file;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -10,8 +11,9 @@ import java.util.Scanner;
 public class ReadPermanantStorage {
 
 	public static void main(String[] args) throws Exception {
+		File f=new File("c:/workspace/prod.obj");
 		// Transfer info FROM a file on hard disk
-		FileInputStream fos=new FileInputStream("d:/product.obj");
+		FileInputStream fos=new FileInputStream(f);
 		// Transfer object info FROM above file
 		ObjectInputStream os=new ObjectInputStream(fos);
 		// Read java object info FROM above file

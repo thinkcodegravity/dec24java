@@ -6,11 +6,37 @@ public class TestProdCons {
 		a=10;
 		int b=10;
 		
-		Stock Iphone=new Stock();
+		
+		
+		
+		
+		
+		
+		Stock Iphone=new Stock();//#aaa
 		// extends thread
-		Producer Apple= new Producer(Iphone);
+		Producer Apple= new Producer();
 		// implements runabble
-		Consumer Users= new Consumer (Iphone);
+		Consumer Users= new Consumer ();
+		
+		Users.demand=Iphone;// #aaa
+		Apple.supply=Iphone;// #aaa
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		Thread t=new Thread(Users);
 		
 		Apple.start();

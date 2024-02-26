@@ -1,6 +1,6 @@
 package thrd;
 
-public class ProgramC extends Thread {
+public class ProgramC  extends Thread{
 	public void run() {
 		System.out.println("inside program C");
 		for(int i=0;i<1000000000;i++) {

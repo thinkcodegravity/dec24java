@@ -1,14 +1,7 @@
 package file;
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.
+BufferedInputStream;
+import java.io.*;
 import java.util.Properties;
 
 public class FileOperations {
@@ -17,7 +10,7 @@ public class FileOperations {
 	{
 		
 		System.out.println("\n testing text file operation \n ");
-		String fileCompletePath="D:/Tutorial/java.txt";
+		String fileCompletePath="C:/workspace/java.txt"; // absolute path 
 		
 		File createf=new File(fileCompletePath);	// initialize file object with file path
 		if(createf.exists() == false )			// check if file does not exist
@@ -37,14 +30,10 @@ public class FileOperations {
 			System.out.println("deleted file "+fileCompletePath);
 		}
 		
-
-		String fileContent="Hello i am learning how to write in file using java";
-		File writef=new File(fileCompletePath); // initialize file object with file path
-		if(!writef.exists())						// check if file exist
-			writef.createNewFile();				// create file if does not exists
+		File f=new File("c:/workspace/writing.txt");
+		if(f.exists() == false)
+			f.createNewFile();
 		
-		
-		File f=new File("d:/Tutorial/writing.txt");
 		FileWriter fw= new FileWriter(f)  ; // initialize File writer
 		BufferedWriter bw=new BufferedWriter(fw);
 		//BufferedWriter print= new BufferedWriter( new FileWriter(writef)  ); // initialize File writer
@@ -55,7 +44,7 @@ public class FileOperations {
 	//	FileReader readFile= new FileReader(fileCompletePath);
 //		readFile.rea
 
-		File f1=new File("d:/Tutorial/writing.txt");
+		File f1=new File("c:/workspace/writing.txt");
 		FileReader fr= new FileReader(f1); // initialize filereader object with file path		
 		BufferedReader readFile = new BufferedReader(fr); 
 		//	BufferedReader reader = new BufferedReader(new FileReader(fileCompletePath)); 

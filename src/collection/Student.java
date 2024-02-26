@@ -11,6 +11,22 @@ public class Student implements Comparable<Student> {
 	public int hashCode() {
 		return grade;
 	}
+	
+	// iphone - call , text
+		// iphoneX - call , text ,camera
+		// iphone > iphoneX
+		// Iphone i=new IphoneX();
+		// i.call();
+		// i.text();
+		// ((IphoneX) i ).camera();
+		
+		// exists/duplicate check
+		// Object > Student
+		// Object - abcd
+		// student - grade , fullname
+		// Object o=new Student();
+		// ((Student)o).grade
+	
 	// duplicate check
 	public boolean equals(Object anotherObject) {
 		Student anotherStuObject=(Student)anotherObject;
@@ -23,8 +39,9 @@ public class Student implements Comparable<Student> {
 			return false;
 			
 	}
+	@Override
 	public String toString() {
-		return fullName +":"+grade;
+		return fullName+"="+grade;
 	}
 	
 	public int compareTo(Student anotherObject)

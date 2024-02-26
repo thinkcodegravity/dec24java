@@ -12,7 +12,7 @@ public class TestString {
 		// join name string value with the input 
 		System.out.println(name.concat(" newyork")); // john + newyork = john newyork
 		// return true if input exist inside name variable value
-		System.out.println(	name.contains("o")	); // true
+		System.out.println(	name.contains("a")	); // true
 		// return true if name variable value ends with input 		
 		System.out.println(name.endsWith("e"));//false
 		// return true if name variable value is equal to input	, case should match as well
@@ -20,7 +20,7 @@ public class TestString {
 		// return true if name variable value is equal to input	, case need not match		
 		System.out.println(name.equalsIgnoreCase(" FIRST name "));
 		// same as contains method, except it returns the index position of input first occurence
-		System.out.println(name.indexOf("name"));
+		System.out.println(name.indexOf("h"));
 		// same as contains method, except it returns the index position of input last occurence
 		System.out.println(name.lastIndexOf("a"));
 		// replace all occurence of the input1 with input2
